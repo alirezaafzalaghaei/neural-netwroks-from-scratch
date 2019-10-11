@@ -3,7 +3,7 @@
 
 
 import numpy as np
-
+np.random.seed(1)
 
 class MLP:
     def __init__(self, hidden_layer_sizes: list,
