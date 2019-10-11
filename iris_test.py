@@ -1,33 +1,34 @@
-import numpy as np
-import pandas as pd
-from mlp import MLP
-import seaborn as sns
-from utils import accuracy
-import matplotlib.pyplot as plt
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import train_test_split
+from utils import *
 
-sns.set()
 
-iris = pd.read_csv('./datasets/iris.csv')
-X = iris.iloc[:, :-1].to_numpy()
-y = iris.iloc[:, -1].to_numpy().reshape(-1, 1)
+def load_iris():
+    iris = pd.read_csv('./datasets/iris.csv')
+    X = iris.iloc[:, :-1].to_numpy()
+    y = iris.iloc[:, -1].to_numpy().reshape(-1, 1)
 
-X = StandardScaler().fit_transform(X)
+    X = StandardScaler().fit_transform(X)
+    return X,y
 
-Xtrain, Xtest, ytrain, ytest = train_test_split(X, y)
 
-mlp = MLP([5, 5, 5, 5], epochs=5000, beta=1, eta=.5)
-hist = mlp.run(Xtrain, ytrain)
-ytr_p = mlp.predict(Xtrain)
-yte_p = mlp.predict(Xtest)
+X,y = load_iris()
+X_train, X_test, y_train, y_test = train_test_split(X, y)
 
-acc_te = accuracy(ytest,yte_p)
-acc_tr = accuracy(ytrain,ytr_p)
+mlp = MLP([5, 5, 5, 5], epochs=5000, beta=1, eta=.5,alpha=.005)
 
-print('train loss: %.4f, accuracy: %.2f%%' % (hist[-1],acc_tr))
-print('train loss: %.4f, accuracy: %.2f%%' % (mlp.loss(ytest, yte_p),acc_te))
+hist = mlp.fit(X_train, y_train)
+ytr_p = mlp.predict(X_train)
+yte_p = mlp.predict(X_test)
+
+acc_test = accuracy(y_test,yte_p)
+acc_train = accuracy(y_train,ytr_p)
+
+loss_test = mlp.loss(y_test, yte_p)
+
+print('train loss: %.4f, accuracy: %.2f%%' % (hist[-1],acc_train))
+print('test  loss: %.4f, accuracy: %.2f%%' % (loss_test,acc_test))
 
 plt.plot(list(range(len(hist))), np.log(hist))
-plt.title("%.2e" % hist[-1])
+plt.title("Error: %.2e" % hist[-1])
+plt.xlabel('iterations')
+plt.ylabel('Log(Error)')
 plt.show()
