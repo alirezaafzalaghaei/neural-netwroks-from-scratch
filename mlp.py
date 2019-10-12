@@ -15,6 +15,7 @@ class MLP:
                  beta: float = 1,
                  alpha: float = 0.01,
                  mu: float = 0.9,  # todo
+                 verbose: int = False
                  ):
         self.random = np.random.randn
         self.weights_ = []
@@ -30,8 +31,9 @@ class MLP:
         self.deltas = []
         self.dLdws = []
         self.hidden_layer_sizes = hidden_layer_sizes
+        self.verbose = verbose
 
-    def init_weights_(self):
+    def init_weights(self):
         for a, b in zip(self.hidden_layer_sizes, self.hidden_layer_sizes[1:]):
             self.weights_.append(self.random(a + 1, b) * self.beta)
 
@@ -95,13 +97,15 @@ class MLP:
 
         self.x = np.hstack((x, np.ones((x.shape[0], 1))))
         self.y = y
-        self.init_weights_()
+        self.init_weights()
         hist = []
         for i in range(self.n_epochs):
             yp = self._forward(self.x)
             self._backward()
             self._update_weights()
             hist.append(self.loss(yp, self.y))
+            if self.verbose and (i + 1) % self.verbose == 0:
+                print("epoch %05d, loss: %06.2f" % (i + 1, hist[-1]))
         return hist
 
     def predict(self, x):

@@ -3,8 +3,11 @@ import pandas as pd
 from mlp import MLP
 import seaborn as sns
 import matplotlib.pyplot as plt
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from sklearn.model_selection import train_test_split
+
+# disable pycharm's import optimizer
+train_test_split, pd, MLP, plt, StandardScaler, MinMaxScaler
 
 sns.set()
 
