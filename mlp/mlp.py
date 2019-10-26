@@ -4,12 +4,14 @@
 
 
 import numpy as np
+from .activations import *
 
 np.random.seed(1)
 
 
 class MLP:
     def __init__(self, hidden_layer_sizes: list,
+                 activation: Activation = Tanh,
                  epochs: int = 1000,
                  eta: float = 0.01,
                  beta: float = 1,
@@ -32,6 +34,9 @@ class MLP:
         self.dLdws = []
         self.hidden_layer_sizes = hidden_layer_sizes
         self.verbose = verbose
+        self.activation = activation.activation
+        self.activation_prime = activation.activation_prime
+        self.current_loss = None
 
     def init_weights(self):
         for a, b in zip(self.hidden_layer_sizes, self.hidden_layer_sizes[1:]):
@@ -83,14 +88,6 @@ class MLP:
     def loss_prime(t, y):
         return y - t
 
-    @staticmethod
-    def activation(x):
-        return np.tanh(x)
-
-    @staticmethod
-    def activation_prime(x):
-        return 1 - np.tanh(x) ** 2
-
     def fit(self, x, y):
         self.hidden_layer_sizes.insert(0, x.shape[1])
         self.hidden_layer_sizes.append(y.shape[1])
@@ -103,10 +100,16 @@ class MLP:
             yp = self._forward(self.x)
             self._backward()
             self._update_weights()
+            # validation?
             hist.append(self.loss(yp, self.y))
-            if self.verbose and (i + 1) % self.verbose == 0:
-                print("epoch %05d, loss: %06.2f" % (i + 1, hist[-1]))
+            self.current_loss = hist[-1]
+            self._verbose(i)
+
         return hist
+
+    def _verbose(self, i):
+        if self.verbose and (i + 1) % self.verbose == 0:
+            print("epoch %05d, loss: %06.2f" % (i + 1, self.current_loss))
 
     def predict(self, x):
         x = np.hstack((x, np.ones((x.shape[0], 1))))

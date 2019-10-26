@@ -13,7 +13,7 @@ def load_airfoil():
 X, y = load_airfoil()
 X_train, X_test, y_train, y_test = train_test_split(X, y)
 
-mlp = MLP([15, 15, 15], epochs=10000, beta=.4, eta=.7, alpha=.01, verbose=500)
+mlp = MLP([15, 15, 15], activation=Tanh, epochs=1000, beta=.5, eta=.4, alpha=.01, verbose=500)
 
 hist = mlp.fit(X_train, y_train)
 yte_p = mlp.predict(X_test)
