@@ -15,7 +15,7 @@ def load_iris():
 X, y = load_iris()
 X_train, X_test, y_train, y_test = train_test_split(X, y)
 
-mlp = MLP([5, 5, 5, 5], activation=Tanh, epochs=5000, beta=1, eta=.5, alpha=.01)
+mlp = MLP([5, 5, 5, 5], activation=ReLu, epochs=200,mu=0.9, beta=1, eta=.1, alpha=.01)
 
 hist = mlp.fit(X_train, y_train)
 ytr_p = mlp.predict(X_train)

@@ -37,10 +37,12 @@ class MLP:
         self.activation = activation.activation
         self.activation_prime = activation.activation_prime
         self.current_loss = None
+        self.velocity_ = []
 
     def init_weights(self):
         for a, b in zip(self.hidden_layer_sizes, self.hidden_layer_sizes[1:]):
             self.weights_.append(self.random(a + 1, b) * self.beta)
+            self.velocity_.append(np.zeros((a + 1, b)))
 
     def _forward(self, a):
         self.z = []
@@ -75,7 +77,8 @@ class MLP:
 
     def _update_weights(self):
         for i in range(len(self.weights_)):
-            self.weights_[i] -= self.learning_rate * self.dLdws[i] * 1 / len(self.x)
+            self.velocity_[i] = self.momentum * self.velocity_[i] + self.learning_rate * self.dLdws[i] * 1 / len(self.x)
+            self.weights_[i] -= self.velocity_[i]
 
     def cost(self, t, y):
         return self.loss(y, t) + self.alpha * np.sum([w.sum() for w in self.weights_])
