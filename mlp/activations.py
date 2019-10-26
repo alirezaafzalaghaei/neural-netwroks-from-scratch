@@ -35,6 +35,18 @@ class ReLu(Activation):
         return np.where(x <= 0, 0, 1)
 
 
+class LeakyReLu(Activation):
+    @staticmethod
+    def activation(x):
+        return np.where(x > 0, x, x * 0.01)
+
+    @staticmethod
+    def activation_prime(x):
+        dx = np.ones_like(x)
+        dx[x < 0] = .1
+        return dx
+
+
 class Sigmoid(Activation):
     @staticmethod
     def activation(x):
