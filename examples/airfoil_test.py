@@ -13,7 +13,8 @@ def load_airfoil():
 X, y = load_airfoil()
 X_train, X_test, y_train, y_test = train_test_split(X, y)
 
-mlp = MLP([15, 15, 15], activation=LeakyReLu, epochs=2000, beta=.2, eta=.2, mu=.95, alpha=0, verbose=100,task='regression')
+mlp = MLP([15, 15, 15], activation=LeakyReLu, epochs=2000, beta=.2, eta=.2, mu=.95, alpha=0, verbose=100,
+          task='regression')
 
 hist = mlp.fit(X_train, y_train)
 yte_p = mlp.predict(X_test)

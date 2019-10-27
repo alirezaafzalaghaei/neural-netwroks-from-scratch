@@ -21,18 +21,18 @@ class MSE(Loss):
 
     @staticmethod
     def loss_prime(y, t):
-        return y-t
+        return y - t
 
 
 class XEntropy(Loss):
     @staticmethod
     def loss(t, y):
         indices = np.argmax(t, axis=1).astype(int)
-        probability = y[np.arange(len(y)), indices]
+        probability = y[np.arange(len(y)), indices] + 1e-10  # to prevent zero value
         log = np.log(probability)
         loss = -1.0 * np.sum(log) / len(log)
         return loss
 
     @staticmethod
     def loss_prime(y, t):
-        return (y-t) / y.shape[0]
+        return (y - t) / y.shape[0]

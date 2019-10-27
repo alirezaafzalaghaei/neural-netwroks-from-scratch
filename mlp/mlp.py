@@ -18,7 +18,7 @@ class MLP:
                  beta: float = 1,
                  alpha: float = 0.01,
                  mu: float = 0.9,
-                 batch_size : int = 128,
+                 batch_size: int = 128,
                  verbose: int = False,
                  task: str = ''
                  ):
@@ -79,7 +79,7 @@ class MLP:
 
         return self.a[-1]
 
-    def _backward(self,y):
+    def _backward(self, y):
         self.deltas = list()
         self.dLdws = list()
 
@@ -112,15 +112,19 @@ class MLP:
         self.init_weights()
         hist = []
         for i in range(self.n_epochs):
+            avg_cost = 0
+            c = 0
             for index in range(0, self.x.shape[0], self.batch_size):
                 batch_x = self.x[index:min(index + self.batch_size, self.x.shape[0]), :]
                 batch_y = self.y[index:min(index + self.batch_size, self.y.shape[0]), :]
                 yp = self._forward(batch_x)
                 self._backward(batch_y)
                 self._update_weights()
+                avg_cost += self.cost(yp, batch_y)
+                c += 1
 
             # validation?
-            hist.append(self.cost(yp, batch_y))
+            hist.append(avg_cost / c)
             self.current_loss = hist[-1]
             self._verbose(i)
 
