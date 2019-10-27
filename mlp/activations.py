@@ -36,15 +36,20 @@ class ReLu(Activation):
 
 
 class LeakyReLu(Activation):
+    leakage = 0.01
+
+    def __init__(self, leakage=0.01):
+        LeakyReLu.leakage = leakage
+
     @staticmethod
     def activation(x):
-        return np.where(x > 0, x, x * 0.01)
+        y = np.copy(x)
+        y[y < 0] *= LeakyReLu.leakage
+        return y
 
     @staticmethod
     def activation_prime(x):
-        dx = np.ones_like(x)
-        dx[x < 0] = .1
-        return dx
+        return np.clip(x > 0, LeakyReLu.leakage, 1.0)
 
 
 class Sigmoid(Activation):
