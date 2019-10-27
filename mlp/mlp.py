@@ -5,7 +5,7 @@
 
 import numpy as np
 from .activations import *
-from .loss_functions import MSE, XEntropy
+from .loss_functions import *
 
 np.random.seed(1)
 
@@ -18,8 +18,9 @@ class MLP:
                  beta: float = 1,
                  alpha: float = 0.01,
                  mu: float = 0.9,
+                 batch_size : int = 128,
                  verbose: int = False,
-                 task: str = 'classification'
+                 task: str = ''
                  ):
         self.random = np.random.randn
         self.weights_ = []
@@ -81,7 +82,7 @@ class MLP:
         self.deltas = list()
         self.dLdws = list()
 
-        self.deltas.append(-(self._loss_prime(self.a[-1], self.y)) * self._output_prime(self.z[-1]))
+        self.deltas.append(self._loss_prime(self.a[-1], self.y) * self._output_prime(self.z[-1]))
         self.dLdws.append(self.a[-2].T @ self.deltas[-1] + self.alpha * self.weights_[-1])
         for i in range(len(self.z) - 1, 0, -1):
             t = np.hstack((self.z[i - 1], np.ones((self.z[i - 1].shape[0], 1))))

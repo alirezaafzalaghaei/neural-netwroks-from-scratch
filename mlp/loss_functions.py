@@ -21,7 +21,7 @@ class MSE(Loss):
 
     @staticmethod
     def loss_prime(y, t):
-        return t - y
+        return y-t
 
 
 class XEntropy(Loss):
@@ -35,4 +35,4 @@ class XEntropy(Loss):
 
     @staticmethod
     def loss_prime(y, t):
-        return (t - y) / y.shape[0]
+        return (y-t) / y.shape[0]
