@@ -5,6 +5,7 @@
 
 import numpy as np
 from .activations import *
+from .loss_functions import MSE, XEntropy
 
 np.random.seed(1)
 
@@ -16,8 +17,9 @@ class MLP:
                  eta: float = 0.01,
                  beta: float = 1,
                  alpha: float = 0.01,
-                 mu: float = 0.9,  # todo
-                 verbose: int = False
+                 mu: float = 0.9,
+                 verbose: int = False,
+                 type : str = 'classification'
                  ):
         self.random = np.random.randn
         self.weights_ = []
@@ -38,6 +40,20 @@ class MLP:
         self.activation_prime = activation.activation_prime
         self.current_loss = None
         self.velocity_ = []
+        self.type = type
+        if type == 'classification':
+            self.output = Softmax.activation
+            self.output_prime = Softmax.activation_prime
+            self.loss = XEntropy.loss
+            self.loss_prime = XEntropy.loss_prime
+
+        elif type == 'regression':
+            self.output = Identity.activation
+            self.output_prime = Identity.activation_prime
+            self.loss = MSE.loss
+            self.loss_prime = MSE.loss_prime
+        else:
+            raise ValueError('just use classification or regression')
 
     def init_weights(self):
         for a, b in zip(self.hidden_layer_sizes, self.hidden_layer_sizes[1:]):
@@ -49,7 +65,11 @@ class MLP:
         self.a = [a]
         for i in range(len(self.weights_)):
             z = a @ self.weights_[i]
-            a = self.activation(z)
+            if i != len(self.weights_) - 1:
+                a = self.activation(z)
+            else:
+                a = self.output(z)
+
             if i != len(self.weights_) - 1:
                 a = np.hstack((a, np.ones((a.shape[0], 1))))
             self.a.append(a)
@@ -61,14 +81,12 @@ class MLP:
         self.deltas = list()
         self.dLdws = list()
 
-        self.deltas.append((self.loss_prime(self.y, self.a[-1])) * self.activation_prime(self.z[-1]))
+        self.deltas.append(-(self.loss_prime(self.a[-1], self.y)) * self.output_prime(self.z[-1]))
         self.dLdws.append(self.a[-2].T @ self.deltas[-1] + self.alpha * self.weights_[-1])
-
         for i in range(len(self.z) - 1, 0, -1):
             t = np.hstack((self.z[i - 1], np.ones((self.z[i - 1].shape[0], 1))))
             t = self.activation_prime(t)
-            delta = ((self.deltas[-1] @ self.weights_[i].T) * t)
-            delta = delta[:, :-1]
+            delta = ((self.deltas[-1] @ self.weights_[i].T) * t)[:, :-1]
             self.deltas.append(delta)
             dLdw = self.a[i - 1].T @ self.deltas[-1] + self.alpha * self.weights_[i - 1]
             self.dLdws.append(dLdw)
@@ -77,19 +95,13 @@ class MLP:
 
     def _update_weights(self):
         for i in range(len(self.weights_)):
-            self.velocity_[i] = self.momentum * self.velocity_[i] + self.learning_rate * self.dLdws[i] * 1 / len(self.x)
+            self.velocity_[i] = self.momentum * self.velocity_[i] + self.learning_rate * self.dLdws[i] / len(self.x)
             self.weights_[i] -= self.velocity_[i]
 
     def cost(self, t, y):
         return self.loss(y, t) + self.alpha * np.sum([w.sum() for w in self.weights_])
 
-    @staticmethod
-    def loss(t, y):
-        return .5 * np.sum((t - y) ** 2)
 
-    @staticmethod
-    def loss_prime(t, y):
-        return y - t
 
     def fit(self, x, y):
         self.hidden_layer_sizes.insert(0, x.shape[1])
@@ -104,7 +116,7 @@ class MLP:
             self._backward()
             self._update_weights()
             # validation?
-            hist.append(self.loss(yp, self.y))
+            hist.append(self.cost(yp, self.y))
             self.current_loss = hist[-1]
             self._verbose(i)
 

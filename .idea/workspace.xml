@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84c40771-fe75-4d20-9feb-995c8e03ac0f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/boston_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mlp/loss_functions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/airfoil_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/airfoil_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/mlp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/boston_sklearn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/iris_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/iris_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlp/activations.py" beforeDir="false" afterPath="$PROJECT_DIR$/mlp/activations.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mlp/mlp.py" beforeDir="false" afterPath="$PROJECT_DIR$/mlp/mlp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,10 +20,12 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/neuralnetwork$iris_sklearn.coverage" NAME="iris_sklearn Coverage Results" MODIFIED="1572110072791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/neuralnetwork$airfoil_test.coverage" NAME="airfoil_test Coverage Results" MODIFIED="1572123632241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/neuralnetwork$boston_test.coverage" NAME="boston_test Coverage Results" MODIFIED="1572144004285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/neuralnetwork$airfoil_test.coverage" NAME="airfoil_test Coverage Results" MODIFIED="1572137067805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/neuralnetwork$mlp.coverage" NAME="mlp Coverage Results" MODIFIED="1570746516215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/neuralnetwork$activations.coverage" NAME="activations Coverage Results" MODIFIED="1572123824364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mlp" />
-    <SUITE FILE_PATH="coverage/neuralnetwork$main.coverage" NAME="main Coverage Results" MODIFIED="1572123385987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/neuralnetwork$activations.coverage" NAME="activations Coverage Results" MODIFIED="1572124767704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mlp" />
+    <SUITE FILE_PATH="coverage/neuralnetwork$boston_sklearn.coverage" NAME="boston_sklearn Coverage Results" MODIFIED="1572140864393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/neuralnetwork$main.coverage" NAME="main Coverage Results" MODIFIED="1572182409480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -47,31 +54,31 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="253" />
+          <entry key="Python Console" value="298" />
           <entry key="dummy" value="14" />
-          <entry key="py" value="7375" />
+          <entry key="py" value="8962" />
           <entry key="txt" value="54" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="68" />
-          <entry key="Python" value="7628" />
+          <entry key="Python" value="9260" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="4" />
+          <entry key="csv" value="5" />
           <entry key="dat" value="3" />
-          <entry key="py" value="11" />
+          <entry key="py" value="25" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSV" value="3" />
+          <entry key="CSV" value="4" />
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Python" value="11" />
+          <entry key="Python" value="25" />
         </counts>
       </usages-collector>
     </session>
@@ -81,32 +88,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/iris_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-49">
-              <caret line="17" column="85" selection-start-line="17" selection-start-column="85" selection-end-line="17" selection-end-column="85" />
+            <state relative-caret-position="152">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
-                <marker date="1572123402680" expanded="true" signature="38:39" ph="..." />
+                <marker date="1572137286984" expanded="true" signature="38:39" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/airfoil_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/iris_sklearn.py">
+        <entry file="file://$PROJECT_DIR$/airfoil_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#48#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="290">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -115,7 +110,7 @@
         <entry file="file://$PROJECT_DIR$/utils.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="319">
-              <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+              <caret line="11" column="66" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -123,15 +118,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mlp/activations.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="178">
+              <caret line="70" column="6" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1572123879830" expanded="true" signature="58:223" ph="..." />
-                <marker date="1572123879830" expanded="true" signature="266:271" ph="..." />
+                <marker date="1572144077110" expanded="true" signature="58:223" ph="..." />
+                <marker date="1572144077110" expanded="true" signature="266:271" ph="..." />
+                <marker date="1572144077110" expanded="true" signature="614:619" ph="..." />
+                <marker date="1572144077110" expanded="true" signature="614:820" ph="..." />
+                <marker date="1572144077110" expanded="true" signature="1383:1388" ph="..." />
               </folding>
             </state>
           </provider>
@@ -140,12 +138,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mlp/mlp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="80" column="49" selection-start-line="80" selection-start-column="49" selection-end-line="80" selection-end-column="49" />
+            <state relative-caret-position="125">
+              <caret line="45" column="35" lean-forward="true" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
               <folding>
                 <element signature="e#165#183#0" expanded="true" />
-                <marker date="1572123238040" expanded="true" signature="3020:3041" ph="..." />
-                <marker date="1572123238040" expanded="true" signature="3630:3768" ph="..." />
+                <marker date="1572144004156" expanded="true" signature="4190:4328" ph="..." />
               </folding>
             </state>
           </provider>
@@ -173,6 +170,8 @@
       <find>self.activation</find>
       <find>DERIVATIVES</find>
       <find>velocity</find>
+      <find>activa</find>
+      <find>loss</find>
     </findStrings>
     <replaceStrings>
       <replace>3</replace>
@@ -195,12 +194,15 @@
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/mlp.py" />
-        <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/iris_sklearn.py" />
+        <option value="$PROJECT_DIR$/airfoil_test.py" />
+        <option value="$PROJECT_DIR$/utils.py" />
+        <option value="$PROJECT_DIR$/boston_sklearn.py" />
+        <option value="$PROJECT_DIR$/boston_test.py" />
         <option value="$PROJECT_DIR$/mlp/mlp.py" />
         <option value="$PROJECT_DIR$/iris_test.py" />
-        <option value="$PROJECT_DIR$/airfoil_test.py" />
         <option value="$PROJECT_DIR$/mlp/activations.py" />
+        <option value="$PROJECT_DIR$/mlp/loss_functions.py" />
       </list>
     </option>
   </component>
@@ -211,10 +213,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="50" />
+    <option name="x" value="54" />
     <option name="y" value="42" />
-    <option name="width" value="1256" />
-    <option name="height" value="710" />
+    <option name="width" value="1246" />
+    <option name="height" value="707" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -254,11 +256,11 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/mlp" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/datasets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mlp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -273,7 +275,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.activations">
+  <component name="RunManager" selected="Python.main">
     <configuration name="activations" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="neuralnetwork" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -318,7 +320,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="iris_sklearn" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="boston_sklearn" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="neuralnetwork" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -331,7 +333,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/iris_sklearn.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/boston_sklearn.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="boston_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="neuralnetwork" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/boston_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -362,42 +386,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mlp" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="neuralnetwork" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mlp/mlp.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.mlp" />
       <item itemvalue="Python.airfoil_test" />
       <item itemvalue="Python.activations" />
-      <item itemvalue="Python.iris_sklearn" />
+      <item itemvalue="Python.boston_test" />
+      <item itemvalue="Python.boston_sklearn" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.activations" />
-        <item itemvalue="Python.airfoil_test" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.iris_sklearn" />
-        <item itemvalue="Python.mlp" />
+        <item itemvalue="Python.boston_test" />
+        <item itemvalue="Python.boston_sklearn" />
+        <item itemvalue="Python.airfoil_test" />
+        <item itemvalue="Python.activations" />
       </list>
     </recent_temporary>
   </component>
@@ -416,14 +418,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="30" y="0" width="1336" height="768" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15503876" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3198128" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3198128" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39937598" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -432,12 +433,12 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32917318" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.2901716" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.28237128" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.31045243" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.14263566" />
+      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.40852714" />
       <window_info anchor="right" id="Database" order="4" weight="0.32945737" />
     </layout>
   </component>
@@ -505,64 +506,126 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
+    <entry file="file://$PROJECT_DIR$/datasets/forestfires.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file:///usr/lib/python3.7/site-packages/numpy/core/numeric.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="176">
+          <caret line="215" selection-start-line="215" selection-end-line="215" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.7/site-packages/numpy/core/shape_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="219" selection-start-line="219" selection-end-line="219" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3.7/site-packages/numpy/core/multiarray.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-506">
+          <caret line="1074" selection-start-line="1074" selection-end-line="1074" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/iris_sklearn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        <state relative-caret-position="696">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="26" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mlp/mlp.py">
+    <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="80" column="49" selection-start-line="80" selection-start-column="49" selection-end-line="80" selection-end-column="49" />
+        <state relative-caret-position="319">
+          <caret line="11" column="66" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
           <folding>
-            <element signature="e#165#183#0" expanded="true" />
-            <marker date="1572123238040" expanded="true" signature="3020:3041" ph="..." />
-            <marker date="1572123238040" expanded="true" signature="3630:3768" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mlp/activations.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1572123879830" expanded="true" signature="58:223" ph="..." />
-            <marker date="1572123879830" expanded="true" signature="266:271" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iris_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-49">
-          <caret line="17" column="85" selection-start-line="17" selection-start-column="85" selection-end-line="17" selection-end-column="85" />
-          <folding>
-            <marker date="1572123402680" expanded="true" signature="38:39" ph="..." />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/airfoil_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="290">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boston_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boston_sklearn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mlp/loss_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1572144168730" expanded="true" signature="52:57" ph="..." />
+            <marker date="1572144168730" expanded="true" signature="113:132" ph="..." />
+            <marker date="1572144168730" expanded="true" signature="226:231" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iris_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <marker date="1572137286984" expanded="true" signature="38:39" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mlp/mlp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="45" column="35" lean-forward="true" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+          <folding>
+            <element signature="e#165#183#0" expanded="true" />
+            <marker date="1572144004156" expanded="true" signature="4190:4328" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mlp/activations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="70" column="6" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1572144077110" expanded="true" signature="58:223" ph="..." />
+            <marker date="1572144077110" expanded="true" signature="266:271" ph="..." />
+            <marker date="1572144077110" expanded="true" signature="614:619" ph="..." />
+            <marker date="1572144077110" expanded="true" signature="614:820" ph="..." />
+            <marker date="1572144077110" expanded="true" signature="1383:1388" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
