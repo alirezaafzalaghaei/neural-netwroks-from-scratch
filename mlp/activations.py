@@ -56,3 +56,26 @@ class Sigmoid(Activation):
     def activation_prime(x):
         y = Sigmoid.activation(x)
         return y * (1 - y)
+
+
+class Identity(Activation):
+    @staticmethod
+    def activation(x):
+        return x
+
+    @staticmethod
+    def activation_prime(x):
+        return 1
+
+
+class Softmax(Activation):
+    @staticmethod
+    def activation(x):
+        exp = np.exp(x)
+        a = exp / np.sum(exp, axis=1, keepdims=True)
+        # print(x.shape, a.shape)
+        return a
+
+    @staticmethod
+    def activation_prime(x):
+        return 1 # just for simplicity
