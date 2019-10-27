@@ -9,6 +9,6 @@ from sklearn.metrics import accuracy_score, r2_score
 
 # disable pycharm's import optimizer
 pd, MLP, plt, StandardScaler, MinMaxScaler, ReLu, Tanh, OneHotEncoder
-train_test_split, accuracy_score, LabelEncoder,LeakyReLu, r2_score
+train_test_split, accuracy_score, LabelEncoder, LeakyReLu, r2_score
 
 sns.set()

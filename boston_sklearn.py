@@ -11,6 +11,7 @@ def load_boston():
     y = MinMaxScaler((-1, 1)).fit_transform(y)
     return X, y.flatten()
 
+
 X, y = load_boston()
 X_train, X_test, y_train, y_test = train_test_split(X, y)
 

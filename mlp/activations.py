@@ -73,9 +73,8 @@ class Softmax(Activation):
     def activation(x):
         exp = np.exp(x)
         a = exp / np.sum(exp, axis=1, keepdims=True)
-        # print(x.shape, a.shape)
         return a
 
     @staticmethod
     def activation_prime(x):
-        return 1 # just for simplicity
+        return 1  # just for simplicity

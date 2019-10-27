@@ -19,7 +19,7 @@ class MLP:
                  alpha: float = 0.01,
                  mu: float = 0.9,
                  verbose: int = False,
-                 type : str = 'classification'
+                 task: str = 'classification'
                  ):
         self.random = np.random.randn
         self.weights_ = []
@@ -40,18 +40,18 @@ class MLP:
         self.activation_prime = activation.activation_prime
         self.current_loss = None
         self.velocity_ = []
-        self.type = type
-        if type == 'classification':
-            self.output = Softmax.activation
-            self.output_prime = Softmax.activation_prime
-            self.loss = XEntropy.loss
-            self.loss_prime = XEntropy.loss_prime
+        self.type = task
+        if task == 'classification':
+            self._output = Softmax.activation
+            self._output_prime = Softmax.activation_prime
+            self._loss = XEntropy.loss
+            self._loss_prime = XEntropy.loss_prime
 
-        elif type == 'regression':
-            self.output = Identity.activation
-            self.output_prime = Identity.activation_prime
-            self.loss = MSE.loss
-            self.loss_prime = MSE.loss_prime
+        elif task == 'regression':
+            self._output = Identity.activation
+            self._output_prime = Identity.activation_prime
+            self._loss = MSE.loss
+            self._loss_prime = MSE.loss_prime
         else:
             raise ValueError('just use classification or regression')
 
@@ -68,7 +68,7 @@ class MLP:
             if i != len(self.weights_) - 1:
                 a = self.activation(z)
             else:
-                a = self.output(z)
+                a = self._output(z)
 
             if i != len(self.weights_) - 1:
                 a = np.hstack((a, np.ones((a.shape[0], 1))))
@@ -81,7 +81,7 @@ class MLP:
         self.deltas = list()
         self.dLdws = list()
 
-        self.deltas.append(-(self.loss_prime(self.a[-1], self.y)) * self.output_prime(self.z[-1]))
+        self.deltas.append(-(self._loss_prime(self.a[-1], self.y)) * self._output_prime(self.z[-1]))
         self.dLdws.append(self.a[-2].T @ self.deltas[-1] + self.alpha * self.weights_[-1])
         for i in range(len(self.z) - 1, 0, -1):
             t = np.hstack((self.z[i - 1], np.ones((self.z[i - 1].shape[0], 1))))
@@ -99,9 +99,7 @@ class MLP:
             self.weights_[i] -= self.velocity_[i]
 
     def cost(self, t, y):
-        return self.loss(y, t) + self.alpha * np.sum([w.sum() for w in self.weights_])
-
-
+        return self._loss(y, t) + self.alpha * np.sum([w.sum() for w in self.weights_])
 
     def fit(self, x, y):
         self.hidden_layer_sizes.insert(0, x.shape[1])

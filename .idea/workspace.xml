@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84c40771-fe75-4d20-9feb-995c8e03ac0f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/boston_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mlp/loss_functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/airfoil_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/airfoil_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/mlp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/boston_sklearn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boston_sklearn.py" beforeDir="false" afterPath="$PROJECT_DIR$/boston_sklearn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boston_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/boston_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/iris_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/iris_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mlp/activations.py" beforeDir="false" afterPath="$PROJECT_DIR$/mlp/activations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlp/loss_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/mlp/loss_functions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mlp/mlp.py" beforeDir="false" afterPath="$PROJECT_DIR$/mlp/mlp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
@@ -21,11 +20,11 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/neuralnetwork$iris_sklearn.coverage" NAME="iris_sklearn Coverage Results" MODIFIED="1572110072791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/neuralnetwork$boston_test.coverage" NAME="boston_test Coverage Results" MODIFIED="1572144004285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/neuralnetwork$airfoil_test.coverage" NAME="airfoil_test Coverage Results" MODIFIED="1572137067805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/neuralnetwork$airfoil_test.coverage" NAME="airfoil_test Coverage Results" MODIFIED="1572183274627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/neuralnetwork$mlp.coverage" NAME="mlp Coverage Results" MODIFIED="1570746516215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/neuralnetwork$activations.coverage" NAME="activations Coverage Results" MODIFIED="1572124767704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mlp" />
     <SUITE FILE_PATH="coverage/neuralnetwork$boston_sklearn.coverage" NAME="boston_sklearn Coverage Results" MODIFIED="1572140864393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/neuralnetwork$main.coverage" NAME="main Coverage Results" MODIFIED="1572182409480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/neuralnetwork$main.coverage" NAME="main Coverage Results" MODIFIED="1572182550388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -56,21 +55,21 @@
         <counts>
           <entry key="Python Console" value="298" />
           <entry key="dummy" value="14" />
-          <entry key="py" value="8962" />
+          <entry key="py" value="9059" />
           <entry key="txt" value="54" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="68" />
-          <entry key="Python" value="9260" />
+          <entry key="Python" value="9357" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="5" />
           <entry key="dat" value="3" />
-          <entry key="py" value="25" />
+          <entry key="py" value="27" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
@@ -78,7 +77,7 @@
         <counts>
           <entry key="CSV" value="4" />
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Python" value="25" />
+          <entry key="Python" value="27" />
         </counts>
       </usages-collector>
     </session>
@@ -88,10 +87,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/iris_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="134">
+              <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
               <folding>
-                <marker date="1572137286984" expanded="true" signature="38:39" ph="..." />
+                <marker date="1572183513210" expanded="true" signature="38:39" ph="..." />
               </folding>
             </state>
           </provider>
@@ -100,20 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/airfoil_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="11" column="66" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="201">
+              <caret line="15" column="82" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -121,15 +108,30 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mlp/activations.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="70" column="6" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
+            <state relative-caret-position="-1125">
+              <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1572144077110" expanded="true" signature="58:223" ph="..." />
-                <marker date="1572144077110" expanded="true" signature="266:271" ph="..." />
-                <marker date="1572144077110" expanded="true" signature="614:619" ph="..." />
-                <marker date="1572144077110" expanded="true" signature="614:820" ph="..." />
-                <marker date="1572144077110" expanded="true" signature="1383:1388" ph="..." />
+                <marker date="1572183250216" expanded="true" signature="58:223" ph="..." />
+                <marker date="1572183250216" expanded="true" signature="266:271" ph="..." />
+                <marker date="1572183250216" expanded="true" signature="614:619" ph="..." />
+                <marker date="1572183250216" expanded="true" signature="614:820" ph="..." />
+                <marker date="1572183250216" expanded="true" signature="1397:1402" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mlp/loss_functions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="98">
+              <caret line="30" column="51" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+                <marker date="1572183250330" expanded="true" signature="52:57" ph="..." />
+                <marker date="1572183250330" expanded="true" signature="114:133" ph="..." />
+                <marker date="1572183250330" expanded="true" signature="228:233" ph="..." />
               </folding>
             </state>
           </provider>
@@ -138,11 +140,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mlp/mlp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="45" column="35" lean-forward="true" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+            <state relative-caret-position="1602">
+              <caret line="101" column="25" selection-start-line="101" selection-start-column="25" selection-end-line="101" selection-end-column="25" />
               <folding>
                 <element signature="e#165#183#0" expanded="true" />
-                <marker date="1572144004156" expanded="true" signature="4190:4328" ph="..." />
+                <marker date="1572183513013" expanded="true" signature="4199:4337" ph="..." />
               </folding>
             </state>
           </provider>
@@ -172,6 +174,8 @@
       <find>velocity</find>
       <find>activa</find>
       <find>loss</find>
+      <find>self.output</find>
+      <find>self.loss</find>
     </findStrings>
     <replaceStrings>
       <replace>3</replace>
@@ -182,6 +186,9 @@
       <replace>self.a_</replace>
       <replace>djdw</replace>
       <replace>velocity_</replace>
+      <replace>self.output_</replace>
+      <replace>self._output</replace>
+      <replace>self._loss</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -195,14 +202,14 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/mlp.py" />
         <option value="$PROJECT_DIR$/iris_sklearn.py" />
-        <option value="$PROJECT_DIR$/airfoil_test.py" />
         <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/boston_sklearn.py" />
         <option value="$PROJECT_DIR$/boston_test.py" />
-        <option value="$PROJECT_DIR$/mlp/mlp.py" />
-        <option value="$PROJECT_DIR$/iris_test.py" />
         <option value="$PROJECT_DIR$/mlp/activations.py" />
         <option value="$PROJECT_DIR$/mlp/loss_functions.py" />
+        <option value="$PROJECT_DIR$/airfoil_test.py" />
+        <option value="$PROJECT_DIR$/mlp/mlp.py" />
+        <option value="$PROJECT_DIR$/iris_test.py" />
       </list>
     </option>
   </component>
@@ -275,7 +282,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.airfoil_test">
     <configuration name="activations" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="neuralnetwork" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -395,10 +402,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.airfoil_test" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.boston_test" />
         <item itemvalue="Python.boston_sklearn" />
-        <item itemvalue="Python.airfoil_test" />
         <item itemvalue="Python.activations" />
       </list>
     </recent_temporary>
@@ -418,13 +425,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="30" y="0" width="1336" height="768" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15503876" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3198128" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43213728" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39937598" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -433,12 +441,12 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32917318" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.28237128" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.19344774" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.31045243" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.40852714" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.34186047" />
       <window_info anchor="right" id="Database" order="4" weight="0.32945737" />
     </layout>
   </component>
@@ -543,33 +551,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="11" column="66" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/airfoil_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/boston_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/boston_sklearn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -580,51 +561,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mlp/loss_functions.py">
+    <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+        <state relative-caret-position="319">
+          <caret line="11" column="67" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1572144168730" expanded="true" signature="52:57" ph="..." />
-            <marker date="1572144168730" expanded="true" signature="113:132" ph="..." />
-            <marker date="1572144168730" expanded="true" signature="226:231" ph="..." />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iris_test.py">
+    <entry file="file://$PROJECT_DIR$/mlp/loss_functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="98">
+          <caret line="30" column="51" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
           <folding>
-            <marker date="1572137286984" expanded="true" signature="38:39" ph="..." />
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1572183250330" expanded="true" signature="52:57" ph="..." />
+            <marker date="1572183250330" expanded="true" signature="114:133" ph="..." />
+            <marker date="1572183250330" expanded="true" signature="228:233" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boston_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="23" column="42" lean-forward="true" selection-start-line="19" selection-end-line="23" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mlp/mlp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="45" column="35" lean-forward="true" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+        <state relative-caret-position="1602">
+          <caret line="101" column="25" selection-start-line="101" selection-start-column="25" selection-end-line="101" selection-end-column="25" />
           <folding>
             <element signature="e#165#183#0" expanded="true" />
-            <marker date="1572144004156" expanded="true" signature="4190:4328" ph="..." />
+            <marker date="1572183513013" expanded="true" signature="4199:4337" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/airfoil_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="15" column="82" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iris_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <folding>
+            <marker date="1572183513210" expanded="true" signature="38:39" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mlp/activations.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="70" column="6" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
+        <state relative-caret-position="-1125">
+          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1572144077110" expanded="true" signature="58:223" ph="..." />
-            <marker date="1572144077110" expanded="true" signature="266:271" ph="..." />
-            <marker date="1572144077110" expanded="true" signature="614:619" ph="..." />
-            <marker date="1572144077110" expanded="true" signature="614:820" ph="..." />
-            <marker date="1572144077110" expanded="true" signature="1383:1388" ph="..." />
+            <marker date="1572183250216" expanded="true" signature="58:223" ph="..." />
+            <marker date="1572183250216" expanded="true" signature="266:271" ph="..." />
+            <marker date="1572183250216" expanded="true" signature="614:619" ph="..." />
+            <marker date="1572183250216" expanded="true" signature="614:820" ph="..." />
+            <marker date="1572183250216" expanded="true" signature="1397:1402" ph="..." />
           </folding>
         </state>
       </provider>
