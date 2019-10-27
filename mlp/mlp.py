@@ -42,6 +42,7 @@ class MLP:
         self.current_loss = None
         self.velocity_ = []
         self.type = task
+        self.batch_size = batch_size
         if task == 'classification':
             self._output = Softmax.activation
             self._output_prime = Softmax.activation_prime
@@ -78,11 +79,11 @@ class MLP:
 
         return self.a[-1]
 
-    def _backward(self):
+    def _backward(self,y):
         self.deltas = list()
         self.dLdws = list()
 
-        self.deltas.append(self._loss_prime(self.a[-1], self.y) * self._output_prime(self.z[-1]))
+        self.deltas.append(self._loss_prime(self.a[-1], y) * self._output_prime(self.z[-1]))
         self.dLdws.append(self.a[-2].T @ self.deltas[-1] + self.alpha * self.weights_[-1])
         for i in range(len(self.z) - 1, 0, -1):
             t = np.hstack((self.z[i - 1], np.ones((self.z[i - 1].shape[0], 1))))
@@ -111,11 +112,15 @@ class MLP:
         self.init_weights()
         hist = []
         for i in range(self.n_epochs):
-            yp = self._forward(self.x)
-            self._backward()
-            self._update_weights()
+            for index in range(0, self.x.shape[0], self.batch_size):
+                batch_x = self.x[index:min(index + self.batch_size, self.x.shape[0]), :]
+                batch_y = self.y[index:min(index + self.batch_size, self.y.shape[0]), :]
+                yp = self._forward(batch_x)
+                self._backward(batch_y)
+                self._update_weights()
+
             # validation?
-            hist.append(self.cost(yp, self.y))
+            hist.append(self.cost(yp, batch_y))
             self.current_loss = hist[-1]
             self._verbose(i)
 
