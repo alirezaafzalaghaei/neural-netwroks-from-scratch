@@ -1,5 +1,6 @@
 from utils import *
-import time
+import time, texttable
+
 
 def load_iris():
     iris = pd.read_csv('../datasets/iris.csv')
@@ -12,14 +13,14 @@ def load_iris():
     return X, y
 
 
-hidden_layers = [(5,)]
+hidden_layers = [(5, 5), (10, 10), (15, 15)]
 activations = [Tanh(), LeakyReLu(.1)]
-batch_sizes = [32]
-epochs = [20]
-mus = [.85]
-betas = [.1,]
-etas = [.01]
-alphas = [.001]
+batch_sizes = [32, 64]
+epochs = [1000]
+mus = [.9, 0.95]
+betas = [.1, ]
+etas = [.01, 0.1]
+alphas = [.001, .01]
 
 X, y = load_iris()
 X_train, X_test, y_train, y_test = train_test_split(X, y)
@@ -27,15 +28,20 @@ t = time.time()
 mlp = MLPGridSearch('classification', hidden_layers, activations, batch_sizes, epochs, mus, betas, etas, alphas)
 histories = mlp.run(X_train, y_train)
 t = time.time() - t
-print(t)
+print('time taken = %.2f sec' % t)
 
 result = mlp.best_model()
 hist = result.pop('history')
-for name,value in result.items():
-    print("%-13s : %s" % (name,value))
+print('Best model is: ')
+
+tbl = texttable.Texttable()
+tbl.set_cols_align(["c", "c"])
+tbl.set_cols_valign(["c", "c"])
+tbl.add_rows([['Hyperparameter', 'Best value'], *list(result.items())])
+print(tbl.draw())
+
 plt.plot(list(range(len(hist))), hist)
 plt.title("loss: %.2e" % hist[-1])
 plt.xlabel('iterations')
 plt.ylabel('Log(loss)')
 plt.show()
-

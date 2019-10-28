@@ -2,8 +2,7 @@ import csv
 from mlp.mlp import MLP
 import itertools
 from utils import pd, np
-from multiprocessing import Pool
-from pathos.multiprocessing import ProcessingPool as Poool
+from pathos.multiprocessing import ProcessingPool as Pool
 
 
 def MLP_model(hidden_layer, activation, epoch, eta, beta, alpha, mu, batch_size, task, x, y):
@@ -23,35 +22,31 @@ class MLPGridSearch:
         self.betas = betas
         self.etas = etas
         self.alphas = alphas
-        self.csv = open('result.csv', 'w')
-        self.writer = csv.writer(self.csv, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-        self.writer.writerow(['hidden_layer', 'activation', 'epoch', 'eta', 'beta', 'alpha', 'mu', 'batch_size','history'])
+        self.csv = 'result.csv'
 
     def run(self, x, y):
+        file = open(self.csv, 'w')
+        writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        writer.writerow(
+            ['hidden_layer', 'activation', 'epoch', 'eta', 'beta', 'alpha', 'mu', 'batch_size', 'history'])
         c = 0
-        combinations = tuple(itertools.product(self.hidden_layers, self.activations, self.epochs, self.etas, self.betas, self.alphas, self.mus, self.batch_sizes))
-        print("number of models = %d" % len(combinations))
-        print('0000 - 0050', end=': ')
-
-        histories = map(lambda p: MLP_model(*p, self.task, x, y), combinations)
+        combinations = tuple(
+            itertools.product(self.hidden_layers, self.activations, self.epochs, self.etas, self.betas, self.alphas,
+                              self.mus, self.batch_sizes))
+        print("number of different models = %d" % len(combinations))
+        histories = Pool().map(lambda p: MLP_model(*p, self.task, x, y), combinations)
         for hist, cfg in zip(histories, combinations):
-            self.writer.writerow([*cfg, hist])
-            c += 1
-            print('.', end='')
-            if c % 50 == 0:
-                print('\n%04d - %04d' % (c, c + 50), end=': ')
-        print()
-        self.csv.close()
+            writer.writerow([*cfg, hist])
+        file.close()
         return histories
 
     def best_model(self):
         df = pd.read_csv('result.csv')
         df['history'] = df['history'].apply(lambda x:
-                                   np.fromstring(
-                                       x.replace('\n','')
-                                        .replace('[','')
-                                        .replace(']','')
-                                        .replace('  ',' '), sep=','))
+                                            np.fromstring(
+                                                x.replace('\n', '').replace('[', '').replace(']', '').replace('  ',
+                                                                                                              ' '),
+                                                sep=','))
         losses = np.array([np.abs(loss[-5:]).mean() for loss in df['history']])
         index = losses.argmin()
         return dict(df.iloc[index, :])
