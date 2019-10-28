@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84c40771-fe75-4d20-9feb-995c8e03ac0f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/examples/airfoil_gridsearch.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/iris_gridsearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/iris_gridsearch.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/result.csv" beforeDir="false" afterPath="$PROJECT_DIR$/examples/result.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mlp/grid_search.py" beforeDir="false" afterPath="$PROJECT_DIR$/mlp/grid_search.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
@@ -18,10 +18,11 @@
     <SUITE FILE_PATH="coverage/neuralnetwork$iris_sklearn.coverage" NAME="iris_sklearn Coverage Results" MODIFIED="1572110072791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/neuralnetwork$boston_test.coverage" NAME="boston_test Coverage Results" MODIFIED="1572144004285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/neuralnetwork$grid_search.coverage" NAME="grid_search Coverage Results" MODIFIED="1572273989389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/neuralnetwork$airfoil_test.coverage" NAME="airfoil_test Coverage Results" MODIFIED="1572194891245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/neuralnetwork$airfoil_test.coverage" NAME="airfoil_test Coverage Results" MODIFIED="1572293810088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/neuralnetwork$mlp.coverage" NAME="mlp Coverage Results" MODIFIED="1572191183288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mlp" />
     <SUITE FILE_PATH="coverage/neuralnetwork$activations.coverage" NAME="activations Coverage Results" MODIFIED="1572124767704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mlp" />
     <SUITE FILE_PATH="coverage/neuralnetwork$boston_sklearn.coverage" NAME="boston_sklearn Coverage Results" MODIFIED="1572140864393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/neuralnetwork$airfoil_gridsearch.coverage" NAME="airfoil_gridsearch Coverage Results" MODIFIED="1572294320435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
     <SUITE FILE_PATH="coverage/neuralnetwork$iris_gridsearch.coverage" NAME="iris_gridsearch Coverage Results" MODIFIED="1572292712323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
     <SUITE FILE_PATH="coverage/neuralnetwork$main.coverage" NAME="main Coverage Results" MODIFIED="1572192830108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -55,21 +56,21 @@
         <counts>
           <entry key="Python Console" value="504" />
           <entry key="dummy" value="26" />
-          <entry key="py" value="13022" />
+          <entry key="py" value="13080" />
           <entry key="txt" value="54" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="80" />
-          <entry key="Python" value="13526" />
+          <entry key="Python" value="13584" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="16" />
           <entry key="dat" value="3" />
-          <entry key="py" value="36" />
+          <entry key="py" value="38" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
@@ -77,35 +78,56 @@
         <counts>
           <entry key="CSV" value="15" />
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Python" value="36" />
+          <entry key="Python" value="38" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mlp/grid_search.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+            <state relative-caret-position="1160">
+              <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1572292602697" expanded="true" signature="230:368" ph="..." />
-                <marker date="1572292602697" expanded="true" signature="388:393" ph="..." />
-                <marker date="1572292602697" expanded="true" signature="388:498" ph="..." />
-                <marker date="1572292602697" expanded="true" signature="388:1635" ph="..." />
-                <marker date="1572292602697" expanded="true" signature="1562:1608" ph="..." />
+                <marker date="1572295144227" expanded="true" signature="265:403" ph="..." />
+                <marker date="1572295144227" expanded="true" signature="423:428" ph="..." />
+                <marker date="1572295144227" expanded="true" signature="423:533" ph="..." />
+                <marker date="1572295144227" expanded="true" signature="423:1672" ph="..." />
+                <marker date="1572295144227" expanded="true" signature="1583:1645" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/airfoil_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="3" selection-start-line="3" selection-end-line="10" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/airfoil_gridsearch.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-698">
+              <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/iris_gridsearch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+            <state relative-caret-position="264">
+              <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -177,8 +199,9 @@
         <option value="$PROJECT_DIR$/mlp/activations.py" />
         <option value="$PROJECT_DIR$/examples/airfoil_test.py" />
         <option value="$PROJECT_DIR$/utils.py" />
-        <option value="$PROJECT_DIR$/mlp/grid_search.py" />
         <option value="$PROJECT_DIR$/examples/iris_gridsearch.py" />
+        <option value="$PROJECT_DIR$/examples/airfoil_gridsearch.py" />
+        <option value="$PROJECT_DIR$/mlp/grid_search.py" />
       </list>
     </option>
   </component>
@@ -213,11 +236,6 @@
             <path>
               <item name="neuralnetwork" type="b2602c69:ProjectViewProjectNode" />
               <item name="neuralnetwork" type="462c0819:PsiDirectoryNode" />
-              <item name="datasets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="neuralnetwork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="neuralnetwork" type="462c0819:PsiDirectoryNode" />
               <item name="examples" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -242,6 +260,7 @@
       <recent name="$PROJECT_DIR$/examples" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/examples" />
       <recent name="$PROJECT_DIR$/datasets" />
     </key>
   </component>
@@ -257,7 +276,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.iris_gridsearch">
+  <component name="RunManager" selected="Python.airfoil_gridsearch">
+    <configuration name="airfoil_gridsearch" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="neuralnetwork" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/airfoil_gridsearch.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="airfoil_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="neuralnetwork" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -346,42 +387,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mlp" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="neuralnetwork" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mlp" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mlp/mlp.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.main" />
       <item itemvalue="Python.airfoil_test" />
-      <item itemvalue="Python.mlp" />
       <item itemvalue="Python.grid_search" />
       <item itemvalue="Python.iris_gridsearch" />
+      <item itemvalue="Python.airfoil_gridsearch" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.airfoil_gridsearch" />
+        <item itemvalue="Python.airfoil_test" />
         <item itemvalue="Python.iris_gridsearch" />
         <item itemvalue="Python.grid_search" />
-        <item itemvalue="Python.airfoil_test" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.mlp" />
       </list>
     </recent_temporary>
   </component>
@@ -407,7 +426,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40873635" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.40873635" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39937598" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -586,13 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/airfoil_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -640,27 +652,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mlp/grid_search.py">
+    <entry file="file://$PROJECT_DIR$/examples/airfoil_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1572292602697" expanded="true" signature="230:368" ph="..." />
-            <marker date="1572292602697" expanded="true" signature="388:393" ph="..." />
-            <marker date="1572292602697" expanded="true" signature="388:498" ph="..." />
-            <marker date="1572292602697" expanded="true" signature="388:1635" ph="..." />
-            <marker date="1572292602697" expanded="true" signature="1562:1608" ph="..." />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="3" selection-start-line="3" selection-end-line="10" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/iris_gridsearch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+        <state relative-caret-position="264">
+          <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/airfoil_gridsearch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-698">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mlp/grid_search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1160">
+          <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1572295144227" expanded="true" signature="265:403" ph="..." />
+            <marker date="1572295144227" expanded="true" signature="423:428" ph="..." />
+            <marker date="1572295144227" expanded="true" signature="423:533" ph="..." />
+            <marker date="1572295144227" expanded="true" signature="423:1672" ph="..." />
+            <marker date="1572295144227" expanded="true" signature="1583:1645" ph="..." />
           </folding>
         </state>
       </provider>

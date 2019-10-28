@@ -1,3 +1,4 @@
+texttable
 pathos
 numpy
 pandas

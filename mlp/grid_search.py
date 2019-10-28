@@ -2,10 +2,11 @@ import csv
 from mlp.mlp import MLP
 import itertools
 from utils import pd, np
-from pathos.multiprocessing import ProcessingPool as Pool
+from pathos.multiprocessing import ProcessPool as Pool
 
 
 def MLP_model(hidden_layer, activation, epoch, eta, beta, alpha, mu, batch_size, task, x, y):
+    print('.', end='', flush=True)
     mlp = MLP(hidden_layer, activation, epoch, eta, beta, alpha, mu, batch_size, False, task)
     hist = mlp.fit(x, y)
     return hist
@@ -29,15 +30,16 @@ class MLPGridSearch:
         writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         writer.writerow(
             ['hidden_layer', 'activation', 'epoch', 'eta', 'beta', 'alpha', 'mu', 'batch_size', 'history'])
-        c = 0
         combinations = tuple(
             itertools.product(self.hidden_layers, self.activations, self.epochs, self.etas, self.betas, self.alphas,
                               self.mus, self.batch_sizes))
         print("number of different models = %d" % len(combinations))
+        print('.' * len(combinations))
         histories = Pool().map(lambda p: MLP_model(*p, self.task, x, y), combinations)
         for hist, cfg in zip(histories, combinations):
             writer.writerow([*cfg, hist])
         file.close()
+        print()
         return histories
 
     def best_model(self):
