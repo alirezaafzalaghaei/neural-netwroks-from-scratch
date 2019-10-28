@@ -5,8 +5,8 @@ def load_airfoil():
     data_set = np.loadtxt('./datasets/airfoil.dat')
     X = data_set[:, :-1]
     y = data_set[:, -1].reshape(-1, 1)
-    X = StandardScaler().fit_transform(X)
-    y = StandardScaler().fit_transform(y)
+    # X = StandardScaler().fit_transform(X)
+    # y = StandardScaler().fit_transform(y)
 
     return X, y
 

@@ -7,6 +7,7 @@ import numpy as np
 from .activations import *
 from .loss_functions import *
 from sklearn.metrics import r2_score, accuracy_score
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
 np.random.seed(1)
 
@@ -105,6 +106,8 @@ class MLP:
         return self._loss(y, t) + self.alpha * np.sum([w.sum() for w in self.weights_])
 
     def fit(self, x, y):
+        x, y = self._encoder(x, y, fit=True)
+
         self.hidden_layer_sizes.insert(0, x.shape[1])
         self.hidden_layer_sizes.append(y.shape[1])
 
@@ -136,12 +139,38 @@ class MLP:
             print("epoch %05d, loss: %06.2f" % (i + 1, self.current_loss))
 
     def predict(self, x):
+        x = self._encoder(x)
         x = np.hstack((x, np.ones((x.shape[0], 1))))
-        return self._forward(x)
+        y = self._forward(x)
+        y = self._decoder(y)
+        return y
 
     def score(self, x, y):
         yp = self.predict(x)
+
         if self.task == 'regression':
-            return r2_score(y,yp)
+            return r2_score(y, yp)
         else:
             return accuracy_score(y, yp)
+
+    def _encoder(self, x=None, y=None, fit=False):
+        if fit:
+            self.x_encoder = StandardScaler().fit(x)
+            if self.task == 'regression':
+                self.y_encoder = StandardScaler().fit(y)
+            else:
+                self.y_encoder = OneHotEncoder().fit(y)
+
+        if x is None:
+            y = self.y_encoder.transform(y)
+            return y.toarray() if self.task == 'classification' else y
+        if y is None:
+            return self.x_encoder.transform(x)
+        y = self.y_encoder.transform(y)
+        return self.x_encoder.transform(x), y.toarray() if self.task == 'classification' else y
+
+    def _decoder(self, y):
+        if self.task == 'classification':
+            y = y.argmax(axis=1)
+            y = np.eye(self.y.shape[1])[y]
+        return self.y_encoder.inverse_transform(y)

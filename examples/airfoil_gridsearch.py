@@ -7,8 +7,6 @@ def load_airfoil():
     data_set = np.loadtxt('../datasets/airfoil.dat')
     X = data_set[:, :-1]
     y = data_set[:, -1].reshape(-1, 1)
-    X = StandardScaler().fit_transform(X)
-    y = StandardScaler().fit_transform(y)
 
     return X, y
 
@@ -26,7 +24,7 @@ X, y = load_airfoil()
 X_train, X_test, y_train, y_test = train_test_split(X, y)
 t = time.time()
 mlp = MLPGridSearch('regression', hidden_layers, activations, batch_sizes, epochs, mus, betas, etas, alphas)
-histories = mlp.run(X_train, y_train)
+histories = mlp.run(X_train, y_train, X_test, y_test)
 t = time.time() - t
 print('time taken = %.2f sec' % t)
 

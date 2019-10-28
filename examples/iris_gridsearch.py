@@ -7,26 +7,23 @@ def load_iris():
     X = iris.iloc[:, :-1].to_numpy()
     y = iris.iloc[:, -1].to_numpy().reshape(-1, 1)
 
-    X = StandardScaler().fit_transform(X)
-    y = OneHotEncoder().fit_transform(y).toarray()
-
     return X, y
 
 
-hidden_layers = [(5, 5), (10, 10), (15, 15)]
+hidden_layers = [(5, 5, 5, 5), (10, 10, 5), (15, 15)]
 activations = [Tanh(), LeakyReLu(.1)]
 batch_sizes = [32, 64]
-epochs = [1000]
-mus = [.9, 0.95]
-betas = [.1, ]
-etas = [.01, 0.1]
-alphas = [.001, .01]
+epochs = [300]
+mus = [0.95, .9]
+betas = [.1, .2]
+etas = [.01]
+alphas = [.001, .1]
 
 X, y = load_iris()
 X_train, X_test, y_train, y_test = train_test_split(X, y)
 t = time.time()
 mlp = MLPGridSearch('classification', hidden_layers, activations, batch_sizes, epochs, mus, betas, etas, alphas)
-histories = mlp.run(X_train, y_train)
+histories = mlp.run(X_train, y_train, X_test, y_test)
 t = time.time() - t
 print('time taken = %.2f sec' % t)
 
