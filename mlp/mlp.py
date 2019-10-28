@@ -6,6 +6,7 @@
 import numpy as np
 from .activations import *
 from .loss_functions import *
+from sklearn.metrics import r2_score, accuracy_score
 
 np.random.seed(1)
 
@@ -41,7 +42,7 @@ class MLP:
         self.activation_prime = activation.activation_prime
         self.current_loss = None
         self.velocity_ = []
-        self.type = task
+        self.task = task
         self.batch_size = batch_size
         if task == 'classification':
             self._output = Softmax.activation
@@ -137,3 +138,10 @@ class MLP:
     def predict(self, x):
         x = np.hstack((x, np.ones((x.shape[0], 1))))
         return self._forward(x)
+
+    def score(self, x, y):
+        yp = self.predict(x)
+        if self.task == 'regression':
+            return r2_score(y,yp)
+        else:
+            return accuracy_score(y, yp)

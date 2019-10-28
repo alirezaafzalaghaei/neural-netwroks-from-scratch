@@ -18,11 +18,10 @@ mlp = MLP([10, 10, 10, 10], activation=LeakyReLu(.01), epochs=200, batch_size=32
           verbose=100, task='regression')
 
 hist = mlp.fit(X_train, y_train)
-yte_p = mlp.predict(X_test)
-ytr_p = mlp.predict(X_train)
 
-print('train r2: %.2f %%' % (100 * r2_score(y_train, ytr_p)))
-print('test  r2: %.2f %%' % (100 * r2_score(y_test, yte_p)))
+
+print('train r2: %.2f %%' % (100 * mlp.score(X_train, y_train)))
+print('test  r2: %.2f %%' % (100 * mlp.score(X_test, y_test)))
 
 plt.plot(list(range(len(hist))), np.log(hist))
 plt.title("loss: %.2e" % hist[-1])
