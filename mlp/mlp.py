@@ -35,7 +35,7 @@ class MLP:
         self.z = []
         self.deltas = []
         self.dLdws = []
-        self.hidden_layer_sizes = hidden_layer_sizes
+        self.hidden_layer_sizes = list(hidden_layer_sizes)
         self.verbose = verbose
         self.activation = activation.activation
         self.activation_prime = activation.activation_prime
