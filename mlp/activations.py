@@ -14,6 +14,10 @@ class Activation(abc.ABC):
     def activation_prime(x):
         pass
 
+    @abc.abstractmethod
+    def __str__(self):
+        pass
+
 
 class Tanh(Activation):
     @staticmethod
@@ -24,6 +28,9 @@ class Tanh(Activation):
     def activation_prime(x):
         return 1 - np.tanh(x) ** 2
 
+    def __str__(self):
+        return 'Tanh'
+
 
 class ReLu(Activation):
     @staticmethod
@@ -33,6 +40,9 @@ class ReLu(Activation):
     @staticmethod
     def activation_prime(x):
         return np.where(x <= 0, 0, 1)
+
+    def __str__(self):
+        return 'ReLu'
 
 
 class LeakyReLu(Activation):
@@ -51,6 +61,9 @@ class LeakyReLu(Activation):
     def activation_prime(x):
         return np.clip(x > 0, LeakyReLu.leakage, 1.0)
 
+    def __str__(self):
+        return 'LeakyReLu(%g)' % self.leakage
+
 
 class Sigmoid(Activation):
     @staticmethod
@@ -62,6 +75,9 @@ class Sigmoid(Activation):
         y = Sigmoid.activation(x)
         return y * (1 - y)
 
+    def __str__(self):
+        return 'Sigmoid'
+
 
 class Identity(Activation):
     @staticmethod
@@ -71,6 +87,9 @@ class Identity(Activation):
     @staticmethod
     def activation_prime(x):
         return 1
+
+    def __str__(self):
+        return 'Identity'
 
 
 class Softmax(Activation):
@@ -83,3 +102,6 @@ class Softmax(Activation):
     @staticmethod
     def activation_prime(x):
         return 1  # just for simplicity
+
+    def __str__(self):
+        return 'Softmax'
