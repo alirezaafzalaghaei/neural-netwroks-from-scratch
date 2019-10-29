@@ -167,7 +167,7 @@ class MLP:
             if self.task == 'regression':
                 self.y_encoder = StandardScaler().fit(y)
             else:
-                self.y_encoder = OneHotEncoder().fit(y)
+                self.y_encoder = OneHotEncoder(categories='auto').fit(y)
 
         if x is None:
             y = self.y_encoder.transform(y)
