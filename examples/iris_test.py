@@ -2,7 +2,7 @@ from utils import *
 
 
 def load_iris():
-    iris = pd.read_csv('./datasets/iris.csv')
+    iris = pd.read_csv('../datasets/iris.csv')
     X = iris.iloc[:, :-1].to_numpy()
     y = iris.iloc[:, -1].to_numpy().reshape(-1, 1)
 
@@ -18,7 +18,7 @@ mlp = MLP([5, 5, 5, 5], activation=Tanh(), batch_size=32, epochs=2000, mu=0.9, b
 hist = mlp.fit(X_train, y_train)
 
 acc_test = mlp.score(X_test, y_test)
-acc_train = mlp.score(X_train,y_train)
+acc_train = mlp.score(X_train, y_train)
 
 print('accuracy: %.2f%%' % (acc_train * 100))
 print('accuracy: %.2f%%' % (acc_test * 100))

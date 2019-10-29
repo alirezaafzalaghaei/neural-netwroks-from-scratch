@@ -31,7 +31,6 @@ print('time taken = %.2f sec' % t)
 result = mlp.best_model()
 hist = result.pop('history')
 
-
 tbl = texttable.Texttable()
 tbl.set_cols_align(["c", "c"])
 tbl.set_cols_valign(["c", "c"])

@@ -1,7 +1,8 @@
 import csv
-from mlp.mlp import MLP
+from . import MLP
 import itertools
-from utils import pd, np
+import numpy as np
+import pandas as pd
 from pathos.multiprocessing import ProcessPool as Pool
 
 
@@ -30,7 +31,8 @@ class MLPGridSearch:
         file = open(self.csv, 'w')
         writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         writer.writerow(
-            ['hidden_layer', 'activation', 'epoch', 'eta', 'beta', 'alpha', 'mu', 'batch_size','test_score', 'history'])
+            ['hidden_layer', 'activation', 'epoch', 'eta', 'beta', 'alpha', 'mu', 'batch_size', 'test_score',
+             'history'])
         combinations = tuple(
             itertools.product(self.hidden_layers, self.activations, self.epochs, self.etas, self.betas, self.alphas,
                               self.mus, self.batch_sizes))
