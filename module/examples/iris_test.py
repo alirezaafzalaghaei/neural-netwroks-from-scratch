@@ -21,7 +21,7 @@ X, y = load_iris()
 X_train, X_test, y_train, y_test = train_test_split(X, y)
 
 mlp = MLP([5, 5, 5, 5], activation=Tanh(), batch_size=32, epochs=2000, mu=0.9, beta=1, eta=.1, alpha=.01,
-          verbose=100, task='classification')
+          verbose=500, task='classification')
 
 hist = mlp.fit(X_train, y_train)
 

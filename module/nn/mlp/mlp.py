@@ -10,6 +10,7 @@ from .activations import *
 from .loss_functions import *
 
 np.random.seed(1)
+np.seterr(all='raise')
 
 
 class MLP:
@@ -121,9 +122,12 @@ class MLP:
             for index in range(0, self.x.shape[0], self.batch_size):
                 batch_x = self.x[index:min(index + self.batch_size, self.x.shape[0]), :]
                 batch_y = self.y[index:min(index + self.batch_size, self.y.shape[0]), :]
-                yp = self._forward(batch_x)
-                self._backward(batch_y)
-                self._update_weights()
+                try:
+                    yp = self._forward(batch_x)
+                    self._backward(batch_y)
+                    self._update_weights()
+                except Exception as ex:
+                    return [str(ex)]
                 avg_cost += self.cost(yp, batch_y)
                 c += 1
 
@@ -147,11 +151,15 @@ class MLP:
 
     def score(self, x, y):
         yp = self.predict(x)
-
-        if self.task == 'regression':
-            return r2_score(y, yp)
-        else:
-            return accuracy_score(y, yp)
+        # yp = self._encoder(y=yp)
+        # y = self._encoder(y=y)
+        try:
+            if self.task == 'regression':
+                return r2_score(y, yp)
+            else:
+                return accuracy_score(y, yp)
+        except:
+            return 0
 
     def _encoder(self, x=None, y=None, fit=False):
         if fit:

@@ -23,10 +23,10 @@ def load_iris():
 hidden_layers = [(5, 5, 5, 5), (10, 10, 5), (15, 15)]
 activations = [Tanh(), LeakyReLu(.1)]
 batch_sizes = [32, 64]
-epochs = [300]
+epochs = [3]
 mus = [0.95, .9]
 betas = [.1, .2]
-etas = [.01]
+etas = [.01, .3]
 alphas = [.001, .1]
 
 X, y = load_iris()
