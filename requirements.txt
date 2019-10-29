@@ -1,7 +1,0 @@
-texttable
-pathos
-numpy
-pandas
-matplotlib
-seaborn
-sklearn
