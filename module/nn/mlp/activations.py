@@ -95,7 +95,7 @@ class Identity(Activation):
 class Softmax(Activation):
     @staticmethod
     def activation(x):
-        exp = np.exp(x)
+        exp = np.exp(x - x.max(axis=1,keepdims=True))
         a = exp / np.sum(exp, axis=1, keepdims=True)
         return a
 
