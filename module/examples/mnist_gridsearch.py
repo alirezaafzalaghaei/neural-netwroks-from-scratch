@@ -1,10 +1,11 @@
 import time
 
 import matplotlib.pyplot as plt
-import numpy as np
 import seaborn as sns
 import texttable
-from sklearn.model_selection import train_test_split
+import os
+os.environ["KERAS_BACKEND"] = "theano"
+from keras.datasets import mnist
 
 from nn.mlp import MLPGridSearch
 from nn.mlp.activations import LeakyReLu, Tanh
@@ -13,23 +14,12 @@ sns.set()
 
 
 def load_mnist():
-    # with zipfile.ZipFile("../datasets/mnist/mnist_train.zip", "r") as zip_file:
-    #     zip_file.extractall('../datasets/mnist/')
-    # with zipfile.ZipFile("../datasets/mnist/mnist_test.zip", "r") as zip_file:
-    #     zip_file.extractall('../datasets/mnist/')
-    # train_data = np.loadtxt("../datasets/mnist/mnist_train.csv", delimiter=",")
-    # test_data = np.loadtxt("../datasets/mnist/mnist_test.csv", delimiter=",")
-    # np.save('../datasets/mnist/train',train_data)
-    # np.save('../datasets/mnist/test', test_data)
-    # os.remove('../datasets/mnist/mnist_train.csv')
-    # os.remove('../datasets/mnist/mnist_test.csv')
-    train_data = np.load('../datasets/mnist/train.npy')
-    test_data = np.load('../datasets/mnist/test.npy')
-    X_train, y_train = train_data[:, 1:], train_data[:, 0].reshape(-1, 1)
-    X_test, y_test = test_data[:, 1:], test_data[:, 0].reshape(-1, 1)
-    return X_train, X_test, y_train, y_test
-
-
+    (x_train, y_train), (x_test, y_test) = mnist.load_data()
+    x_train = x_train.reshape(60000,784)
+    x_test = x_test.reshape(10000, 784)
+    y_train = y_train.reshape(-1,1)
+    y_test = y_test.reshape(-1, 1)
+    return x_train, x_test, y_train, y_test
 
 
 hidden_layers = [(5, 5, 5, 5)]
@@ -38,7 +28,7 @@ batch_sizes = [32]
 epochs = [3]
 mus = [0.95]
 betas = [.1]
-etas = [.01,.4]
+etas = [.01, .4]
 alphas = [.001]
 
 X_train, X_test, y_train, y_test = load_mnist()
