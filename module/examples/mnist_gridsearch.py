@@ -9,7 +9,7 @@ os.environ["KERAS_BACKEND"] = "theano"
 from keras.datasets import mnist
 
 from nn.mlp import MLPGridSearch
-from nn.mlp.activations import LeakyReLu, Tanh
+from nn.mlp.activations import *
 
 sns.set()
 
@@ -23,21 +23,22 @@ def load_mnist():
     return x_train, x_test, y_train, y_test
 
 
-hidden_layers = [(5, 5, 5, 5)]
-activations = [Tanh()]
-batch_sizes = [32]
-epochs = [3]
-mus = [0.95]
-betas = [.1]
-etas = [.01, .4]
-alphas = [.001]
+hidden_layers = [(10, 10), (20, 10), (30, 20, 10), (10, 10, 10, 10), (100,)]
+activations = [Tanh(), LeakyReLu(0.02), ReLu()]
+batch_sizes = [512, 2048]
+epochs = [300]
+mus = [0.95, .9]
+betas = [.1, .2]
+etas = [.001, .1, .25]
+alphas = [.001, 0.01, .1]
 
 X_train, X_test, y_train, y_test = load_mnist()
 t = time.time()
-mlp = MLPGridSearch('classification', hidden_layers, activations, batch_sizes, epochs, mus, betas, etas, alphas)
+mlp = MLPGridSearch('classification', hidden_layers, activations, batch_sizes, epochs, mus, betas, etas, alphas,
+                    'mnist.csv')
 histories = mlp.run(X_train, y_train, X_test, y_test)
 t = time.time() - t
-print('time taken = %.2f sec' % t)
+print('time taken = %s seconds' % time.strftime('%H:%M:%S', time.gmtime(t)))
 
 result = mlp.best_model()
 hist = result.pop('history')
@@ -48,9 +49,3 @@ tbl.set_cols_align(["c", "c"])
 tbl.set_cols_valign(["c", "c"])
 tbl.add_rows([['Hyperparameter', 'Best value'], *list(result.items())])
 print(tbl.draw())
-
-plt.plot(list(range(len(hist))), hist)
-plt.title("loss: %.2e" % hist[-1])
-plt.xlabel('iterations')
-plt.ylabel('Log(loss)')
-plt.show()
