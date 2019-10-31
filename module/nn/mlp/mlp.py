@@ -15,7 +15,7 @@ np.seterr(all='raise')
 
 class MLP:
     def __init__(self, hidden_layer_sizes: list,
-                 activation: Activation = Tanh,
+                 activation: Activation = Tanh(),
                  epochs: int = 1000,
                  eta: float = 0.01,
                  beta: float = 1,
@@ -47,14 +47,14 @@ class MLP:
         self.task = task
         self.batch_size = batch_size
         if task == 'classification':
-            self._output = Softmax.activation
-            self._output_prime = Softmax.activation_prime
+            self._output = Softmax().activation
+            self._output_prime = Softmax().activation_prime
             self._loss = XEntropy.loss
             self._loss_prime = XEntropy.loss_prime
 
         elif task == 'regression':
-            self._output = Identity.activation
-            self._output_prime = Identity.activation_prime
+            self._output = Identity().activation
+            self._output_prime = Identity().activation_prime
             self._loss = MSE.loss
             self._loss_prime = MSE.loss_prime
         else:
