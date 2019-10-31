@@ -17,7 +17,7 @@ def MLP_model(hidden_layer, activation, epoch, eta, beta, alpha, mu, batch_size,
 
 
 class MLPGridSearch:
-    def __init__(self, task, hidden_layers, activations, batch_sizes, epochs, mus, betas, etas, alphas):
+    def __init__(self, task, hidden_layers, activations, batch_sizes, epochs, mus, betas, etas, alphas, file_name='result.csv'):
         self.task = task
         self.hidden_layers = hidden_layers
         self.activations = activations
@@ -27,7 +27,7 @@ class MLPGridSearch:
         self.betas = betas
         self.etas = etas
         self.alphas = alphas
-        self.csv = 'result.csv'
+        self.csv = file_name
 
     def run(self, x, y, xt, yt):
         file = open(self.csv, 'w')
