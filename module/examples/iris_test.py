@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
-import pandas as pd
 import seaborn as sns
 from sklearn.model_selection import train_test_split
+from sklearn.datasets import load_iris
 
 from nn.mlp import MLP
 from nn.mlp.activations import Tanh
@@ -9,16 +9,8 @@ from nn.mlp.activations import Tanh
 sns.set()
 
 
-def load_iris():
-    iris = pd.read_csv('../datasets/iris.csv')
-    X = iris.iloc[:, :-1].to_numpy()
-    y = iris.iloc[:, -1].to_numpy().reshape(-1, 1)
-
-    return X, y
-
-
-X, y = load_iris()
-X_train, X_test, y_train, y_test = train_test_split(X, y)
+X, y = load_iris(True)
+X_train, X_test, y_train, y_test = train_test_split(X, y.reshape(-1, 1))
 
 mlp = MLP([5, 5, 5, 5], activation=Tanh(), batch_size=32, epochs=2000, mu=0.9, beta=1, eta=.1, alpha=.01,
           verbose=500, task='classification')
