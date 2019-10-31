@@ -1,8 +1,7 @@
 import matplotlib.pyplot as plt
-import numpy as np
 import seaborn as sns
-from sklearn.model_selection import train_test_split
-
+import zipfile
+import os
 from nn.mlp import MLP
 from nn.mlp.activations import *
 
@@ -10,8 +9,12 @@ sns.set()
 
 
 def load_satlog():
+    with zipfile.ZipFile('../datasets/satlog/satlog.zip', 'r') as zip_ref:
+        zip_ref.extractall('../datasets/satlog/')
     train = np.loadtxt('../datasets/satlog/sat.trn', delimiter=' ')
     test = np.loadtxt('../datasets/satlog/sat.tst', delimiter=' ')
+    os.remove('../datasets/satlog/sat.trn')
+    os.remove('../datasets/satlog/sat.tst')
     X_train, y_train = train[:, :-1], train[:, -1].reshape(-1, 1)
     X_test, y_test = test[:, :-1], test[:, -1].reshape(-1, 1)
     return X_train, X_test, y_train, y_test
