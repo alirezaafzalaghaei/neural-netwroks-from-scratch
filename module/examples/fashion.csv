@@ -1,0 +1,2 @@
+hidden_layer,activation,epoch,eta,beta,alpha,mu,batch_size,test_score,history
+"(1,)",Tanh,1,0.25,0.2,0.1,0.95,2048,0.1271,[2.76523045403008]
