@@ -19,8 +19,8 @@ hist = mlp.fit(X_train, y_train)
 acc_test = mlp.score(X_test, y_test)
 acc_train = mlp.score(X_train, y_train)
 
-print('accuracy: %.2f%%' % (acc_train * 100))
-print('accuracy: %.2f%%' % (acc_test * 100))
+print('train accuracy: %.2f%%' % (acc_train * 100))
+print('test accuracy: %.2f%%' % (acc_test * 100))
 
 plt.plot(list(range(len(hist))), hist)
 plt.title("loss: %.2e" % hist[-1])
