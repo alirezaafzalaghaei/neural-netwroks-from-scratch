@@ -15,7 +15,7 @@ def analyze(csv_file):
         lambda x: np.fromstring(x.replace('\n', '').replace('[', '').replace(']', '').replace('  ', ' '), sep=','))
     losses = [np.abs(loss[-1:]).mean() for loss in df['history']]
     df['loss'] = pd.Series(losses, index=df.index).apply(lambda x: '%.2f' % x)
-    best_models_by_test = df.sort_values(['test_score','loss'],ascending=[False,True])[:n]
+    best_models_by_test = df.sort_values(['test_score', 'loss'], ascending=[False, True])[:n]
     best_models_by_test.reset_index(inplace=True)
     history_of_best = best_models_by_test['history']
     indexs = best_models_by_test['index']
@@ -40,4 +40,3 @@ def plot_loss(losses, scores):
             axs[i][j].set_xlabel('iterations')
             axs[i][j].set_ylabel('Log(loss)')
             c += 1
-

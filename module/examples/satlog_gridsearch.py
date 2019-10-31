@@ -5,7 +5,6 @@ import numpy as np
 import seaborn as sns
 import texttable
 
-
 from nn.mlp import MLPGridSearch
 from nn.mlp.activations import LeakyReLu, Tanh
 

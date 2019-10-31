@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import os
 import seaborn as sns
+
 os.environ["KERAS_BACKEND"] = "theano"
 from keras.datasets import mnist
 
@@ -12,9 +13,9 @@ sns.set()
 
 def load_mnist():
     (x_train, y_train), (x_test, y_test) = mnist.load_data()
-    x_train = x_train.reshape(60000,784)
+    x_train = x_train.reshape(60000, 784)
     x_test = x_test.reshape(10000, 784)
-    y_train = y_train.reshape(-1,1)
+    y_train = y_train.reshape(-1, 1)
     y_test = y_test.reshape(-1, 1)
     return x_train, x_test, y_train, y_test
 

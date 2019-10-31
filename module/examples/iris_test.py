@@ -8,7 +8,6 @@ from nn.mlp.activations import Tanh
 
 sns.set()
 
-
 X, y = load_iris(True)
 X_train, X_test, y_train, y_test = train_test_split(X, y.reshape(-1, 1))
 

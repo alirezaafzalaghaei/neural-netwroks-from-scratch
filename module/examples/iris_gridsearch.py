@@ -6,12 +6,12 @@ from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 
 from nn.mlp import MLPGridSearch
-from nn.mlp.activations import LeakyReLu, Tanh
+from nn.mlp.activations import *
 
 sns.set()
 
 hidden_layers = [(5, 5, 5, 5), (10, 10, 5), (15, 15), (20, 15, 10)]
-activations = [Tanh(), LeakyReLu(.1), LeakyReLu(0)]
+activations = [Tanh(), LeakyReLu(.1), ReLu()]
 batch_sizes = [16, 32, 64]
 epochs = [1000]
 mus = [0.85, 0.9, 0.95]
