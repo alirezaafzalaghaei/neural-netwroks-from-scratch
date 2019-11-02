@@ -10,7 +10,7 @@ from .activations import *
 from .loss_functions import *
 
 np.random.seed(1)
-np.seterr(all='raise')
+#np.seterr(all='raise')
 
 
 class MLP:
