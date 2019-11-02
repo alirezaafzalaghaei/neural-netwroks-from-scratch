@@ -25,6 +25,7 @@ class MLP:
                  verbose: int = False,
                  task: str = ''
                  ):
+        self._validation = False
         self.random = np.random.randn
         self.weights_ = []
         self.beta = beta
@@ -106,7 +107,7 @@ class MLP:
     def cost(self, t, y):
         return self._loss(y, t) + self.alpha * np.sum([w.sum() for w in self.weights_])
 
-    def fit(self, x, y):
+    def fit(self, x, y, validation: tuple=False):
         x, y = self._encoder(x, y, fit=True)
 
         self.hidden_layer_sizes.insert(0, x.shape[1])
@@ -116,6 +117,7 @@ class MLP:
         self.y = y
         self.init_weights()
         hist = []
+        valid = []
         for i in range(self.n_epochs):
             avg_cost = 0
             c = 0
@@ -130,17 +132,25 @@ class MLP:
                     return [str(ex)]
                 avg_cost += self.cost(yp, batch_y)
                 c += 1
+            if validation:
+                #valid.append(self.score(validation[0], validation[1]))
+                yp = self.predict(validation[0])
+                valid.append(self.cost(validation[1], yp))
+                self._validation = valid[-1]
 
-            # validation?
             hist.append(avg_cost / c)
             self.current_loss = hist[-1]
             self._verbose(i)
-
+        if validation:
+            return hist, valid
         return hist
 
     def _verbose(self, i):
         if self.verbose and (i + 1) % self.verbose == 0:
-            print("epoch %05d, loss: %06.2f" % (i + 1, self.current_loss))
+            if self._validation:
+                print("epoch %05d, loss: %06.2f, validation: %.2f" % (i + 1, self.current_loss, self._validation))
+            else:
+                print("epoch %05d, loss: %06.2f" % (i + 1, self.current_loss))
 
     def predict(self, x):
         x = self._encoder(x)

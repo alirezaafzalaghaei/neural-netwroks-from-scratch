@@ -1,5 +1,5 @@
 import abc
-import numpy as np
+import cupy as np
 
 
 class Loss(abc.ABC):

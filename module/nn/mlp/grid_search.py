@@ -1,7 +1,7 @@
 import itertools
 
 import csv
-import numpy as np
+import cupy as np
 import pandas as pd
 from pathos.multiprocessing import ProcessPool as Pool
 
