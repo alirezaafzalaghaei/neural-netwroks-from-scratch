@@ -134,8 +134,10 @@ class MLP:
                 c += 1
             if validation:
                 #valid.append(self.score(validation[0], validation[1]))
-                yp = self.predict(validation[0])
-                valid.append(self.cost(validation[1], yp))
+
+                # yp = self.predict(validation[0])
+                # valid.append(self.cost(validation[1], yp))
+                valid.append(self.score(*validation))
                 self._validation = valid[-1]
 
             # validation?
