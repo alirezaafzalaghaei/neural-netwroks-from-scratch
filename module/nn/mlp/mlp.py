@@ -25,7 +25,7 @@ class MLP:
                  verbose: int = False,
                  task: str = ''
                  ):
-        self._validation = False
+        self._validation = tuple()
         self.random = np.random.randn
         self.weights_ = []
         self.beta = beta
@@ -101,14 +101,14 @@ class MLP:
 
     def _update_weights(self):
         for i in range(len(self.weights_)):
-            self.velocity_[i] = self.momentum * self.velocity_[i] + self.learning_rate * self.dLdws[i] / len(self.x)
+            self.velocity_[i] = self.momentum * self.velocity_[i] + self.learning_rate * self.dLdws[i] / len(self.x)  # todo: batch size?
             self.weights_[i] -= self.velocity_[i]
 
     def cost(self, t, y):
         return self._loss(y, t) + self.alpha * np.sum([w.sum() for w in self.weights_])
 
-    def fit(self, x, y, validation: tuple=False):
-        x, y = self._encoder(x, y, fit=True)
+    def fit(self, x_train, y_train, validation: tuple=False):
+        x, y = self._encoder(x_train, y_train, fit=True)
 
         self.hidden_layer_sizes.insert(0, x.shape[1])
         self.hidden_layer_sizes.append(y.shape[1])
@@ -133,25 +133,22 @@ class MLP:
                 avg_cost += self.cost(yp, batch_y)
                 c += 1
             if validation:
-                #valid.append(self.score(validation[0], validation[1]))
-
-                # yp = self.predict(validation[0])
-                # valid.append(self.cost(validation[1], yp))
-                valid.append(self.score(*validation))
+                yp = self.predict(validation[0])
+                _c, s = self.cost(validation[1], yp), self.score(*validation)
+                valid.append((_c, s))
                 self._validation = valid[-1]
-
-            # validation?
-            hist.append(avg_cost / c)
+            sc = self.score(x_train, y_train)
+            hist.append((avg_cost / c, sc))
             self.current_loss = hist[-1]
             self._verbose(i)
         if validation:
-            return hist, valid
+            return np.array(hist), np.array(valid)
         return hist
 
     def _verbose(self, i):
         if self.verbose and (i + 1) % self.verbose == 0:
             if self._validation:
-                print("epoch %05d, loss: %06.2f, validation: %.2f" % (i + 1, self.current_loss, self._validation))
+                print("epoch %05d, train loss: %06.2f, train score: %.2f, validation loss: %06.2f, validation score: %.2f" % (i + 1, *self.current_loss, *self._validation))
             else:
                 print("epoch %05d, loss: %06.2f" % (i + 1, self.current_loss))
 
