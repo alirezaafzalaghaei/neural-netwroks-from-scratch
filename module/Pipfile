@@ -14,8 +14,10 @@ matplotlib = "*"
 seaborn = "*"
 sklearn = "*"
 nn = {editable = true,path = "."}
-keras = "*"
 theano = "*"
+yapf = "*"
+jupyter-contrib-nbextensions = "*"
+Keras = "*"
 
 [requires]
 python_version = "3.5"

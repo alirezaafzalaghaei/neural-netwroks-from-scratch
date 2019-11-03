@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd7a7f90-a98b-47a1-86a7-3a385fe7230a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/datasets/satlog/sat.trn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/satlog/sat.tst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/satlog_gridsearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/satlog_gridsearch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/satlog_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/satlog_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/mnist_gridsearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/mnist_gridsearch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/mnist_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/mnist_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +20,7 @@
     <SUITE FILE_PATH="coverage/module$airfoil_gridsearch.coverage" NAME="airfoil_gridsearch Coverage Results" MODIFIED="1572370386388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
     <SUITE FILE_PATH="coverage/module$mnist_gridsearch.coverage" NAME="mnist_gridsearch Coverage Results" MODIFIED="1572546956215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
     <SUITE FILE_PATH="coverage/module$satlog_gridsearch.coverage" NAME="satlog_gridsearch Coverage Results" MODIFIED="1572550128908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
-    <SUITE FILE_PATH="coverage/module$mnist_test.coverage" NAME="mnist_test Coverage Results" MODIFIED="1572536948859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
+    <SUITE FILE_PATH="coverage/module$mnist_test.coverage" NAME="mnist_test Coverage Results" MODIFIED="1572797148699" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
     <SUITE FILE_PATH="coverage/module$iris_test.coverage" NAME="iris_test Coverage Results" MODIFIED="1572539202877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
     <SUITE FILE_PATH="coverage/module$airfoil_test.coverage" NAME="airfoil_test Coverage Results" MODIFIED="1572374551089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
     <SUITE FILE_PATH="coverage/module$satlog_test.coverage" NAME="satlog_test Coverage Results" MODIFIED="1572549954776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
@@ -56,18 +57,19 @@
     <session id="-1404486208">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.26" value="1" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.26" value="2" />
+          <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.32" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Pipfile" value="1" />
           <entry key="csv" value="2" />
-          <entry key="py" value="46" />
+          <entry key="py" value="56" />
           <entry key="tst" value="2" />
         </counts>
       </usages-collector>
@@ -75,57 +77,45 @@
         <counts>
           <entry key="CSV" value="2" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="46" />
+          <entry key="Python" value="56" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Pipfile" value="1" />
           <entry key="Python Console" value="185" />
-          <entry key="py" value="1436" />
+          <entry key="py" value="1870" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="1621" />
+          <entry key="Python" value="2055" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/satlog_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="32" column="48" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="16" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/examples/satlog_gridsearch.py">
+        <entry file="file://$PROJECT_DIR$/nn/mlp/mlp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+            <state relative-caret-position="-105">
+              <caret line="139" column="51" selection-start-line="139" selection-start-column="51" selection-end-line="139" selection-end-column="51" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#165#217#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/mnist_gridsearch.py">
+        <entry file="file://$PROJECT_DIR$/examples/mnist_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="40" selection-start-line="40" selection-end-line="40" selection-end-column="76" />
+            <state relative-caret-position="276">
+              <caret line="27" column="50" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="72" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -140,6 +130,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>_val</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -153,8 +148,6 @@
         <option value="$PROJECT_DIR$/nn/mlp/__init__.py" />
         <option value="$PROJECT_DIR$/Pipfile" />
         <option value="$PROJECT_DIR$/nn/mlp/activations.py" />
-        <option value="$PROJECT_DIR$/nn/mlp/mlp.py" />
-        <option value="$PROJECT_DIR$/examples/mnist_test.py" />
         <option value="$PROJECT_DIR$/nn/mlp/grid_search.py" />
         <option value="$PROJECT_DIR$/examples/iris_gridsearch.py" />
         <option value="$PROJECT_DIR$/examples/iris_test.py" />
@@ -162,6 +155,9 @@
         <option value="$PROJECT_DIR$/examples/fashion_mnist_gridsearch.py" />
         <option value="$PROJECT_DIR$/examples/satlog_test.py" />
         <option value="$PROJECT_DIR$/examples/satlog_gridsearch.py" />
+        <option value="$PROJECT_DIR$/examples/result_analyzer.py" />
+        <option value="$PROJECT_DIR$/examples/mnist_test.py" />
+        <option value="$PROJECT_DIR$/nn/mlp/mlp.py" />
       </list>
     </option>
   </component>
@@ -174,8 +170,8 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="62" />
     <option name="y" value="42" />
-    <option name="width" value="1226" />
-    <option name="height" value="701" />
+    <option name="width" value="1216" />
+    <option name="height" value="698" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -183,23 +179,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="module" type="b2602c69:ProjectViewProjectNode" />
               <item name="module" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="module" type="b2602c69:ProjectViewProjectNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="datasets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="module" type="b2602c69:ProjectViewProjectNode" />
-              <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="datasets" type="462c0819:PsiDirectoryNode" />
-              <item name="satlog" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="module" type="b2602c69:ProjectViewProjectNode" />
@@ -221,7 +207,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -250,7 +235,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.satlog_gridsearch">
+  <component name="RunManager" selected="Python.mnist_test">
     <configuration name="fashion_mnist_gridsearch" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="module" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -273,28 +258,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="iris_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="module" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/iris_test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="mnist_gridsearch" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="module" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -309,6 +272,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/mnist_gridsearch.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mnist_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="module" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/mnist_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -362,19 +347,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.iris_test" />
       <item itemvalue="Python.mnist_gridsearch" />
       <item itemvalue="Python.fashion_mnist_gridsearch" />
       <item itemvalue="Python.satlog_test" />
       <item itemvalue="Python.satlog_gridsearch" />
+      <item itemvalue="Python.mnist_test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.mnist_test" />
         <item itemvalue="Python.satlog_gridsearch" />
         <item itemvalue="Python.satlog_test" />
         <item itemvalue="Python.fashion_mnist_gridsearch" />
         <item itemvalue="Python.mnist_gridsearch" />
-        <item itemvalue="Python.iris_test" />
       </list>
     </recent_temporary>
   </component>
@@ -394,7 +379,7 @@
   <component name="ToolWindowManager">
     <frame x="30" y="0" width="1336" height="768" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19069767" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19689922" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -405,7 +390,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32917318" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007752" side_tool="true" weight="0.36349455" />
       <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4992248" visible="true" weight="0.36349455" />
@@ -413,12 +398,38 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.32945737" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.46899223" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -455,11 +466,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datasets/satlog/sat.tst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-312" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/datasets/satlog/sat.tst" />
     <entry file="file://$PROJECT_DIR$/Pipfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
@@ -467,81 +474,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nn/mlp/loss_functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nn/mlp/mlp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
-          <folding>
-            <element signature="e#165#217#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nn/mlp/activations.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="91" selection-start-line="91" selection-end-line="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/result.csv">
-      <provider selected="true" editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3">
-          <column index="0" width="100" />
-          <column index="1" width="100" />
-          <column index="2" width="100" />
-          <column index="3" width="100" />
-          <column index="4" width="100" />
-          <column index="5" width="100" />
-          <column index="6" width="100" />
-          <column index="7" width="100" />
-          <column index="8" width="100" />
-          <column index="9" width="100" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nn/mlp/grid_search.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/result.csv" />
     <entry file="file://$PROJECT_DIR$/examples/iris_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/iris_gridsearch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-95">
-          <caret line="29" selection-start-line="29" selection-end-line="29" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/mnist_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-81">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -549,9 +486,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="792">
           <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -559,38 +493,81 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-110">
           <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/mnist_gridsearch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="40" selection-start-line="40" selection-end-line="40" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/satlog_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="32" column="48" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="16" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/satlog_gridsearch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
+        <state relative-caret-position="1184">
           <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nn/mlp/loss_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1044">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nn/mlp/activations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2264">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/result_analyzer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/iris_gridsearch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="12" selection-start-line="12" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/satlog_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nn/mlp/grid_search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/mnist_gridsearch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/mnist_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="27" column="50" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="72" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nn/mlp/mlp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-105">
+          <caret line="139" column="51" selection-start-line="139" selection-start-column="51" selection-end-line="139" selection-end-column="51" />
+          <folding>
+            <element signature="e#165#217#0" expanded="true" />
           </folding>
         </state>
       </provider>

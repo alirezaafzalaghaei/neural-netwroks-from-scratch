@@ -1,3 +1,6 @@
+from nn.mlp.activations import *
+from nn.mlp import MLPGridSearch
+from keras.datasets import mnist
 import time
 
 import matplotlib.pyplot as plt
@@ -6,10 +9,7 @@ import texttable
 import os
 
 os.environ["KERAS_BACKEND"] = "theano"
-from keras.datasets import mnist
 
-from nn.mlp import MLPGridSearch
-from nn.mlp.activations import *
 
 sns.set()
 
@@ -23,14 +23,14 @@ def load_mnist():
     return x_train, x_test, y_train, y_test
 
 
-hidden_layers = [(10, 10), (20, 10), (30, 20, 10), (10, 10, 10, 10), (100,)]
-activations = [Tanh(), LeakyReLu(0.02), ReLu()]
-batch_sizes = [512, 2048]
-epochs = [300]
-mus = [0.95, .9]
-betas = [.1, .2]
-etas = [.001, .1, .25]
-alphas = [.001, 0.01, .1]
+hidden_layers = [(128,), (128, 64), (128, 64, 32)]
+activations = [ReLu()]
+batch_sizes = [128]
+epochs = [1000]
+mus = [0.95]
+betas = [.3]
+etas = [.4]
+alphas = [.001]
 
 X_train, X_test, y_train, y_test = load_mnist()
 t = time.time()
