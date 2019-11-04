@@ -118,6 +118,19 @@ class MLP:
         self.init_weights()
         hist = []
         valid = []
+        sc = self.score(x_train, y_train)
+        yp = self._forward(self.x)
+        avg_cost = self.cost(yp, self.y)
+
+        hist.append((avg_cost, sc))
+        self.current_loss = hist[-1]
+
+        if validation:
+            yp = self.predict(validation[0])
+            _c, s = self.cost(validation[1], yp), self.score(*validation)
+            valid.append((_c, s))
+            self._validation = valid[-1]
+        self._verbose(-1)
         for i in range(self.n_epochs):
             avg_cost = 0
             c = 0
