@@ -161,7 +161,7 @@ class MLP:
     def _verbose(self, i):
         if self.verbose and (i + 1) % self.verbose == 0:
             if self._validation:
-                print("epoch %05d, train loss: %06.2f, train score: %.2f, validation loss: %06.2f, validation score: %.2f" % (i + 1, *self.current_loss, *self._validation))
+                print("epoch %03d, train loss: %.6f, train score: %.6f, validation loss: %.6f, validation score: %.6f" % (i + 1, *self.current_loss, *self._validation))
             else:
                 print("epoch %05d, loss: %06.2f" % (i + 1, self.current_loss))
 
