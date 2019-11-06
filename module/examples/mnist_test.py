@@ -1,11 +1,13 @@
 from nn.mlp.activations import *
 from nn.mlp import MLP
+import os
+os.environ["KERAS_BACKEND"] = "theano"
 from keras.datasets import mnist
 import matplotlib.pyplot as plt
-import os
+
 import seaborn as sns
 
-os.environ["KERAS_BACKEND"] = "theano"
+
 
 
 sns.set()
@@ -22,7 +24,7 @@ def load_mnist():
 
 X_train, X_test, y_train, y_test = load_mnist()
 
-mlp = MLP([128, 64, 32], activation=ReLu(), batch_size=128, epochs=10, mu=0.95, beta=.13, eta=.4, alpha=.001,
+mlp = MLP([128], activation=ReLu(), batch_size=64, epochs=50, mu=0.95, beta=.3, eta=.1, alpha=.001,
           verbose=1, task='classification')
 
 hist, validation = mlp.fit(X_train, y_train, validation=(X_test, y_test))

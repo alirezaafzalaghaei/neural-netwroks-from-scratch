@@ -13,7 +13,7 @@ sns.set()
 hidden_layers = [(5, 5, 5, 5), (10, 10, 5), (15, 15), (20, 15, 10)]
 activations = [Tanh(), LeakyReLu(.1), ReLu()]
 batch_sizes = [16, 32, 64]
-epochs = [1000]
+epochs = [50]
 mus = [0.85, 0.9, 0.95]
 betas = [.1, .2]
 etas = [.01, .1, 0.001]

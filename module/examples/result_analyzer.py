@@ -8,21 +8,21 @@ sns.set()
 
 def analyze(csv_file, n=6):
     df = pd.read_csv(csv_file)
-
-    df['history'] = df['history'].apply(
-        lambda x: np.fromstring(x.replace('\n', '').replace('[', '').replace(']', '').replace('  ', ' '), sep=','))
-    losses = [np.abs(loss[-5:]).mean() for loss in df['history']]
+    df['history'] = df['history'].apply(lambda x: np.array(eval(x)).round(2)[:, 0])
+    losses = [loss[-1] for loss in df['history']]
     df['loss'] = pd.Series(losses, index=df.index).apply(lambda x: '%.2f' % x)
     best_models_by_test = df.sort_values(['test_score', 'loss'], ascending=[False, True])[:n]
     best_models_by_test.reset_index(inplace=True)
     history_of_best = best_models_by_test['history']
     # indexs = best_models_by_test['index']
     best_models_by_test.drop(['history', 'index'], axis=1, inplace=True)
-
+    # print(df)
     # with pd.option_context('display.max_columns', None, 'display.width', None):
     #     print(best_models_by_test)
     histories = history_of_best.to_numpy()
     scores = best_models_by_test['test_score']
+    # print(histories.shape)
+    # print(scores.shape)
     plot_loss(histories, scores)
     return best_models_by_test
 

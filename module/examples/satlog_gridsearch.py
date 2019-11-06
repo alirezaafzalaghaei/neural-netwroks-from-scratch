@@ -26,12 +26,12 @@ def load_satlog():
 
 hidden_layers = [(32, 16, 8), (10, 10), (12, 6)]
 activations = [Tanh(), Sigmoid(), LeakyReLu(.03)]
-batch_sizes = [64, 256, 512]
-epochs = [1000]
+batch_sizes = [64, 256]
+epochs = [30]
 mus = [0.95, .9]
-betas = [.1, .3]
-etas = [.01, 0.1, .3]
-alphas = [.001, 0.01, 0.1]
+betas = [.3]
+etas = [.01, 0.1]
+alphas = [0.01, 0.1]
 
 X_train, X_test, y_train, y_test = load_satlog()
 t = time.time()

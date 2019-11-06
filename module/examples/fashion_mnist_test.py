@@ -6,7 +6,7 @@ os.environ["KERAS_BACKEND"] = "theano"
 from keras.datasets import fashion_mnist
 
 from nn.mlp import MLP
-from nn.mlp.activations import LeakyReLu
+from nn.mlp.activations import *
 from sklearn.model_selection import train_test_split
 
 sns.set()
@@ -25,7 +25,7 @@ X, X_test, y, y_test = load_mnist()
 X_train, X_valid, y_train, y_valid = train_test_split(X, y, test_size=0.15)
 
 
-mlp = MLP([30, 10], activation=LeakyReLu(.1), batch_size=64, epochs=30, mu=0.95, beta=.2, eta=.3, alpha=.01,
+mlp = MLP([128], activation=ReLu(), batch_size=64, epochs=50, mu=0.95, beta=.2, eta=.4, alpha=.001,
           verbose=1, task='classification')
 
 hist, valid = mlp.fit(X_train, y_train, validation=(X_valid, y_valid))
