@@ -22,23 +22,34 @@ def load_mnist():
 
 X_train, X_test, y_train, y_test = load_mnist()
 
-mlp = MLP([128, 64], activation=ReLu(), batch_size=64, epochs=5, mu=0.99, beta=.3, eta=.05, alpha=.0,
+mlp = MLP([128, 64], activation=ReLu(), batch_size=64, epochs=15, mu=0.85, beta=.1, eta=.03, alpha=.001,
           verbose=1, task='classification')
 
-hist, validation = mlp.fit(X_train, y_train, validation=[X_test, y_test])
-valid = validation[:, 0]
-hist = hist[:, 0]
+history, validation = mlp.fit(X_train, y_train, validation=[X_test, y_test])
+valid0 = validation[:, 0]
+hist0 = history[:, 0]
+
+valid1 = validation[:, 1]
+hist1 = history[:, 1]
+
 acc_test = mlp.score(X_test, y_test)
 acc_train = mlp.score(X_train, y_train)
 
 print('train accuracy: %.2f%%' % (acc_train * 100))
 print('test accuracy: %.2f%%' % (acc_test * 100))
 
-plt.plot(list(range(len(hist))), hist, label='train')
-plt.plot(list(range(len(hist))), valid, label='valid')
-plt.legend()
+f, (ax1, ax2) = plt.subplots(1,2)
+ax1.plot(list(range(len(hist0))), hist0, label='train')
+ax1.plot(list(range(len(hist0))), valid0, label='valid')
+ax1.legend()
+ax1.set_xlabel('iterations')
+ax1.set_ylabel('Loss')
+ax1.set_title('loss')
 
-plt.title("loss: %.2e" % hist[-1])
-plt.xlabel('iterations')
-plt.ylabel('Log(loss)')
+ax2.plot(list(range(len(hist0))), hist1, label='train')
+ax2.plot(list(range(len(hist0))), valid1, label='valid')
+ax2.legend()
+ax2.set_xlabel('iterations')
+ax2.set_ylabel('accuracy')
+ax2.set_title('accuracy')
 plt.show()
