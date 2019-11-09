@@ -5,7 +5,7 @@
 
 from sklearn.metrics import r2_score, accuracy_score
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
-
+from sklearn.utils import shuffle
 from .activations import *
 from .loss_functions import *
 
@@ -101,69 +101,77 @@ class MLP:
 
     def _update_weights(self):
         for i in range(len(self.weights_)):
-            self.velocity_[i] = self.momentum * self.velocity_[i] + self.learning_rate * self.dLdws[i] / self.batch_size
+            self.velocity_[i] = self.momentum * self.velocity_[i] + self.learning_rate * (self.dLdws[i] / self.batch_size - self.alpha * self.weights_[i])
             self.weights_[i] -= self.velocity_[i]
 
-    def cost(self, t, y):
-        return self._loss(y, t) + self.alpha * np.sum([w.sum() for w in self.weights_])
+    def cost(self, x, y):
+        # x and y must be encoded
+        c = 0
+        avg = 0
+        for i in range(0, x.shape[0], self.batch_size):
+            batch_x = x[i:min(i + self.batch_size, x.shape[0]), :]
+            batch_y = y[i:min(i + self.batch_size, y.shape[0]), :]
+            yp = self._forward(batch_x)
+            avg += self._loss(yp, batch_y)
+            c += 1
+        return avg / c + self.alpha * np.sum([np.linalg.norm(w) for w in self.weights_])
 
-    def fit(self, x_train, y_train, validation: tuple=False):
+    def fit(self, x_train, y_train, validation: list = False):
         x, y = self._encoder(x_train, y_train, fit=True)
-
+        self.batch_size = min([self.batch_size, len(x)])
         self.hidden_layer_sizes.insert(0, x.shape[1])
         self.hidden_layer_sizes.append(y.shape[1])
 
         self.x = np.hstack((x, np.ones((x.shape[0], 1))))
         self.y = y
+
         self.init_weights()
         hist = []
         valid = []
         sc = self.score(x_train, y_train)
-        yp = self._forward(self.x)
-        avg_cost = self.cost(yp, self.y)
-
-        hist.append((avg_cost, sc))
+        cost = self.cost(self.x, self.y)
+        hist.append((cost, sc))
         self.current_loss = hist[-1]
 
         if validation:
-            yp = self.predict(validation[0])
-            _c, s = self.cost(validation[1], yp), self.score(*validation)
+            validation = list(validation)
+            valid_x, valid_y = self._encoder(*validation)
+            valid_x = np.hstack((valid_x, np.ones((valid_x.shape[0], 1))))
+            print('epoch, train loss, train accuracy, validation loss, validation accuracy')
+            _c = self.cost(valid_x, valid_y)
+            s = self.score(*validation)
             valid.append((_c, s))
             self._validation = valid[-1]
         self._verbose(-1)
         for i in range(self.n_epochs):
-            avg_cost = 0
-            c = 0
+            self.x, self.y = shuffle(self.x, self.y)
             for index in range(0, self.x.shape[0], self.batch_size):
                 batch_x = self.x[index:min(index + self.batch_size, self.x.shape[0]), :]
                 batch_y = self.y[index:min(index + self.batch_size, self.y.shape[0]), :]
-                try:
-                    yp = self._forward(batch_x)
-                    self._backward(batch_y)
-                    self._update_weights()
-                except Exception as ex:
-                    return [str(ex)]
-                avg_cost += self.cost(yp, batch_y)
-                c += 1
+                self._forward(batch_x)
+                self._backward(batch_y)
+                self._update_weights()
             if validation:
-                yp = self.predict(validation[0])
-                _c, s = self.cost(validation[1], yp), self.score(*validation)
+                _c, s = self.cost(valid_x, valid_y), self.score(*validation)
                 valid.append((_c, s))
                 self._validation = valid[-1]
             sc = self.score(x_train, y_train)
-            hist.append((avg_cost / c, sc))
+            _c = self.cost(self.x, self.y)
+            hist.append((_c, sc))
             self.current_loss = hist[-1]
             self._verbose(i)
         if validation:
             return np.array(hist), np.array(valid)
-        return hist
+        return np.array(hist)
 
     def _verbose(self, i):
         if self.verbose and (i + 1) % self.verbose == 0:
             if self._validation:
-                print("epoch %03d, train loss: %.6f, train score: %.6f, validation loss: %.6f, validation score: %.6f" % (i + 1, *self.current_loss, *self._validation))
+                # print("epoch %03d, train loss: %.6f, train score: %.6f, validation loss: %.6f, validation score: %.6f"
+                #  % (i + 1, *self.current_loss, *self._validation))
+                print("%04d, %05.8e, %.4f, %05.8e, %.4f" % (i + 1, *self.current_loss, *self._validation))
             else:
-                print("epoch %05d, loss: %06.2f" % (i + 1, self.current_loss))
+                print("epoch %05d, loss: %06.2f" % (i + 1, self.current_loss[0]))
 
     def predict(self, x):
         x = self._encoder(x)
