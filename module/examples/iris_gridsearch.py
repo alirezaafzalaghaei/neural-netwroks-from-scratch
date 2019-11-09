@@ -10,14 +10,14 @@ from nn.mlp.activations import *
 
 sns.set()
 
-hidden_layers = [(5, 5, 5, 5), (10, 10, 5), (15, 15), (20, 15, 10)]
+hidden_layers = [(5, 5, 5, 5), (10, 10, 5), (15, 15), (20, 15, 10), (32,)]
 activations = [Tanh(), LeakyReLu(.1), ReLu()]
-batch_sizes = [16, 32, 64]
-epochs = [50]
-mus = [0.85, 0.9, 0.95]
-betas = [.1, .2]
-etas = [.01, .1, 0.001]
-alphas = [.001, 0.01, .1]
+batch_sizes = [16, 64, 128]
+epochs = [300]
+mus = [0, .8]
+betas = [.3]
+etas = [.01, 0.001]
+alphas = [.001, .01, 0]
 
 X, y = load_iris(True)
 X_train, X_test, y_train, y_test = train_test_split(X, y.reshape(-1, 1))
@@ -30,7 +30,8 @@ t = time.time() - t
 print('time taken = %s seconds' % time.strftime('%H:%M:%S', time.gmtime(t)))
 
 result = mlp.best_model()
-hist = result.pop('history')
+hist = result.pop('history_loss')
+result.pop('history_score')
 print('Best model is: ')
 
 tbl = texttable.Texttable()

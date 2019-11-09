@@ -4,18 +4,18 @@ from sklearn.model_selection import train_test_split
 from sklearn.datasets import load_iris
 
 from nn.mlp import MLP
-from nn.mlp.activations import Tanh
+from nn.mlp.activations import *
 
 sns.set()
 
 X, y = load_iris(True)
 X_train, X_test, y_train, y_test = train_test_split(X, y.reshape(-1, 1))
 
-mlp = MLP([5, 5, 5, 5], activation=Tanh(), batch_size=32, epochs=2000, mu=0.9, beta=1, eta=.1, alpha=.01,
-          verbose=500, task='classification')
+mlp = MLP([10], activation=LeakyReLu(), batch_size=16, epochs=600, mu=.9, beta=.1, eta=.01, alpha=.001, verbose=500,
+          task='classification')
 
-hist = mlp.fit(X_train, y_train)
-
+hist, _ = mlp.fit(X_train, y_train, validation=[X_test, y_test])
+hist = hist[:, 0]
 acc_test = mlp.score(X_test, y_test)
 acc_train = mlp.score(X_train, y_train)
 
