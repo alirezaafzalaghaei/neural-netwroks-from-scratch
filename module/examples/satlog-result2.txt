@@ -1,6 +1,0 @@
-epoch 000, train loss: 3.043687, train score: 0.117538, validation loss: -1.028554, validation score: 0.135135
-epoch 050, train loss: 0.255782, train score: 0.918015, validation loss: -1.029233, validation score: 0.858859
-epoch 100, train loss: 0.193445, train score: 0.939241, validation loss: -1.024026, validation score: 0.881381
-epoch 150, train loss: 0.156095, train score: 0.951977, validation loss: -1.021893, validation score: 0.884384
-train accuracy: 95.20%
-test accuracy: 88.65%

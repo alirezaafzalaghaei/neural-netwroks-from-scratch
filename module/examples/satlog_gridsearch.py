@@ -24,14 +24,14 @@ def load_satlog():
     return X_train, X_test, y_train, y_test
 
 
-hidden_layers = [(32, 16, 8), (10, 10), (12, 6)]
-activations = [Tanh(), Sigmoid(), LeakyReLu(.03)]
+hidden_layers = [(32, 16, 8)]
+activations = [Tanh()]
 batch_sizes = [64, 256]
 epochs = [30]
-mus = [0.95, .9]
-betas = [.3]
-etas = [.01, 0.1]
-alphas = [0.01, 0.1]
+mus = [0.95,]
+betas = [.2,.3]
+etas = [.01]
+alphas = [0.01]
 
 X_train, X_test, y_train, y_test = load_satlog()
 t = time.time()
@@ -42,7 +42,8 @@ t = time.time() - t
 print('time taken = %s seconds' % time.strftime('%H:%M:%S', time.gmtime(t)))
 
 result = mlp.best_model()
-hist = result.pop('history')
+hist = result.pop('history_loss')
+result.pop('history_score')
 print('Best model is: ')
 
 tbl = texttable.Texttable()
