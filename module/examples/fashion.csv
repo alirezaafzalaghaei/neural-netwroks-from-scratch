@@ -1,1 +1,2 @@
-hidden_layer,activation,epoch,eta,beta,alpha,mu,batch_size,test_score,history
+hidden_layer,activation,epoch,eta,beta,alpha,mu,batch_size,test_score,history_loss,history_score
+"(128,)",ReLu,3,0.04,0.05,0.001,0.95,164,0.7924,"[20.588767478833013, 5.872778543960926, 4.9175810924476995, 4.556863787274269]","[0.10661666666666667, 0.74595, 0.7877666666666666, 0.8039166666666666]"

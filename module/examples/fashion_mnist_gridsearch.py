@@ -23,14 +23,14 @@ def load_mnist():
     return x_train, x_test, y_train, y_test
 
 
-hidden_layers = [(128,), (128, 64), (128, 64, 32), (32, 32, 32, 32)]
-activations = [ReLu(), LeakyReLu()]
-batch_sizes = [64]
-epochs = [25]
+hidden_layers = [(128,)]
+activations = [ReLu()]
+batch_sizes = [164]
+epochs = [3]
 mus = [0.95]
 betas = [.05]
-etas = [.4]
-alphas = [.001, 0.01]
+etas = [.04]
+alphas = [.001]
 
 X_train, X_test, y_train, y_test = load_mnist()
 t = time.time()
@@ -41,7 +41,8 @@ t = time.time() - t
 print('time taken = %s seconds' % time.strftime('%H:%M:%S', time.gmtime(t)))
 
 result = mlp.best_model()
-hist = result.pop('history')
+hist = result.pop('history_loss')
+result.pop('history_score')
 print('Best model is: ')
 
 tbl = texttable.Texttable()

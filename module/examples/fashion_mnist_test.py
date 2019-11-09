@@ -24,13 +24,12 @@ def load_mnist():
 X, X_test, y, y_test = load_mnist()
 X_train, X_valid, y_train, y_valid = train_test_split(X, y, test_size=0.15)
 
-
-mlp = MLP([128], activation=ReLu(), batch_size=64, epochs=50, mu=0.95, beta=.2, eta=.4, alpha=.001,
+mlp = MLP([128], activation=ReLu(), batch_size=64, epochs=5, mu=0.9, beta=.1, eta=.01, alpha=.001,
           verbose=1, task='classification')
 
-hist, valid = mlp.fit(X_train, y_train, validation=(X_valid, y_valid))
-valid = valid[:, 1]
-hist = hist[:, 1]
+hist, valid = mlp.fit(X_train, y_train, validation=[X_valid, y_valid])
+valid = valid[:, 0]
+hist = hist[:, 0]
 acc_test = mlp.score(X_test, y_test)
 acc_train = mlp.score(X_train, y_train)
 
