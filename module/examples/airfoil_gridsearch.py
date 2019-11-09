@@ -21,24 +21,25 @@ def load_airfoil():
 
 
 hidden_layers = [(5, 5), (10, 10)]
-activations = [Tanh(), LeakyReLu(.1)]
+activations = [Tanh(), LeakyReLu(.05)]
 batch_sizes = [128]
-epochs = [300]
-mus = [.9, 0.95]
-betas = [.1, ]
-etas = [.01, 0.1]
+epochs = [100]
+mus = [0.85]
+betas = [.06]
+etas = [.01, 0.06]
 alphas = [.001, .01]
 
 X, y = load_airfoil()
 X_train, X_test, y_train, y_test = train_test_split(X, y)
 t = time.time()
-mlp = MLPGridSearch('regression', hidden_layers, activations, batch_sizes, epochs, mus, betas, etas, alphas)
+mlp = MLPGridSearch('regression', hidden_layers, activations, batch_sizes, epochs, mus, betas, etas, alphas, 'airfoil.csv')
 histories = mlp.run(X_train, y_train, X_test, y_test)
 t = time.time() - t
 print('time taken = %.2f sec' % t)
 
 result = mlp.best_model()
-hist = result.pop('history')
+hist = result.pop('history_loss')
+result.pop('history_score')
 
 tbl = texttable.Texttable()
 tbl.set_cols_align(["c", "c"])
