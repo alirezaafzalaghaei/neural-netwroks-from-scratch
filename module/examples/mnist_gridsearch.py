@@ -22,14 +22,14 @@ def load_mnist():
     return x_train, x_test, y_train, y_test
 
 
-hidden_layers = [(64, 64), (128, 64), (128, 32, 32),(128, 32, 32)]
-activations = [ReLu(),LeakyReLu(.03)]
+hidden_layers = [(64, 64), (128, 64), (128, 32, 32), (128, 32, 32)]
+activations = [ReLu(), LeakyReLu(.03)]
 batch_sizes = [512]
 epochs = [10]
 mus = [0, .85]
-betas = [.1,.2]
-etas = [.001,.01]
-alphas = [.001,0]
+betas = [.1, .2]
+etas = [.001, .01]
+alphas = [.001, 0]
 
 X_train, X_test, y_train, y_test = load_mnist()
 t = time.time()

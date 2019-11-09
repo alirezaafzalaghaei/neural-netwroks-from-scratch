@@ -38,7 +38,7 @@ acc_train = mlp.score(X_train, y_train)
 print('train accuracy: %.2f%%' % (acc_train * 100))
 print('test accuracy: %.2f%%' % (acc_test * 100))
 
-f, (ax1, ax2) = plt.subplots(1,2)
+f, (ax1, ax2) = plt.subplots(1, 2)
 ax1.plot(list(range(len(hist0))), hist0, label='train')
 ax1.plot(list(range(len(hist0))), valid0, label='valid')
 ax1.legend()

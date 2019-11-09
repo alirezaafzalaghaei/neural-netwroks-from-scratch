@@ -20,7 +20,9 @@ def analyze(csv_file, n=6):
     best_models_by_test.reset_index(inplace=True)
     history_of_best = best_models_by_test['history_loss']
     best_models_by_test.drop(['history_loss', 'history_score', 'index'], axis=1, inplace=True)
-    best_models_by_test = best_models_by_test[['hidden_layer','activation','epoch','eta','beta','alpha','mu','batch_size','test_score','train_score','loss']]
+    best_models_by_test = best_models_by_test[
+        ['hidden_layer', 'activation', 'epoch', 'eta', 'beta', 'alpha', 'mu', 'batch_size', 'test_score', 'train_score',
+         'loss']]
 
     histories = history_of_best.to_numpy()
     scores = best_models_by_test['test_score']
