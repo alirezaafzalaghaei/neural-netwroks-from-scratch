@@ -17,7 +17,7 @@ class Loss(abc.ABC):
 class MSE(Loss):
     @staticmethod
     def loss(y, t):
-        return .5 * np.sum((t - y) ** 2)
+        return .5 * 1 / len(y) * np.sum((t - y) ** 2)
 
     @staticmethod
     def loss_prime(y, t):
