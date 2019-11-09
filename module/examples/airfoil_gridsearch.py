@@ -32,7 +32,8 @@ alphas = [.001, .01]
 X, y = load_airfoil()
 X_train, X_test, y_train, y_test = train_test_split(X, y)
 t = time.time()
-mlp = MLPGridSearch('regression', hidden_layers, activations, batch_sizes, epochs, mus, betas, etas, alphas, 'airfoil.csv')
+mlp = MLPGridSearch('regression', hidden_layers, activations, batch_sizes, epochs, mus, betas, etas, alphas,
+                    'airfoil.csv')
 histories = mlp.run(X_train, y_train, X_test, y_test)
 t = time.time() - t
 print('time taken = %.2f sec' % t)

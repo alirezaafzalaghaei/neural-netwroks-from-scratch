@@ -101,7 +101,8 @@ class MLP:
 
     def _update_weights(self):
         for i in range(len(self.weights_)):
-            self.velocity_[i] = self.momentum * self.velocity_[i] + self.learning_rate * (self.dLdws[i] / self.batch_size - self.alpha * self.weights_[i])
+            self.velocity_[i] = self.momentum * self.velocity_[i] + self.learning_rate * (
+                        self.dLdws[i] / self.batch_size - self.alpha * self.weights_[i])
             self.weights_[i] -= self.velocity_[i]
 
     def cost(self, x, y):

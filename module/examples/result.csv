@@ -1,0 +1,1 @@
+hidden_layer,activation,epoch,eta,beta,alpha,mu,batch_size,test_score,history_loss,history_score

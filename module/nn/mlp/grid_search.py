@@ -53,10 +53,11 @@ class MLPGridSearch:
     def best_model(self):
         df = pd.read_csv(self.csv)
         df['history_loss'] = df['history_loss'].apply(lambda x:
-                                            np.fromstring(
-                                                x.replace('\n', '').replace('[', '').replace(']', '').replace('  ',
-                                                                                                              ' '),
-                                                sep=','))
+                                                      np.fromstring(
+                                                          x.replace('\n', '').replace('[', '').replace(']', '').replace(
+                                                              '  ',
+                                                              ' '),
+                                                          sep=','))
         # losses = np.array([np.abs(loss[-5:]).mean() for loss in df['history']])
         # index = losses.argmin()
 
