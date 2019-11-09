@@ -24,14 +24,14 @@ def load_satlog():
     return X_train, X_test, y_train, y_test
 
 
-hidden_layers = [(32, 16, 8)]
-activations = [Tanh()]
-batch_sizes = [64, 256]
+hidden_layers = [(32, 16, 8), (10, 10, 10), (64,)]
+activations = [Tanh(), Sigmoid(), ReLu()]
+batch_sizes = [256]
 epochs = [30]
-mus = [0.95, ]
+mus = [0.95]
 betas = [.2, .3]
 etas = [.01]
-alphas = [0.01]
+alphas = [0.01, 0]
 
 X_train, X_test, y_train, y_test = load_satlog()
 t = time.time()
