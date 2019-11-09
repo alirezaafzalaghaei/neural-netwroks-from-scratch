@@ -1,15 +1,14 @@
 from nn.mlp.activations import *
 from nn.mlp import MLPGridSearch
+import os
+
+os.environ["KERAS_BACKEND"] = "theano"
 from keras.datasets import mnist
 import time
 
 import matplotlib.pyplot as plt
 import seaborn as sns
 import texttable
-import os
-
-os.environ["KERAS_BACKEND"] = "theano"
-
 
 sns.set()
 
@@ -23,10 +22,10 @@ def load_mnist():
     return x_train, x_test, y_train, y_test
 
 
-hidden_layers = [(128,), (128, 64), (128, 64, 32)]
+hidden_layers = [(128,)]
 activations = [ReLu()]
 batch_sizes = [128]
-epochs = [1000]
+epochs = [5]
 mus = [0.95]
 betas = [.3]
 etas = [.4]
@@ -41,7 +40,8 @@ t = time.time() - t
 print('time taken = %s seconds' % time.strftime('%H:%M:%S', time.gmtime(t)))
 
 result = mlp.best_model()
-hist = result.pop('history')
+hist = result.pop('history_loss')
+result.pop('history_score')
 print('Best model is: ')
 
 tbl = texttable.Texttable()
