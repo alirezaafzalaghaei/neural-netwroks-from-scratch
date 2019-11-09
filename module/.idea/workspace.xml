@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cd7a7f90-a98b-47a1-86a7-3a385fe7230a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/Report-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/Report-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/Report.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/examples/Report.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/img/aneuron.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/img/ann.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/img/neuron.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/img/optimizer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result-fashion.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/result_analyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/result_analyzer.py" afterDir="false" />
-    </list>
+    <list default="true" id="cd7a7f90-a98b-47a1-86a7-3a385fe7230a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +69,7 @@
           <entry key="Pipfile" value="1" />
           <entry key="csv" value="6" />
           <entry key="png" value="1" />
-          <entry key="py" value="102" />
+          <entry key="py" value="103" />
           <entry key="tst" value="2" />
           <entry key="txt" value="6" />
         </counts>
@@ -90,7 +79,7 @@
           <entry key="CSV" value="6" />
           <entry key="Image" value="1" />
           <entry key="PLAIN_TEXT" value="9" />
-          <entry key="Python" value="102" />
+          <entry key="Python" value="103" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -109,7 +98,20 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nn/mlp/mlp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="29">
+              <caret line="104" column="57" selection-start-line="104" selection-start-column="57" selection-end-line="104" selection-end-column="57" />
+              <folding>
+                <element signature="e#165#217#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -385,9 +387,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="30" y="0" width="1336" height="768" extended-state="7" />
+    <frame x="30" y="0" width="1336" height="768" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21007752" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21007752" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -401,7 +403,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32917318" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007752" side_tool="true" weight="0.36349455" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4992248" visible="true" weight="0.36037442" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4992248" visible="true" weight="0.36037442" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.5819033" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -552,6 +554,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="25" selection-start-line="25" selection-end-line="25" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
