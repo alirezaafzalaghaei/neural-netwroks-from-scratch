@@ -35,7 +35,7 @@ class MLPGridSearch:
         writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         writer.writerow(
             ['hidden_layer', 'activation', 'epoch', 'eta', 'beta', 'alpha', 'mu', 'batch_size', 'test_score',
-             'history'])
+             'history_loss', 'history_score'])
         combinations = tuple(
             itertools.product(self.hidden_layers, self.activations, self.epochs, self.etas, self.betas, self.alphas,
                               self.mus, self.batch_sizes))
@@ -43,14 +43,16 @@ class MLPGridSearch:
         print('.' * len(combinations))
         histories = Pool().map(lambda p: MLP_model(*p, self.task, x, y, xt, yt), combinations)
         for (hist, loss), cfg in zip(histories, combinations):
-            writer.writerow([*cfg, loss, hist])
+            h = list(hist[:, 0])
+            s = list(hist[:, 1])
+            writer.writerow([*cfg, loss, h, s])
         file.close()
         print()
         return histories
 
     def best_model(self):
         df = pd.read_csv(self.csv)
-        df['history'] = df['history'].apply(lambda x:
+        df['history_loss'] = df['history_loss'].apply(lambda x:
                                             np.fromstring(
                                                 x.replace('\n', '').replace('[', '').replace(']', '').replace('  ',
                                                                                                               ' '),
