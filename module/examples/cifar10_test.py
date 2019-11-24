@@ -1,6 +1,14 @@
 import os
 
-os.environ["KERAS_BACKEND"] = "theano"
+os.environ["PYTHONHASHSEED"] = "0"
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+import tensorflow as tf
+import logging
+tf.get_logger().setLevel('ERROR')
+logging.getLogger('tensorflow').disabled = True
+logging.getLogger('tensorflow').setLevel(logging.Error)
+tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
+
 import keras
 import matplotlib.pyplot as plt
 from nn.cnn.cnn import CNN
@@ -19,10 +27,7 @@ epochs = 3
 optimizer = keras.optimizers.RMSprop(learning_rate=0.001)
 loss = 'categorical_crossentropy'
 metrics = ['accuracy']
-arch = [Conv2D(32, (3, 3), padding='same', activation='relu'),
-        Flatten(),
-        Dense(32, activation='relu')
-        ]
+arch = [Conv2D(32, (3, 3), padding='same', activation='relu'),Flatten(),Dense(32, activation='relu')]
 
 model = CNN(arch, epochs, batch_size, optimizer, loss, metrics, task='classification')
 history = model.fit(x_train, y_train, validation_split=.2)
