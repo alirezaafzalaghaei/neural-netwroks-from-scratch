@@ -12,10 +12,15 @@ def CNN_model(architecture, epochs, batch_size, optimizer, task, x, y, xt, yt, l
     model = CNN(architecture, epochs, batch_size, optimizer, loss, metrics, task, verbose=0)
     h = model.fit(x, y)
     sc = model.score(xt, yt)[1]
-    t1,t2 = np.array(h.history['loss']), np.array(h.history['accuracy']).flatten()
-    hist = np.empty((t1.shape[0],2))
-    hist[:,0] = t1
-    hist[:,1] = t2
+    t1 = np.array(h.history['loss'])
+    try:
+        t2 = np.array(h.history['accuracy']).flatten()
+    except:
+        t2 = np.array(h.history['acc']).flatten()
+
+    hist = np.empty((t1.shape[0], 2))
+    hist[:, 0] = t1
+    hist[:, 1] = t2
     return hist, sc
 
 
