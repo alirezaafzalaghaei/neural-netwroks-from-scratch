@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd7a7f90-a98b-47a1-86a7-3a385fe7230a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/examples/sentiment_gridsearch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.directory" beforeDir="false" afterPath="$PROJECT_DIR$/.directory" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/Report.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/examples/Report.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/cifar10_gridsearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/cifar10_gridsearch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/fashion_cnn.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/fashion_cnn_gridsearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/fashion_cnn_gridsearch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nn/cnn/grid_search.py" beforeDir="false" afterPath="$PROJECT_DIR$/nn/cnn/grid_search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../report/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../report/main.pdf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/module$sentiment_gridsearch.coverage" NAME="sentiment_gridsearch Coverage Results" MODIFIED="1577666775618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
     <SUITE FILE_PATH="coverage/module$mnist_gridsearch.coverage" NAME="mnist_gridsearch Coverage Results" MODIFIED="1573307099095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
     <SUITE FILE_PATH="coverage/module$cifar10_gridsearch.coverage" NAME="cifar10_gridsearch Coverage Results" MODIFIED="1574461122662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
     <SUITE FILE_PATH="coverage/module$satlog_gridsearch.coverage" NAME="satlog_gridsearch Coverage Results" MODIFIED="1573305403488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
@@ -71,11 +71,11 @@
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.30" value="1" />
-          <entry key="project.open.time.31" value="1" />
+          <entry key="project.open.time.31" value="2" />
           <entry key="project.open.time.32" value="2" />
           <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.41" value="1" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -83,7 +83,7 @@
           <entry key="Pipfile" value="1" />
           <entry key="csv" value="9" />
           <entry key="png" value="1" />
-          <entry key="py" value="120" />
+          <entry key="py" value="129" />
           <entry key="tst" value="2" />
           <entry key="txt" value="6" />
         </counts>
@@ -93,21 +93,21 @@
           <entry key="CSV" value="9" />
           <entry key="Image" value="1" />
           <entry key="PLAIN_TEXT" value="9" />
-          <entry key="Python" value="120" />
+          <entry key="Python" value="129" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Pipfile" value="1" />
           <entry key="Python Console" value="446" />
-          <entry key="dummy" value="1" />
-          <entry key="py" value="8130" />
+          <entry key="dummy" value="12" />
+          <entry key="py" value="8428" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="8576" />
+          <entry key="PLAIN_TEXT" value="13" />
+          <entry key="Python" value="8874" />
         </counts>
       </usages-collector>
     </session>
@@ -115,24 +115,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/cifar10_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="9" lean-forward="true" selection-start-column="9" selection-end-line="9" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/cifar10_gridsearch.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/cnn_analyzer.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="454">
@@ -144,31 +126,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/cifar10_cnn.csv">
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="false" fixedHeaders="false" rowLines="3">
-              <column index="0" width="335" />
-              <column index="1" width="100" />
-              <column index="2" width="100" />
-              <column index="3" width="100" />
-              <column index="4" width="100" />
-              <column index="5" width="100" />
-              <column index="6" width="100" />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="29">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/examples/sentiment_gridsearch.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-254">
+              <caret line="29" selection-start-line="29" selection-end-line="29" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/fashion_cnn_gridsearch.py">
+        <entry file="file://$PROJECT_DIR$/examples/airfoil_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+            <state relative-caret-position="96">
+              <caret line="12" column="39" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -176,8 +147,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nn/cnn/grid_search.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+            <state relative-caret-position="435">
+              <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -186,37 +157,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nn/cnn/cnn.py">
+        <entry file="file://$PROJECT_DIR$/examples/fashion_mnist_gridsearch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="957">
-              <caret line="34" column="90" selection-start-line="34" selection-start-column="90" selection-end-line="34" selection-end-column="90" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="190">
+              <caret line="31" column="18" selection-end-line="52" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nn/mlp/grid_search.py">
+        <entry file="file://$PROJECT_DIR$/examples/fashion_cnn_gridsearch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1653">
-              <caret line="64" column="38" selection-start-line="52" selection-start-column="4" selection-end-line="64" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/iris_gridsearch.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="957">
-              <caret line="41" selection-start-line="31" selection-end-line="41" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="287">
+              <caret line="22" column="33" selection-end-line="113" />
             </state>
           </provider>
         </entry>
@@ -279,12 +232,17 @@
         <option value="$PROJECT_DIR$/examples/cfar10_test.py" />
         <option value="$PROJECT_DIR$/nn/cnn/__init__.py" />
         <option value="$PROJECT_DIR$/nn/cnn/cnn.py" />
-        <option value="$PROJECT_DIR$/nn/cnn/grid_search.py" />
         <option value="$PROJECT_DIR$/examples/cifar10_test.py" />
         <option value="$PROJECT_DIR$/examples/fashion_cnn_gridsearch.py" />
         <option value="$PROJECT_DIR$/examples/1.py" />
         <option value="$PROJECT_DIR$/examples/cifar10_gridsearch.py" />
         <option value="$PROJECT_DIR$/examples/cnn_analyzer.py" />
+        <option value="$PROJECT_DIR$/examples/sentiment_data.py" />
+        <option value="$PROJECT_DIR$/nn/rnn/gridsearch.py" />
+        <option value="$PROJECT_DIR$/nn/rnn/rnn.py" />
+        <option value="$PROJECT_DIR$/nn/rnn/__init__.py" />
+        <option value="$PROJECT_DIR$/nn/cnn/grid_search.py" />
+        <option value="$PROJECT_DIR$/examples/sentiment_gridsearch.py" />
       </list>
     </option>
   </component>
@@ -305,7 +263,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -316,7 +273,7 @@
             <path>
               <item name="module" type="b2602c69:ProjectViewProjectNode" />
               <item name="module" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
+              <item name="datasets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="module" type="b2602c69:ProjectViewProjectNode" />
@@ -335,10 +292,17 @@
               <item name="nn" type="462c0819:PsiDirectoryNode" />
               <item name="mlp" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="module" type="b2602c69:ProjectViewProjectNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+              <item name="nn" type="462c0819:PsiDirectoryNode" />
+              <item name="rnn" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -370,7 +334,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.fashion_cnn_gridsearch">
+  <component name="RunManager" selected="Python.sentiment_gridsearch">
     <configuration name="cfar10_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="module" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -459,7 +423,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="satlog_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="sentiment_gridsearch" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="module" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -472,7 +436,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/satlog_test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/sentiment_gridsearch.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -483,18 +447,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.fashion_mnist_test" />
-      <item itemvalue="Python.satlog_test" />
       <item itemvalue="Python.cfar10_test" />
       <item itemvalue="Python.cifar10_gridsearch" />
       <item itemvalue="Python.fashion_cnn_gridsearch" />
+      <item itemvalue="Python.sentiment_gridsearch" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.sentiment_gridsearch" />
         <item itemvalue="Python.fashion_cnn_gridsearch" />
         <item itemvalue="Python.cifar10_gridsearch" />
         <item itemvalue="Python.cfar10_test" />
         <item itemvalue="Python.fashion_mnist_test" />
-        <item itemvalue="Python.satlog_test" />
       </list>
     </recent_temporary>
   </component>
@@ -515,7 +479,7 @@
     <frame x="30" y="0" width="1336" height="768" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22325581" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22713178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -529,7 +493,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32917318" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007752" side_tool="true" weight="0.36349455" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4992248" weight="0.35881436" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4992248" visible="true" weight="0.042121686" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.37129486" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -650,13 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/airfoil_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="25" selection-start-line="25" selection-end-line="25" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/airfoil_gridsearch.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -697,13 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/fashion_mnist_gridsearch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/fashion_mnist_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
@@ -718,13 +668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nn/cnn/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nn/mlp/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
@@ -736,9 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
           <caret line="40" column="3" selection-start-line="40" selection-start-column="3" selection-end-line="55" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -770,6 +710,39 @@
       </provider>
       <provider editor-type-id="csv-text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/examples/1.py" />
+    <entry file="file://$PROJECT_DIR$/examples/cifar10_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="9" selection-start-column="9" selection-end-line="9" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/cifar10_gridsearch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/cifar10_cnn.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="false" fixedHeaders="false" rowLines="3">
+          <column index="0" width="335" />
+          <column index="1" width="100" />
+          <column index="2" width="100" />
+          <column index="3" width="100" />
+          <column index="4" width="100" />
+          <column index="5" width="100" />
+          <column index="6" width="100" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="29">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/nn/cnn/cnn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="957">
@@ -800,61 +773,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/1.py">
+    <entry file="file://$PROJECT_DIR$/examples/sentiment-analysis-using-lstm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="638" selection-start-column="638" selection-end-column="638" />
+        <state relative-caret-position="-1287" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/fashion_mnist_gridsearch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="31" column="18" selection-end-line="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/fashion_cnn_gridsearch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+        <state relative-caret-position="287">
+          <caret line="22" column="33" selection-end-line="113" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/cifar10_test.py">
+    <entry file="file://$PROJECT_DIR$/nn/cnn/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="9" lean-forward="true" selection-start-column="9" selection-end-line="9" selection-end-column="62" />
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/cifar10_cnn.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="false" fixedHeaders="false" rowLines="3">
-          <column index="0" width="335" />
-          <column index="1" width="100" />
-          <column index="2" width="100" />
-          <column index="3" width="100" />
-          <column index="4" width="100" />
-          <column index="5" width="100" />
-          <column index="6" width="100" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="29">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nn/cnn/grid_search.py">
+    <entry file="file://$PROJECT_DIR$/nn/rnn/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        <state relative-caret-position="29">
+          <caret line="1" column="37" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/cifar10_gridsearch.py">
+    <entry file="file://$PROJECT_DIR$/nn/rnn/rnn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret selection-end-line="10" />
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nn/rnn/gridsearch.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/cnn_analyzer.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -863,6 +826,30 @@
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/airfoil_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nn/cnn/grid_search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/sentiment_gridsearch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-254">
+          <caret line="29" selection-start-line="29" selection-end-line="29" selection-end-column="20" />
         </state>
       </provider>
     </entry>

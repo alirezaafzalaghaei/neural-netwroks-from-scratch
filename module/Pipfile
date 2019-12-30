@@ -19,6 +19,7 @@ jupyter-contrib-nbextensions = "*"
 Keras = "*"
 Theano = "*"
 tensorflow = "*"
+torch = "*"
 
 [requires]
 python_version = "3.5"
