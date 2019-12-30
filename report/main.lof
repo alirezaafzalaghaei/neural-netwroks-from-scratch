@@ -1,0 +1,17 @@
+\babel@toc {english}{}
+\contentsline {figure}{\numberline {1}{\ignorespaces An artificial neuron\relax }}{2}{figure.caption.1}% 
+\contentsline {figure}{\numberline {2}{\ignorespaces A biological neuron\relax }}{2}{figure.caption.1}% 
+\contentsline {figure}{\numberline {3}{\ignorespaces An Artificial neural network\relax }}{2}{figure.caption.2}% 
+\contentsline {figure}{\numberline {4}{\ignorespaces Different optimizers\relax }}{3}{figure.caption.3}% 
+\contentsline {figure}{\numberline {5}{\ignorespaces Convolution operator\relax }}{4}{figure.caption.4}% 
+\contentsline {figure}{\numberline {6}{\ignorespaces Pooling layer\relax }}{4}{figure.caption.4}% 
+\contentsline {figure}{\numberline {7}{\ignorespaces RNN\relax }}{4}{figure.caption.5}% 
+\contentsline {figure}{\numberline {8}{\ignorespaces LSTM cell\relax }}{4}{figure.caption.6}% 
+\contentsline {figure}{\numberline {10}{\ignorespaces Loss and accuracy during epochs for train and validation sets of Statlog.\relax }}{6}{figure.10}% 
+\contentsline {figure}{\numberline {9}{\ignorespaces Loss value of best architectures for IRIS\relax }}{7}{figure.caption.8}% 
+\contentsline {figure}{\numberline {11}{\ignorespaces Loss value of best architectures for Statlog\relax }}{7}{figure.caption.10}% 
+\contentsline {figure}{\numberline {13}{\ignorespaces Loss and accuracy during epochs for train and validation sets of MNIST.\relax }}{8}{figure.13}% 
+\contentsline {figure}{\numberline {12}{\ignorespaces Loss value of best architectures for MNIST\relax }}{9}{figure.caption.12}% 
+\contentsline {figure}{\numberline {14}{\ignorespaces Loss value of best architectures for Fashion mnist\relax }}{10}{figure.caption.14}% 
+\contentsline {figure}{\numberline {15}{\ignorespaces Loss and accuracy during epochs for train and validation sets of Fashion MNIST.\relax }}{10}{figure.15}% 
+\contentsfinish 

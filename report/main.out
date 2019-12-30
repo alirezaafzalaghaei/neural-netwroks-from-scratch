@@ -5,17 +5,26 @@
 \BOOKMARK [2][-]{subsection.1.3}{Backward phase: Backpropagation}{section.1}% 5
 \BOOKMARK [2][-]{subsection.1.4}{Update phase}{section.1}% 6
 \BOOKMARK [2][-]{subsection.1.5}{Weight regularization}{section.1}% 7
-\BOOKMARK [1][-]{section.2}{Convolutional neural network \(CNN\)}{}% 8
-\BOOKMARK [2][-]{subsection.2.1}{Convolution and Pooling block}{section.2}% 9
-\BOOKMARK [2][-]{subsection.2.2}{Backward phase}{section.2}% 10
-\BOOKMARK [1][-]{section.3}{Implementation}{}% 11
-\BOOKMARK [2][-]{subsection.3.1}{MLP model}{section.3}% 12
-\BOOKMARK [2][-]{subsection.3.2}{CNN Model}{section.3}% 13
-\BOOKMARK [2][-]{subsection.3.3}{Hyperparameter tuning}{section.3}% 14
-\BOOKMARK [1][-]{section.4}{Results and Discussion}{}% 15
-\BOOKMARK [2][-]{subsection.4.1}{Iris}{section.4}% 16
-\BOOKMARK [2][-]{subsection.4.2}{Statlog}{section.4}% 17
-\BOOKMARK [2][-]{subsection.4.3}{mnist}{section.4}% 18
-\BOOKMARK [2][-]{subsection.4.4}{Fashion mnist}{section.4}% 19
-\BOOKMARK [2][-]{subsection.4.5}{Cifar10}{section.4}% 20
-\BOOKMARK [1][-]{section.5}{Concluding remarks}{}% 21
+\BOOKMARK [2][-]{subsection.1.6}{Dropout}{section.1}% 8
+\BOOKMARK [1][-]{section.2}{Convolutional neural network \(CNN\)}{}% 9
+\BOOKMARK [2][-]{subsection.2.1}{Convolution and Pooling block}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.2}{Backward phase}{section.2}% 11
+\BOOKMARK [1][-]{section.3}{Recurrent neural network \(RNN\)}{}% 12
+\BOOKMARK [2][-]{subsection.3.1}{LSTM}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.2}{GRU}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.3}{Backward phase}{section.3}% 15
+\BOOKMARK [1][-]{section.4}{Text analysis}{}% 16
+\BOOKMARK [2][-]{subsection.4.1}{Embedding}{section.4}% 17
+\BOOKMARK [1][-]{section.5}{Implementation}{}% 18
+\BOOKMARK [2][-]{subsection.5.1}{MLP model}{section.5}% 19
+\BOOKMARK [2][-]{subsection.5.2}{CNN Model}{section.5}% 20
+\BOOKMARK [2][-]{subsection.5.3}{RNN Model}{section.5}% 21
+\BOOKMARK [2][-]{subsection.5.4}{Hyperparameter tuning}{section.5}% 22
+\BOOKMARK [1][-]{section.6}{Results and Discussion}{}% 23
+\BOOKMARK [2][-]{subsection.6.1}{Iris}{section.6}% 24
+\BOOKMARK [2][-]{subsection.6.2}{Statlog}{section.6}% 25
+\BOOKMARK [2][-]{subsection.6.3}{mnist}{section.6}% 26
+\BOOKMARK [2][-]{subsection.6.4}{Fashion mnist}{section.6}% 27
+\BOOKMARK [2][-]{subsection.6.5}{Cifar10}{section.6}% 28
+\BOOKMARK [2][-]{subsection.6.6}{Sentiment analysis}{section.6}% 29
+\BOOKMARK [1][-]{section.7}{Concluding remarks}{}% 30

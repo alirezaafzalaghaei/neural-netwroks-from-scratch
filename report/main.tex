@@ -82,7 +82,7 @@
 \Authors{Alireza Afzal Aghaei\textsuperscript{1}*}
 \affiliation{\textsuperscript{1}\textit{Department of Computer Science, Shahid Beheshti University, Tehran, Iran}} \affiliation{*\textbf{Corresponding author}: alirezaafzalaghaei@gmail.com}
 
-\Keywords{Deep learning, Convolutional neural networks} % Keywords - if you don't want any simply remove all the text between the curly brackets
+\Keywords{Deep learning, Convolutional neural networks, Recurrent neural networks} % Keywords - if you don't want any simply remove all the text between the curly brackets
 \newcommand{\keywordname}{Keywords} % Defines the keywords heading name
 
 %----------------------------------------------------------------------------------------
@@ -90,7 +90,7 @@
 %----------------------------------------------------------------------------------------
 
 \Abstract{
-In this report, we explain the mathematics behind deep neural networks by starting from multi layer perceptron (MLP) model and then discuss convolutional neural networks (CNN). To show the accuracy of models we use 5 well-known datasets, iris, statlog, mnist, fashion mnist and cifar10.
+In this report, we explain the mathematics behind deep neural networks by starting from multi layer perceptron (MLP) model, then discuss convolutional neural networks (CNN) and recurrent neural networks (RNN). To increase generalization of the models we explained weight regularization method as a powerful method among regularization techniques. To show the accuracy of models we use some datasets for classification tasks on iris dataset. then used CNN model on mnist and fashion mnist dataset and finally applied RNNs on sentiment analysis task.
 }
 
 %----------------------------------------------------------------------------------------
@@ -114,9 +114,9 @@ In this report, we explain the mathematics behind deep neural networks by starti
 ANNs began as an attempt to exploit the architecture of the human brain to perform tasks that conventional algorithms had little success with. They retained the biological concept of artificial neurons, which receive input, combine the input with their internal state (activation) and an optional threshold using an activation function, and produce output using an output function. The initial inputs are external data, such as images and documents. The ultimate outputs accomplish the task, such as recognizing an object in an image. The important characteristic of the activation function is that it provides a smooth transition as input values change, i.e. a small change in input produces a small change in output.The network consists of connections, each connection providing the output of one neuron as an input to another neuron. Each connection is assigned a weight that represents its relative importance. A given neuron can have multiple input and output connections.
 \begin{figure}\centering
 			\includegraphics[width=\linewidth]{img/neuron}
-	\caption{An artificial neuron}
+	\caption{A biological neuron}
 		\includegraphics[width=\linewidth]{img/aneuron}
-	\caption{A biological neuron}	
+	\caption{An artificial neuron}	
 \end{figure}
 A biological neuron made of a cell body (Soma), dendrites and an axon. Dendrite receives signals from other neurons, Soma sums all the incoming signals to generate input, Axon fires when the sum reaches a threshold value and sends a signal to the synapse where is the point of interconnection of one neuron with other neurons.
 
@@ -125,7 +125,7 @@ A biological neuron made of a cell body (Soma), dendrites and an axon. Dendrite 
 %
 %\end{figure}
 
-Artificial neuron simlulates the structure of a biological neron. As of the simplicity of derivative calculation, it uses sum of product of input and corresponding weights. It fires, if the summation reaches to a threshold. Note that, because of good approximation of fuzzy activations, the function $f$ maybe more complex than simple threshold function. This functions should be continuous and (weakly) differentiable. For example, $Tanh$, $Relu$ and its variants, $Sigmoid$ and radial basis functions ($RBFs$) are some of them. Same as linear regression, by finding set of appropriate weights, we can solve a linear regression problem with this approach.
+Artificial neuron simulates the structure of a biological neuron. As of the simplicity of derivative calculation, it uses sum of product of input and corresponding weights. It fires, if the summation reaches to a threshold. Note that, because of good approximation of fuzzy activation functions, the function $f$ maybe more complex than simple threshold function. This functions should be continuous and (weakly) differentiable. For example, $Tanh$, $Relu$ and its variants, $Sigmoid$ and radial basis functions ($RBFs$) are some of them. Same as linear regression, by finding set of appropriate weights, we can solve a linear regression problem with this approach.
 
 \begin{figure}\centering % Using \begin{figure*} makes the figure take up the entire width of the page
 	\includegraphics[width=\linewidth]{img/ann}
@@ -209,7 +209,8 @@ This regularization, can be defined by adding
 \alpha \sum_{i=1}^r \Vert W_i \Vert_F
 \end{equation}
 term to the loss function, where $\Vert \cdot \Vert_F$ denotes Frobinious norm and $\alpha$ is the regularization coefficient.
-
+\subsection{Dropout}
+Dropout is a regularization technique for reducing overfitting in neural networks by preventing complex co-adaptations on training data. It is a very efficient way of performing model averaging with neural networks. The term "dropout" refers to dropping out units (both hidden and visible) in a neural network.
 \section{Convolutional neural network (CNN)}
 In this section we introduce convolution and pooling operators used in Convolutional neural networks. Then derive the backpropagation formulas for these operators. 
 \subsection{Convolution and Pooling block}
@@ -228,9 +229,28 @@ Max Pooling also performs as a Noise Suppressant. It discards the noisy activati
 
 The Convolutional Layer and the Pooling Layer, together form the i-th layer of a Convolutional Neural Network. Depending on the complexities in the images, the number of such layers may be increased for capturing low-levels details even further, but at the cost of more computational power.
 After going through the above process, we have successfully enabled the model to understand the features. Moving on, we are going to flatten the final output and feed it to a regular Neural Network for classification purposes.
-
 \subsection{Backward phase}
 See \href{https://medium.com/@2017csm1006/forward-and-backpropagation-in-convolutional-neural-network-4dfa96d7b37e}{this} and \href{https://becominghuman.ai/back-propagation-in-convolutional-neural-networks-intuition-and-code-714ef1c38199}{this} for backward phase of convolution and pooling layers.
+
+\section{Recurrent neural network (RNN)}
+A recurrent neural network (RNN) is a class of artificial neural networks where connections between nodes form a directed graph along a temporal sequence. This allows it to exhibit temporal dynamic behavior. Unlike feedforward neural networks, RNNs can use their internal state (memory) to process sequences of inputs. This makes them applicable to tasks such as unsegmented, connected handwriting recognition or speech recognition.
+\begin{figure}\centering 
+	\includegraphics[width=.6\linewidth]{img/rnn}
+	\caption{RNN}
+\end{figure}
+\subsection{LSTM}
+A common LSTM unit is composed of a cell, an input gate, an output gate and a forget gate. The cell remembers values over arbitrary time intervals and the three gates regulate the flow of information into and out of the cell.
+\begin{figure}\centering 
+	\includegraphics[width=.6\linewidth]{img/lstm}
+	\caption{LSTM cell}
+\end{figure}
+\subsection{GRU}
+The GRU is like a long short-term memory (LSTM) with forget gate[2] but has fewer parameters than LSTM, as it lacks an output gate. GRU's performance on certain tasks of polyphonic music modeling and speech signal modeling was found to be similar to that of LSTM. GRUs have been shown to exhibit even better performance on certain smaller datasets. However, as shown by Gail Weiss \& Yoav Goldberg \& Eran Yahav, the LSTM is "strictly stronger" than the GRU as it can easily perform unbounded counting, while the GRU cannot.That's why the GRU fails to learn simple languages that are learnable by the LSTM. 
+\subsection{Backward phase}
+The error backpropagation algorithm for recurrent networks is named as backpropagation trough time (BPTT). see  \href{https://machinelearningmastery.com/gentle-introduction-backpropagation-time/}{this link} for more information about BTPP.
+\section{Text analysis}
+\subsection{Embedding}
+Word embedding is a technique used to represent documents with a dense vector representation. The vocabulary in these documents is mapped to real number vectors. Words that are semantically similar are mapped close to each other in the vector space. 
 
 %------------------------------------------------
 
@@ -295,6 +315,27 @@ where arguments are
 
 same as MLP model, this class implements three methods fit, score and predict. everything is same as previous one except fit function which gets some keyword arguments and pass them to keras fit function. So use keras validation\_data to validate model on specific data.
 
+\subsection{RNN Model}
+Again, For this case we used keras API and implemented a simple class to be compatible with previous both MLP and CNN class.
+\begin{python}
+	RNN(architecture, epochs,
+	batch_size, optimizer, loss,
+	metrics, task, verbose)
+\end{python}
+where arguments are
+\begin{itemize}
+	\item 	\textbf{architecture}: list of keras layers such as LSTM, Dense, etc.
+	\item  \textbf{epochs}: number of epochs
+	\item  \textbf{batch\_size}: size of the batch for gradient descent optimizer
+	\item  \textbf{optimizer}: keras optimizer such as adam or sgd
+	\item  \textbf{loss}: loss function, same as keras loss functions
+	\item \textbf{metrics}: list of metrics, same as keras
+	\item  \textbf{task}: regression or classification
+	\item  \textbf{verbose}: print training information, same as keras
+\end{itemize}
+
+same as CNN model, this class implements three methods fit, score and predict.
+
 \subsection{Hyperparameter tuning}
 To find optimal architecture of network, grid search is a simple and efficient way. By passing a set of different possible choices for a problem, the following classes run and save all possible architectures and their corresponding loss history.
 \begin{python}
@@ -303,14 +344,20 @@ MLPGridSearch(task, hidden_layers,
       epochs, mus, betas, etas,
       alphas, filename)
 \end{python}
-And for CNN
-
+for CNN
 \begin{python}
 CNNGridSearch(architecture,epochs,
 	  batch_sizes, optimizers,
 	  file_name)
 \end{python}
-These class implement two methods run and best\_model which return history of models and the best model which has best accuracy and lower loss, respectively. Also a parallelization technique for multi-core processors has been implemented on MLPGridSearch class to speedup searching process. 
+and RNN
+\begin{python}
+RNNGridSearch(architecture,epochs,
+batch_sizes, optimizers,
+file_name)
+\end{python}
+
+These classes implement two methods run and best\_model which return history of models and the best model which has best accuracy and lower loss, respectively. Also a parallelization technique for multi-core processors has been implemented on MLPGridSearch class to speedup searching process. Because of GPU limitations we cannot implement parallelization on CNNGridSearch and RNNGridSearch.
 
 \section{Results and Discussion}
 
@@ -392,10 +439,9 @@ verbose=1, task='classification')
 \end{python}
 
 \begin{center}\centering
-	\includegraphics[width=\linewidth,height=7cm]{img/satlog-plots2}
+	\includegraphics[width=\linewidth,height=5cm]{img/satlog-plots2}
 	\captionof{figure}{Loss and accuracy during epochs for train and validation sets of Statlog.}
 \end{center}
-
 
 \begin{table*}[hbt]\centering
   \begin{tabular*}{1\textwidth}{@{\extracolsep{\fill} }ccccccccccc@{}}
@@ -421,7 +467,7 @@ verbose=1, task='classification')
 
 \subsection{mnist}
 The MNIST database of handwritten digits, available from this page, has a training set of 60,000 examples, and a test set of 10,000 examples. It is a subset of a larger set available from NIST. The digits have been size-normalized and centered in a fixed-size image. \href{http://yann.lecun.com/exdb/mnist/}{More information about mnist dataset is available on lecun.com.}
-
+\\
 The grid search parameters for this problem are set to
 
 \begin{python}
@@ -464,7 +510,7 @@ verbose=1, task='classification')
 To reach this accuracy with just 15 epochs we reduced the batch size from 512 to 64. This shows the important role of batch size in training a netwrok. Another interesting fact we found is the effect of number of epochs on overfitting problen. In above figure, you sae that from iteration 7-8 the network validation accuracy is reducing.
 
 \begin{center}
-	\includegraphics[width=\linewidth,height=4cm]{img/mnist-plots2}
+	\includegraphics[width=1\linewidth,height=6cm]{img/mnist-plots2}
 	\captionof{figure}{Loss and accuracy during epochs for train and validation sets of MNIST.}
 	\label{fmnist2}
 \end{center}
@@ -515,7 +561,7 @@ beta=.2, eta=.01, alpha=.001,
 verbose=1, task='classification')
 \end{python}
 \begin{center}
-	\includegraphics[width=\linewidth,height=5cm]{img/fashion-plots2}
+	\includegraphics[width=\linewidth,height=6cm]{img/fashion-plots2}
 	\captionof{figure}{Loss and accuracy during epochs for train and validation sets of Fashion MNIST.}
 	\label{ffashion2}
 \end{center}
@@ -531,6 +577,7 @@ To increase the accuracy, we changed the model from MLP to CNN and tested differ
 
 \subsection{Cifar10}
 The CIFAR-10 dataset contains 60,000 32x32 color images in 10 different classes. The 10 different classes represent airplanes, cars, birds, cats, deer, dogs, frogs, horses, ships, and trucks. There are 6,000 images of each class. To show the effect of batch normalization effect on the dataset, we designed this architecture for cifar10 classification
+\\
 \begin{python}
 [Conv2D(32, (3, 3),padding='same',
        activation='relu'),
@@ -597,8 +644,24 @@ learning rate & epochs &accuracy \\ \midrule
 	\captionof{table}{The effect of epochs and learning for adam optimizer on cifar10 test set}
 	\label{tadams}
 \end{center}
+
+\subsection{Sentiment analysis}
+
+See dataset info in \href{https://www.kaggle.com/ashukr/rnnsentiment-data}{kaggle}. We splitted the data set into 67\% train and 33\% test set. The first test case in this example consist of 108 tries, with 12 different architectures and 9 different permutations of sentence configuration. To do this we first preprocess the documents and convert sentences to a sequence of integers. To apply this sequence into network we should align all sequences to a fixed size length. We tested 3 different lengths $100,200,500$. Since some words in the documents are appear frequently we removed 15 top common words from the sequences. Then fed this fixed size sequences to an embedding layer with $10,50,100,200$ output dimension along with one LSTM cell of $8,16,64$ units. Table \ref{tsentiment1} shows the accuracy of these models. All of the results obtained by just 5 epochs of Keras default Adam optimizer with batch size 256.  As the second try, we designed a more complex network consist of en embedding layer followed by two LSTM cells. Table \ref{tsentiment2} shows the results of this experiment ran in 15 epochs. Also in this example we used Bidirectional LSTM architecture to see the effect of this layer, but doesn't affect the accuracy.  For the last try, we designed a convolutional-LSTM network. This model performs better that previous models and reached $82\%$ accuracy. Note that the first layer of this model is an embedding layer with output\_dim=200, input\_dim=715 and input\_length=100. Here is the code of proposed architecture in presented library.
+\begin{python}
+N=max_dict_words + skip_common
+[Embedding(N, 200, input_length=
+max_sent_words), 
+LSTM(16, return_sequences=True),
+Conv1D(16, 3, padding='valid',
+activation='relu', strides=1),
+GlobalMaxPooling1D(),
+Dense(16,activation='relu'),
+Dense(2, activation='softmax')]
+\end{python}
 \section{Concluding remarks}
-In this exercise, we implemented a simple multi layer perceptron neural network from scratch with matrix form formulations which is very important where the number of neurons and layers are large. Our implementation is appropriate for both regression and classification tasks by just setting an argument. All of the preprocessing requirements such as scaling and encoding are done by $MLP$ class automatically. To tune the hyperparametes of the network for a specific dataset, we implemented a $MLPGridSearch$ class which uses $parallelization$ techniques and finds optimal architecture among all possible solutions. In the second part of the report, we implemented a $CNN$ class based on awesome $keras$ module which is based on $tensorflow$ a scientific computation package. Also to find optimal architecture, we implemented a $CNNGridSearch$ class with the same interface of $MLPGridSearch$ class. We tested this networks on 5 different datasets which is used by many researchers for classification tasks. The results shows the important role of model type and architecture, batch size, number of epochs, activation function and learning rate for training a network. Also to prevent overfitting problem we saw the effect of dropout layer in the networks.
+In this exercise, we implemented a simple multi layer perceptron neural network from scratch with matrix form formulations which is very important where the number of neurons and layers are large. Our implementation is appropriate for both regression and classification tasks by just setting an argument. All of the preprocessing requirements such as scaling and encoding are done by $MLP$ class automatically. To tune the hyperparametes of the network for a specific dataset, we implemented a $MLPGridSearch$ class which uses $parallelization$ techniques and finds optimal architecture among all possible solutions. In the second part of the report, we implemented a $CNN$ class based on awesome $keras$ module which is based on $tensorflow$ a scientific computation package. Also to find optimal architecture, we implemented a $CNNGridSearch$ class with the same interface of $MLPGridSearch$ class. The third part, implements $RNN$ based networks with an interface similar to $CNN$. Again to optimize the network architecture, we implemented $RNNGridSearch$. We tested this networks on 6 different datasets which is used by many researchers for classification tasks. The results shows the important role of model type and architecture, batch size, number of epochs, activation function and learning rate for training a network. Also to prevent overfitting problem we saw the effect of dropout layer in the networks. 
+
 \begin{table*}[]
 	\begin{tabular*}{1\linewidth}{@{\extracolsep{\fill} }lccc@{}}
 		\toprule
@@ -630,39 +693,79 @@ In this exercise, we implemented a simple multi layer perceptron neural network 
 \end{table*}
 
 \begin{table*}[]
-	\begin{tabular}{@{}cccc@{}}
+	\begin{tabular*}{1\linewidth}{@{\extracolsep{\fill} }lccc@{}}
 		\toprule
-		architecture & test\_score & train\_score & loss \\ \midrule
+		architecture & test & train & loss \\ \midrule
 		Conv(filters=16, kernel=(3, 3)),Conv(filters=16, kernel=(3, 3)),Conv(filters=16, kernel=(3, 3)) & 0.84 & 0.99 & 0.04 \\
 		Conv(filters=32, kernel=(7, 7)),Conv(filters=32, kernel=(7, 7)),Conv(filters=32, kernel=(7, 7)) & 0.82 & 0.98 & 0.04 \\
 		Conv(filters=32, kernel=(7, 7)),Conv(filters=32, kernel=(7, 7)),Conv(filters=32, kernel=(7, 7)) & 0.82 & 0.98 & 0.06 \\
 		Conv(filters=16, kernel=(3, 3)),Conv(filters=16, kernel=(3, 3)),Conv(filters=16, kernel=(3, 3)) & 0.80 & 0.99 & 0.03 \\ \bottomrule
-	\end{tabular}
+	\end{tabular*}
 	\caption{Train and test score for fashion mnist CNN  with different configurations}
 	\label{tfashion3}
 \end{table*}
 \begin{table*}[]
-	\begin{tabular}{@{}ccc@{}}
+	\begin{tabular*}{1\linewidth}{@{\extracolsep{\fill} }lcc@{}}
 		\toprule
 		architecture & test & train \\ \midrule
-		Conv(filters=16, kernel=(3, 3)),Conv(filters=16, kernel=(3, 3)),Conv(filters=16, kernel=(3, 3)),Dense(units=32) & 0.86 & 0.99  \\
-		Conv(filters=16, kernel=(3, 3)),Conv(filters=16, kernel=(3, 3)),Conv(filters=16, kernel=(3, 3)),Dense(units=32) & 0.85 & 1.00  \\
-		Conv(filters=32, kernel=(7, 7)),Conv(filters=32, kernel=(7, 7)),Conv(filters=32, kernel=(7, 7)),Dense(units=32) & 0.84 & 0.99 \\
-		Conv(filters=32, kernel=(7, 7)),Conv(filters=32, kernel=(7, 7)),Conv(filters=32, kernel=(7, 7)),Dense(units=32) & 0.83 & 0.99 \\ \bottomrule
-	\end{tabular}
+		Conv(filters=16, kernel=(3,3)),Conv(filters=16, kernel=(3, 3)),Conv(filters=16, kernel=(3,3)),Dense(units=32) & 0.86 & 0.99  \\
+		Conv(filters=16, kernel=(3,3)),Conv(filters=16, kernel=(3, 3)),Conv(filters=16, kernel=(3,3)),Dense(units=32) & 0.85 & 1.00  \\
+		Conv(filters=32, kernel=(7,7)),Conv(filters=32, kernel=(7, 7)),Conv(filters=32, kernel=(7,7)),Dense(units=32) & 0.84 & 0.99 \\
+		Conv(filters=32, kernel=(7,7)),Conv(filters=32, kernel=(7, 7)),Conv(filters=32, kernel=(7,7)),Dense(units=32) & 0.83 & 0.99 \\ \bottomrule
+	\end{tabular*}
 	\caption{Train and test score for fashion mnist CNN  with different configurations}
 	\label{tfashion4}
 \end{table*}
 \begin{table*}[]
-	\begin{tabular}{@{}ccc@{}}
+	\begin{tabular*}{1\linewidth}{@{\extracolsep{\fill} }lcc@{}}
 		\toprule
 		architecture & test & train  \\ \midrule
 		Conv(filters=8, kernel=(3, 3)),Conv(filters=16, kernel=(3, 3)),Conv(filters=32, kernel=(3, 3)),Dense(units=32) & 0.89 & 1.00 \\
 		Conv(filters=8, kernel=(7, 7)),Conv(filters=16, kernel=(7, 7)),Conv(filters=32, kernel=(7, 7)),Dense(units=32) & 0.86 & 0.99 \\
 		Conv(filters=8, kernel=(3, 3)),Conv(filters=16, kernel=(3, 3)),Conv(filters=32, kernel=(3, 3)),Dense(units=32) & 0.85 & 1.00  \\
 		Conv(filters=8, kernel=(7, 7)),Conv(filters=16, kernel=(7, 7)),Conv(filters=32, kernel=(7, 7)),Dense(units=32) & 0.85 & 0.99  \\ \bottomrule
-	\end{tabular}
+	\end{tabular*}
 	\caption{Train and test score for fashion mnist CNN  with different configurations}
 	\label{tfashion5}
+\end{table*}
+
+\begin{table*}[]
+	\begin{tabular*}{1\linewidth}{@{\extracolsep{\fill} }lccc@{}}
+		\toprule
+		architecture & test\_score & train\_score & loss \\ \midrule
+		Embedding(output\_dim=200, input\_dim=515, input\_length=100),LSTM(units=64) & 0.814 & 0.840 & 0.35 \\
+		Embedding(output\_dim=200, input\_dim=515, input\_length=100),LSTM(units=8) & 0.811 & 0.840 & 0.36 \\
+		Embedding(output\_dim=100, input\_dim=515, input\_length=100),LSTM(units=16) & 0.809 & 0.840 & 0.35 \\
+		Embedding(output\_dim=200, input\_dim=515, input\_length=100),LSTM(units=16) & 0.809 & 0.840 & 0.35 \\
+		Embedding(output\_dim=50, input\_dim=515, input\_length=100),LSTM(units=64) & 0.806 & 0.830 & 0.39 \\ \bottomrule
+	\end{tabular*}
+	\caption{Train and test score for sentiment analysis with different configurations}
+\label{tsentiment1}
+\end{table*}
+
+\begin{table*}[]
+	\begin{tabular*}{1\linewidth}{@{\extracolsep{\fill} }lcc@{}}
+		\toprule
+		architecture & test & train \\ \midrule
+		Embedding(output\_dim=200, input\_dim=725, input\_length=100),LSTM(units=32) & 0.799 & 0.870 \\
+		Embedding(output\_dim=200, input\_dim=725, input\_length=100),LSTM(units=32) & 0.796 & 0.920 \\
+		Embedding(output\_dim=500, input\_dim=725, input\_length=100),LSTM(units=32),LSTM(units=32) & 0.795 & 0.950 \\
+		Embedding(output\_dim=1000, input\_dim=725, input\_length=100),LSTM(units=32) & 0.795 & 0.930 \\ \bottomrule
+	\end{tabular*}
+\caption{Train and test score for sentiment analysis with different configurations}
+\label{tsentiment2}
+\end{table*}
+\begin{table*}[t!]
+	\begin{tabular*}{1\linewidth}{@{\extracolsep{\fill} }lcc@{}}
+		\toprule
+		architecture & test\_score & train\_score \\ \midrule
+		LSTM(units=16),Conv1D(kernel=(3,), filters=16),GlobalMaxPooling1D(),Dense(units=16) & 0.820 & 0.880 \\
+		LSTM(units=16),Conv1D(kernel=(3,), filters=8),GlobalMaxPooling1D(),Dense(units=16) & 0.818 & 0.880 \\
+	LSTM(units=16),Conv1D(kernel=(5,), filters=8),GlobalMaxPooling1D(),Dense(units=16) & 0.812 & 0.880 \\
+		Conv1D(kernel=(3,), filters=16),GlobalMaxPooling1D(),Dense(units=16) & 0.806 & 0.940 \\
+		\multicolumn{1}{l}{} &  &  \\ \bottomrule
+	\end{tabular*}
+\caption{Train and test score for sentiment analysis with different configurations}
+\label{tsentiment3}
 \end{table*}
 \end{document}

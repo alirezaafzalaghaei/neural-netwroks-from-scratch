@@ -1,0 +1,13 @@
+\babel@toc {english}{}
+\contentsline {table}{\numberline {1}{\ignorespaces Best architectures and corresponding scores for IRIS dataset\relax }}{7}{table.caption.7}% 
+\contentsline {table}{\numberline {2}{\ignorespaces Best architectures and corresponding scores for Statlog dataset\relax }}{8}{table.caption.9}% 
+\contentsline {table}{\numberline {3}{\ignorespaces Best architectures and corresponding scores for MNIST dataset\relax }}{9}{table.caption.11}% 
+\contentsline {table}{\numberline {4}{\ignorespaces Best architectures and corresponding scores for Fashion MNIST dataset\relax }}{11}{table.caption.13}% 
+\contentsline {table}{\numberline {5}{\ignorespaces The effect of epochs and learning for adam optimizer on cifar10 test set\relax }}{12}{table.5}% 
+\contentsline {table}{\numberline {6}{\ignorespaces Train and test score for fashion mnist CNN with different configurations\relax }}{14}{table.caption.15}% 
+\contentsline {table}{\numberline {7}{\ignorespaces Train and test score for fashion mnist CNN with different configurations\relax }}{14}{table.caption.16}% 
+\contentsline {table}{\numberline {8}{\ignorespaces Train and test score for fashion mnist CNN with different configurations\relax }}{14}{table.caption.17}% 
+\contentsline {table}{\numberline {9}{\ignorespaces Train and test score for fashion mnist CNN with different configurations\relax }}{14}{table.caption.18}% 
+\contentsline {table}{\numberline {10}{\ignorespaces Train and test score for fashion mnist CNN with different configurations\relax }}{14}{table.caption.19}% 
+\contentsline {table}{\numberline {11}{\ignorespaces Train and test score for sentiment analysis with different configurations\relax }}{14}{table.caption.20}% 
+\contentsfinish 

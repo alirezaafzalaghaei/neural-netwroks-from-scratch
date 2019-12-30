@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.11.22)  10 DEC 2019 15:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.12.13)  30 DEC 2019 22:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -689,12 +689,12 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
-<img/neuron.png, id=130, 803.0pt x 431.6125pt>
+<img/neuron.png, id=184, 803.0pt x 431.6125pt>
 File: img/neuron.png Graphic file (type png)
 <use img/neuron.png>
 Package pdftex.def Info: img/neuron.png  used on input line 116.
 (pdftex.def)             Requested size: 242.41745pt x 130.30139pt.
-<img/aneuron.png, id=132, 584.1825pt x 264.99pt>
+<img/aneuron.png, id=186, 584.1825pt x 264.99pt>
 File: img/aneuron.png Graphic file (type png)
 <use img/aneuron.png>
 Package pdftex.def Info: img/aneuron.png  used on input line 118.
@@ -702,269 +702,296 @@ Package pdftex.def Info: img/aneuron.png  used on input line 118.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./img/neuron.png> <./img/aneuron.png>]
-<img/ann.png, id=143, 805.0075pt x 418.56375pt>
+]
+<img/ann.png, id=195, 805.0075pt x 418.56375pt>
 File: img/ann.png Graphic file (type png)
 <use img/ann.png>
 Package pdftex.def Info: img/ann.png  used on input line 131.
 (pdftex.def)             Requested size: 242.41745pt x 126.04271pt.
-<img/optimizer.png, id=145, 602.25pt x 425.59pt>
+ [2 <./img/neuron.png> <./img/aneuron.png> <./img/ann.png>]
+<img/optimizer.png, id=224, 602.25pt x 425.59pt>
 File: img/optimizer.png Graphic file (type png)
 <use img/optimizer.png>
 Package pdftex.def Info: img/optimizer.png  used on input line 194.
 (pdftex.def)             Requested size: 242.41745pt x 171.31097pt.
- [2 <./img/ann.png>]
-<img/conv.png, id=172, 321.45094pt x 236.38312pt>
+<img/conv.png, id=226, 321.45094pt x 236.38312pt>
 File: img/conv.png Graphic file (type png)
 <use img/conv.png>
-Package pdftex.def Info: img/conv.png  used on input line 217.
+Package pdftex.def Info: img/conv.png  used on input line 218.
 (pdftex.def)             Requested size: 145.45193pt x 106.96295pt.
-<img/pooling.jpeg, id=173, 598.235pt x 440.64626pt>
+<img/pooling.jpeg, id=227, 598.235pt x 440.64626pt>
 File: img/pooling.jpeg Graphic file (type jpg)
 <use img/pooling.jpeg>
-Package pdftex.def Info: img/pooling.jpeg  used on input line 219.
+Package pdftex.def Info: img/pooling.jpeg  used on input line 220.
 (pdftex.def)             Requested size: 145.45193pt x 107.13562pt.
- [3 <./img/optimizer.png> <./img/conv.png (PNG copy)> <./img/pooling.jpeg>] (/u
-sr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+ [3 <./img/optimizer.png> <./img/conv.png (PNG copy)> <./img/pooling.jpeg>]
+<img/rnn.png, id=241, 761.84625pt x 377.41pt>
+File: img/rnn.png Graphic file (type png)
+<use img/rnn.png>
+Package pdftex.def Info: img/rnn.png  used on input line 238.
+(pdftex.def)             Requested size: 145.45193pt x 72.05417pt.
+<img/lstm.png, id=242, 311.84505pt x 242.46585pt>
+File: img/lstm.png Graphic file (type png)
+<use img/lstm.png>
+Package pdftex.def Info: img/lstm.png  used on input line 244.
+(pdftex.def)             Requested size: 145.45193pt x 113.08952pt.
+ (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
+[4 <./img/rnn.png> <./img/lstm.png>]
 LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 2
-53.
+73.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 253.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 273.
 
-Overfull \hbox (3.4194pt too wide) in paragraph at lines 263--264
+Overfull \hbox (3.4194pt too wide) in paragraph at lines 283--284
 \OT1/ptm/m/n/10 (-20) on task, this class en-codes out-put val-ues and also cho
 oses
  []
 
 
-Overfull \hbox (3.57031pt too wide) in paragraph at lines 267--268
+Overfull \hbox (3.57031pt too wide) in paragraph at lines 287--288
 []\OT1/ptm/b/n/10 fit(x[]train, y[]train, val-i-da-tion: op-tional = list(x[]va
 lid,
  []
 
-[4]
-Overfull \hbox (2.38504pt too wide) in paragraph at lines 301--302
+
+Overfull \hbox (16.78519pt too wide) in paragraph at lines 322--323
+[][][][][][][][][][][][] 
+ []
+
+[5]
+Overfull \hbox (2.38504pt too wide) in paragraph at lines 342--343
 [][][][][][][][][][] 
  []
 
 
-Overfull \hbox (2.38504pt too wide) in paragraph at lines 309--310
+Overfull \hbox (2.38504pt too wide) in paragraph at lines 349--350
 [][][][][][][][][] 
  []
 
 
-Overfull \hbox (2.38504pt too wide) in paragraph at lines 310--311
+Overfull \hbox (2.38504pt too wide) in paragraph at lines 350--351
 [][][][][][][][][] 
  []
 
 
-Overfull \hbox (2.38504pt too wide) in paragraph at lines 329--330
+Overfull \hbox (2.38504pt too wide) in paragraph at lines 355--356
+[][][][][][][][][] 
+ []
+
+
+Overfull \hbox (2.38504pt too wide) in paragraph at lines 376--377
 [][][][][][][][][][][][][][] 
  []
 
-<img/iris-plots1.png, id=204, 900.36375pt x 666.49pt>
+<img/iris-plots1.png, id=274, 900.36375pt x 666.49pt>
 File: img/iris-plots1.png Graphic file (type png)
 <use img/iris-plots1.png>
-Package pdftex.def Info: img/iris-plots1.png  used on input line 363.
+Package pdftex.def Info: img/iris-plots1.png  used on input line 410.
 (pdftex.def)             Requested size: 433.9282pt x 284.5308pt.
 
-Overfull \hbox (2.38504pt too wide) in paragraph at lines 389--390
+Overfull \hbox (2.38504pt too wide) in paragraph at lines 436--437
 [][][][][][][][][] 
  []
 
-<img/satlog-plots2.png, id=207, 642.4pt x 481.8pt>
+<img/satlog-plots2.png, id=277, 642.4pt x 481.8pt>
 File: img/satlog-plots2.png Graphic file (type png)
 <use img/satlog-plots2.png>
-Package pdftex.def Info: img/satlog-plots2.png  used on input line 395.
-(pdftex.def)             Requested size: 242.41875pt x 199.16399pt.
+Package pdftex.def Info: img/satlog-plots2.png  used on input line 442.
+(pdftex.def)             Requested size: 242.41875pt x 142.26208pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 396.
+(caption)                particular \caption on input line 443.
 See the caption package documentation for explanation.
 
-<img/statlog-plots1.png, id=208, 900.36375pt x 666.49pt>
+<img/statlog-plots1.png, id=278, 900.36375pt x 666.49pt>
 File: img/statlog-plots1.png Graphic file (type png)
 <use img/statlog-plots1.png>
-Package pdftex.def Info: img/statlog-plots1.png  used on input line 417.
+Package pdftex.def Info: img/statlog-plots1.png  used on input line 463.
 (pdftex.def)             Requested size: 433.9282pt x 284.5308pt.
-[5 <./img/satlog-plots2.png (PNG copy)>] [6 <./img/iris-plots1.png> <./img/stat
+[6 <./img/satlog-plots2.png (PNG copy)>] [7 <./img/iris-plots1.png> <./img/stat
 log-plots1.png>]
-Overfull \hbox (2.38504pt too wide) in paragraph at lines 428--429
+Overfull \hbox (2.38504pt too wide) in paragraph at lines 474--475
 [][][][][][][][] 
  []
 
 
-Overfull \hbox (2.38504pt too wide) in paragraph at lines 430--431
+Overfull \hbox (2.38504pt too wide) in paragraph at lines 476--477
 [][][][][][][][][] 
  []
 
 
-Overfull \hbox (2.38504pt too wide) in paragraph at lines 441--442
+Overfull \hbox (2.38504pt too wide) in paragraph at lines 487--488
 [][][][][][][][][][][] 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 445.
+               Default added (so using `tbp') on input line 491.
 
-<img/mnist-plots1.png, id=266, 911.405pt x 666.49pt>
+<img/mnist-plots1.png, id=342, 911.405pt x 666.49pt>
 File: img/mnist-plots1.png Graphic file (type png)
 <use img/mnist-plots1.png>
-Package pdftex.def Info: img/mnist-plots1.png  used on input line 460.
+Package pdftex.def Info: img/mnist-plots1.png  used on input line 506.
 (pdftex.def)             Requested size: 433.93707pt x 284.5308pt.
-<img/mnist-plots2.png, id=267, 642.4pt x 481.8pt>
+<img/mnist-plots2.png, id=343, 642.4pt x 481.8pt>
 File: img/mnist-plots2.png Graphic file (type png)
 <use img/mnist-plots2.png>
-Package pdftex.def Info: img/mnist-plots2.png  used on input line 467.
-(pdftex.def)             Requested size: 242.41875pt x 113.81114pt.
+Package pdftex.def Info: img/mnist-plots2.png  used on input line 513.
+(pdftex.def)             Requested size: 242.41875pt x 170.71304pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 468.
+(caption)                particular \caption on input line 514.
 See the caption package documentation for explanation.
 
 
-Underfull \vbox (badness 2050) has occurred while \output is active []
-
-
-Overfull \hbox (2.38504pt too wide) in paragraph at lines 478--479
+Overfull \hbox (2.38504pt too wide) in paragraph at lines 524--525
 [][][][][][][][] 
  []
 
 
-Overfull \hbox (2.38504pt too wide) in paragraph at lines 480--481
+Overfull \hbox (2.38504pt too wide) in paragraph at lines 526--527
 [][][][][][][][][] 
  []
 
+[8 <./img/mnist-plots2.png (PNG copy)>] [9 <./img/mnist-plots1.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 488.
+               Default added (so using `tbp') on input line 534.
 
-<img/fashion-plots1.png, id=269, 900.36375pt x 666.49pt>
+<img/fashion-plots1.png, id=383, 900.36375pt x 666.49pt>
 File: img/fashion-plots1.png Graphic file (type png)
 <use img/fashion-plots1.png>
-Package pdftex.def Info: img/fashion-plots1.png  used on input line 503.
+Package pdftex.def Info: img/fashion-plots1.png  used on input line 549.
 (pdftex.def)             Requested size: 433.9282pt x 284.5308pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 507--510
+Underfull \hbox (badness 10000) in paragraph at lines 553--556
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 507--510
+Underfull \hbox (badness 10000) in paragraph at lines 553--556
 
  []
 
-[7 <./img/mnist-plots2.png (PNG copy)>] [8 <./img/mnist-plots1.png>]
-<img/fashion-plots2.png, id=314, 642.4pt x 481.8pt>
+<img/fashion-plots2.png, id=384, 642.4pt x 481.8pt>
 File: img/fashion-plots2.png Graphic file (type png)
 <use img/fashion-plots2.png>
-Package pdftex.def Info: img/fashion-plots2.png  used on input line 518.
-(pdftex.def)             Requested size: 242.41875pt x 142.26208pt.
-
+Package pdftex.def Info: img/fashion-plots2.png  used on input line 564.
+(pdftex.def)             Requested size: 242.41875pt x 170.71304pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 519.
+(caption)                particular \caption on input line 565.
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 524--525
+Underfull \hbox (badness 10000) in paragraph at lines 570--571
 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 579--581
 
- [9 <./img/fashion-plots1.png> <./img/fashion-plots2.png (PNG copy)>]
-Overfull \hbox (2.38504pt too wide) in paragraph at lines 535--536
+ []
+
+
+Overfull \hbox (2.38504pt too wide) in paragraph at lines 582--583
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (2.38504pt too wide) in paragraph at lines 539--540
+Overfull \hbox (2.38504pt too wide) in paragraph at lines 586--587
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (2.38504pt too wide) in paragraph at lines 548--549
+Overfull \hbox (2.38504pt too wide) in paragraph at lines 595--596
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (2.38504pt too wide) in paragraph at lines 554--555
+Overfull \hbox (2.38504pt too wide) in paragraph at lines 601--602
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (2.38504pt too wide) in paragraph at lines 564--565
+[10 <./img/fashion-plots2.png (PNG copy)>] [11 <./img/fashion-plots1.png>]
+Overfull \hbox (2.38504pt too wide) in paragraph at lines 611--612
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (2.38504pt too wide) in paragraph at lines 571--572
+Overfull \hbox (2.38504pt too wide) in paragraph at lines 618--619
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 597.
+(caption)                particular \caption on input line 644.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 602.
+               Default added (so using `tbp') on input line 665.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 617.
+               Default added (so using `tbp') on input line 680.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 632.
+               Default added (so using `tbp') on input line 695.
 
 
-Overfull \hbox (10.25143pt too wide) in paragraph at lines 633--641
-[][] 
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 707.
+
+
+Overfull \hbox (1.70155pt too wide) in alignment at lines 708--715
+[] [] []
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 644.
+               Default added (so using `tbp') on input line 719.
 
 
-Overfull \hbox (4.20155pt too wide) in paragraph at lines 645--653
-[][] 
+Overfull \hbox (1.70155pt too wide) in alignment at lines 720--727
+[] [] []
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 656.
+               Default added (so using `tbp') on input line 732.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 746.
 
 
 AED: lastpage setting LastPage
-[10] [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 668.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 668.
+[12] [13] [14]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 771.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 771.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 668.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 668.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 771.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 771.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 98350124AD3FC60D8D16B890CFD43AAD;1297.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 668.
+(rerunfilecheck)             Checksum: 646887556AB46BC7C37B7DF1E03509C7;1828.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 771.
  ) 
 Here is how much of TeX's memory you used:
- 13984 strings out of 492167
- 202868 string characters out of 6131557
- 564615 words of memory out of 5000000
- 17754 multiletter control sequences out of 15000+600000
- 65381 words of font info for 233 fonts, out of 8000000 for 9000
+ 14082 strings out of 492167
+ 204221 string characters out of 6131557
+ 565055 words of memory out of 5000000
+ 17808 multiletter control sequences out of 15000+600000
+ 65676 words of font info for 238 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,12n,49p,1296b,1889s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,12n,49p,1596b,1936s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
@@ -976,10 +1003,10 @@ b></usr/share/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texmf-dist
 /fonts/type1/urw/symbol/usyr.pfb></usr/share/texmf-dist/fonts/type1/urw/times/u
 tmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/t
 exmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (11 pages, 669569 bytes).
+Output written on main.pdf (14 pages, 728827 bytes).
 PDF statistics:
- 476 PDF objects out of 1000 (max. 8388607)
- 404 compressed objects within 5 object streams
- 182 named destinations out of 1000 (max. 500000)
- 50410 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 586 PDF objects out of 1000 (max. 8388607)
+ 498 compressed objects within 5 object streams
+ 217 named destinations out of 1000 (max. 500000)
+ 50492 words of extra memory for PDF output out of 51595 (max. 10000000)
 
