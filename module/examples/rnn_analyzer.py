@@ -31,7 +31,7 @@ def rnn_analyze(csv_file, n=6, dosent_req: set = set()):
             reqs = set()
             if cls == 'Conv1D':
                 reqs = {'filters', 'kernel_size', 'activation'}
-            elif cls in ('Dense', 'LSTM'):
+            elif cls in ('Dense', 'LSTM', 'GRU'):
                 reqs = {'units'}
             elif cls == 'Bidirectional':
                 continue
