@@ -1,30 +1,33 @@
-\BOOKMARK [1][-]{Doc-Start}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.1}{Multi layer perceptron \(MLP\)}{}% 2
-\BOOKMARK [2][-]{subsection.1.1}{Forward phase}{section.1}% 3
-\BOOKMARK [2][-]{subsection.1.2}{Loss function}{section.1}% 4
-\BOOKMARK [2][-]{subsection.1.3}{Backward phase: Backpropagation}{section.1}% 5
-\BOOKMARK [2][-]{subsection.1.4}{Update phase}{section.1}% 6
-\BOOKMARK [2][-]{subsection.1.5}{Weight regularization}{section.1}% 7
-\BOOKMARK [2][-]{subsection.1.6}{Dropout}{section.1}% 8
-\BOOKMARK [1][-]{section.2}{Convolutional neural network \(CNN\)}{}% 9
-\BOOKMARK [2][-]{subsection.2.1}{Convolution and Pooling block}{section.2}% 10
-\BOOKMARK [2][-]{subsection.2.2}{Backward phase}{section.2}% 11
-\BOOKMARK [1][-]{section.3}{Recurrent neural network \(RNN\)}{}% 12
-\BOOKMARK [2][-]{subsection.3.1}{LSTM}{section.3}% 13
-\BOOKMARK [2][-]{subsection.3.2}{GRU}{section.3}% 14
-\BOOKMARK [2][-]{subsection.3.3}{Backward phase}{section.3}% 15
-\BOOKMARK [1][-]{section.4}{Text analysis}{}% 16
-\BOOKMARK [2][-]{subsection.4.1}{Embedding}{section.4}% 17
-\BOOKMARK [1][-]{section.5}{Implementation}{}% 18
-\BOOKMARK [2][-]{subsection.5.1}{MLP model}{section.5}% 19
-\BOOKMARK [2][-]{subsection.5.2}{CNN Model}{section.5}% 20
-\BOOKMARK [2][-]{subsection.5.3}{RNN Model}{section.5}% 21
-\BOOKMARK [2][-]{subsection.5.4}{Hyperparameter tuning}{section.5}% 22
-\BOOKMARK [1][-]{section.6}{Results and Discussion}{}% 23
-\BOOKMARK [2][-]{subsection.6.1}{Iris}{section.6}% 24
-\BOOKMARK [2][-]{subsection.6.2}{Statlog}{section.6}% 25
-\BOOKMARK [2][-]{subsection.6.3}{mnist}{section.6}% 26
-\BOOKMARK [2][-]{subsection.6.4}{Fashion mnist}{section.6}% 27
-\BOOKMARK [2][-]{subsection.6.5}{Cifar10}{section.6}% 28
-\BOOKMARK [2][-]{subsection.6.6}{Sentiment analysis}{section.6}% 29
-\BOOKMARK [1][-]{section.7}{Concluding remarks}{}% 30
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Multi layer perceptron \(MLP\)}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Forward phase}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Loss function}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Backward phase: Backpropagation}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Update phase}{section.2}% 6
+\BOOKMARK [1][-]{section.3}{Regularization}{}% 7
+\BOOKMARK [2][-]{subsection.3.1}{Weight regularization}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.2}{Dropout}{section.3}% 9
+\BOOKMARK [1][-]{section.4}{Convolutional neural network \(CNN\)}{}% 10
+\BOOKMARK [2][-]{subsection.4.1}{Convolution block}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.2}{Pooling block}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.3}{Backward phase}{section.4}% 13
+\BOOKMARK [1][-]{section.5}{Recurrent neural network \(RNN\)}{}% 14
+\BOOKMARK [2][-]{subsection.5.1}{LSTM}{section.5}% 15
+\BOOKMARK [2][-]{subsection.5.2}{GRU}{section.5}% 16
+\BOOKMARK [2][-]{subsection.5.3}{Bidirectional}{section.5}% 17
+\BOOKMARK [2][-]{subsection.5.4}{Backward phase}{section.5}% 18
+\BOOKMARK [1][-]{section.6}{Text analysis}{}% 19
+\BOOKMARK [2][-]{subsection.6.1}{Embedding}{section.6}% 20
+\BOOKMARK [1][-]{section.7}{Implementation}{}% 21
+\BOOKMARK [2][-]{subsection.7.1}{MLP model}{section.7}% 22
+\BOOKMARK [2][-]{subsection.7.2}{CNN Model}{section.7}% 23
+\BOOKMARK [2][-]{subsection.7.3}{RNN Model}{section.7}% 24
+\BOOKMARK [2][-]{subsection.7.4}{Hyperparameter tuning}{section.7}% 25
+\BOOKMARK [1][-]{section.8}{Results and Discussion}{}% 26
+\BOOKMARK [2][-]{subsection.8.1}{Iris}{section.8}% 27
+\BOOKMARK [2][-]{subsection.8.2}{Statlog}{section.8}% 28
+\BOOKMARK [2][-]{subsection.8.3}{mnist}{section.8}% 29
+\BOOKMARK [2][-]{subsection.8.4}{Fashion mnist}{section.8}% 30
+\BOOKMARK [2][-]{subsection.8.5}{Cifar10}{section.8}% 31
+\BOOKMARK [2][-]{subsection.8.6}{Sentiment analysis}{section.8}% 32
+\BOOKMARK [1][-]{section.9}{Concluding remarks}{}% 33

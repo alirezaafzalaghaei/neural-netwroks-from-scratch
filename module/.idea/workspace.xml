@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cd7a7f90-a98b-47a1-86a7-3a385fe7230a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/.directory" beforeDir="false" afterPath="$PROJECT_DIR$/examples/.directory" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/Report.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/examples/Report.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/sentiment1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/examples/sentiment1.csv" afterDir="false" />
-    </list>
+    <list default="true" id="cd7a7f90-a98b-47a1-86a7-3a385fe7230a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +57,7 @@
     <session id="-1404486208">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.25" value="2" />
           <entry key="project.open.time.26" value="2" />
           <entry key="project.open.time.27" value="1" />
