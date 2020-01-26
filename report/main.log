@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.1.18)  27 JAN 2020 01:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.1.18)  27 JAN 2020 01:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -790,12 +790,11 @@ Overfull \hbox (2.38504pt too wide) in paragraph at lines 375--376
 [][][][][][][][][] 
  []
 
-
+[6]
 Overfull \hbox (2.38504pt too wide) in paragraph at lines 396--397
 [][][][][][][][][][][][][][] 
  []
 
-[6]
 <img/iris-plots1.png, id=320, 900.36375pt x 666.49pt>
 File: img/iris-plots1.png Graphic file (type png)
 <use img/iris-plots1.png>
@@ -845,18 +844,20 @@ File: img/mnist-plots1.png Graphic file (type png)
 <use img/mnist-plots1.png>
 Package pdftex.def Info: img/mnist-plots1.png  used on input line 526.
 (pdftex.def)             Requested size: 433.93707pt x 284.5308pt.
-<img/mnist-plots2.png, id=328, 642.4pt x 481.8pt>
+[7 <./img/satlog-plots2.png (PNG copy)>] [8 <./img/iris-plots1.png> <./img/stat
+log-plots1.png>]
+<img/mnist-plots2.png, id=392, 642.4pt x 481.8pt>
 File: img/mnist-plots2.png Graphic file (type png)
 <use img/mnist-plots2.png>
 Package pdftex.def Info: img/mnist-plots2.png  used on input line 533.
 (pdftex.def)             Requested size: 242.41875pt x 170.71304pt.
 
+
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 534.
 See the caption package documentation for explanation.
 
-[7 <./img/satlog-plots2.png (PNG copy)>] [8 <./img/iris-plots1.png> <./img/stat
-log-plots1.png>]
+
 Overfull \hbox (2.38504pt too wide) in paragraph at lines 544--545
 [][][][][][][][] 
  []
@@ -895,14 +896,14 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 585.
 See the caption package documentation for explanation.
 
-
+[9 <./img/mnist-plots2.png (PNG copy)> <./img/fashion-plots2.png (PNG copy)>]
+[10 <./img/mnist-plots1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 590--591
 
  []
 
-[9 <./img/mnist-plots2.png (PNG copy)> <./img/fashion-plots2.png (PNG copy)>]
-[10 <./img/mnist-plots1.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Underfull \vbox (badness 1062) has occurred while \output is active []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 599--601
@@ -944,7 +945,10 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 664.
 See the caption package documentation for explanation.
 
-[12]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 686.
@@ -1011,12 +1015,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 834.
  ) 
 Here is how much of TeX's memory you used:
  14129 strings out of 492167
- 204945 string characters out of 6131558
+ 204948 string characters out of 6131558
  567117 words of memory out of 5000000
  17835 multiletter control sequences out of 15000+600000
- 65914 words of font info for 242 fonts, out of 8000000 for 9000
+ 65908 words of font info for 242 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,12n,49p,1600b,1920s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,12n,49p,1599b,1920s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
@@ -1028,7 +1032,7 @@ b></usr/share/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texmf-dist
 /fonts/type1/urw/symbol/usyr.pfb></usr/share/texmf-dist/fonts/type1/urw/times/u
 tmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/t
 exmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (15 pages, 1156164 bytes).
+Output written on main.pdf (15 pages, 1156072 bytes).
 PDF statistics:
  623 PDF objects out of 1000 (max. 8388607)
  526 compressed objects within 6 object streams

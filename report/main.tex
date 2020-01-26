@@ -90,7 +90,7 @@
 %----------------------------------------------------------------------------------------
 
 \Abstract{
-	In this report, we explain some techniques in deep neural networks by starting from multi-layer perceptron (MLP) model and it's mathematical definitions, then discuss convolutional neural networks (CNNs) which are used for image classification and finally review recurrent neural networks (RNN) as a powerful mathematical tool for time series forecasting. To increase generalization of the models we explained the some regularization methods such as weight regularization and dropout. To show the accuracy of models we use some benchmark datasets for classification tasks. First the iris dataset is applied on a simple MLP neural network, then we used the CNN model on mnist and fashion mnist dataset and finally applied RNNs on a sentiment analysis task.
+	In this report, we explain some techniques in deep neural networks by starting from multi-layer perceptron (MLP) model and it's mathematical definitions, then discuss convolutional neural networks (CNNs) which are used for image classification and finally review recurrent neural networks (RNN) as a powerful mathematical tool for time series forecasting. To increase generalization of the models we explained some regularization methods such as weight regularization and dropout. To show the accuracy of models we use some benchmark datasets for classification tasks. First, the iris dataset is applied on a simple MLP neural network, then we used the CNN model on mnist and fashion mnist dataset and finally applied RNNs on a sentiment analysis task.
 }
 
 %----------------------------------------------------------------------------------------
@@ -131,7 +131,7 @@
 		\caption{An Artificial neural network}	
 	\end{figure}
 	
-	An artificial neural network (ANN) consists of many single neurons connected to each other with a specific structure. Multi-layer perceptron (MLP) is a most basic network in which neurons are stacked in several layers. Convolutional and recurrent neural networks are other types of ANNs. By training a network we can find optimal weights which leads to a good approximation of the desired dataset. This process can be divided into three major phases:
+	An artificial neural network (ANN) consists of many single neurons connected with a specific structure. Multi-layer perceptron (MLP) is the most basic network in which neurons are stacked in several layers. Convolutional and recurrent neural networks are other types of ANNs. By training a network we can find optimal weights which leads to a good approximation of the desired dataset. This process can be divided into three major phases:
 	Forward pass, Backward pass and, Updating weights. In the two next Sections, we explain the mathematics behind state-of-the-art networks such as MLP and CNN which can be trained using a backpropagation algorithm and gradient descent optimizer for supervised tasks.
 	
 	
@@ -205,7 +205,7 @@
 	\end{align*}
 	where $\mu$ is a hyper-parameter which is usually set to $0.9$.
 	\section{Regularization}
-		There are several techniques that are used to overcome the over-fitting problem. Among them, weight decay and dropout are major methods. 
+		Several techniques are used to overcome the over-fitting problem. Among them, weight decay and dropout are major methods. 
 	\subsection{Weight regularization}
 In weight decay, we add a positive function of unknown weights to the loss function. This leads to small weights and helps us to prevent over-fitting. because of simplicity here we explain L2-regularization which is named Tikhonov regularization in mathematics.
 	This regularization can be defined by adding 
@@ -232,7 +232,7 @@ In weight decay, we add a positive function of unknown weights to the loss funct
 	The objective of the Convolution Operation is to extract the high-level features such as edges, from the input image. ConvNets need not be limited to only one Convolutional Layer. Conventionally, the first ConvLayer is responsible for capturing the Low-Level features such as edges, color, gradient orientation, etc. With added layers, the architecture adapts to the High-Level features as well, giving us a network that has the wholesome understanding of images in the dataset, similar to how we would.
 	There are two types of results to the operation — one in which the convolved feature is reduced in dimensionality as compared to the input, and the other in which the dimensionality is either increased or remains the same. This is done by applying Valid Padding in case of the former, or Same Padding in the case of the latter.
 \subsection{Pooling block}
-	Similar to the Convolutional Layer, the Pooling layer is responsible for reducing the spatial size of the Convolved Feature. This is to decrease the computational power required to process the data through dimensionality reduction. Furthermore, it is useful for extracting dominant features which are rotational and positional invariant, thus maintaining the process of effectively training of the model.
+	Similar to the Convolutional Layer, the Pooling layer is responsible for reducing the spatial size of the Convolved Feature. This is to decrease the computational power required to process the data through dimensionality reduction. Furthermore, it is useful for extracting dominant features that are rotational and positional invariant, thus maintaining the process of effectively training of the model.
 	There are two types of Pooling: Max Pooling and Average Pooling. Max Pooling returns the maximum value from the portion of the image covered by the Kernel. On the other hand, Average Pooling returns the average of all the values from the portion of the image covered by the Kernel.
 	Max Pooling also performs as a Noise Suppressant. It discards the noisy activations altogether and also performs de-noising along with dimensionality reduction. On the other hand, Average Pooling simply performs dimensionality reduction as a noise suppressing mechanism. Hence, we can say that Max Pooling performs a lot better than Average Pooling.
 	
@@ -261,7 +261,7 @@ In weight decay, we add a positive function of unknown weights to the loss funct
 	\subsection{GRU}
 	The GRU is like a long short-term memory (LSTM) with forget gate[2] but has fewer parameters than LSTM, as it lacks an output gate. GRU's performance on certain tasks of polyphonic music modeling and speech signal modeling was found to be similar to that of LSTM. GRUs have been shown to exhibit even better performance on certain smaller datasets. However, as shown by Gail Weiss \& Yoav Goldberg \& Eran Yahav, the LSTM is "strictly stronger" than the GRU as it can easily perform unbounded counting, while the GRU cannot. That's why the GRU fails to learn simple languages that are learnable by the LSTM. 
 	\subsection{Bidirectional}
-	Bidirectional Recurrent Neural Networks (BRNN) connect two hidden layers of opposite directions to the same output. With this form of generative deep learning, the output layer can get information from past (backwards) and future (forward) states simultaneously.
+	Bidirectional Recurrent Neural Networks (BRNN) connect two hidden layers of opposite directions to the same output. With this form of generative deep learning, the output layer can get information from the past (backward) and future (forward) states simultaneously.
 \begin{figure}\centering 
 	\includegraphics[width=.85\linewidth]{img/bidirectional}
 	\caption{Bidirectional RNN}
@@ -315,7 +315,7 @@ batch_size, verbose, task)
 	
 	
 	\subsection{CNN Model}
-	For this case we used keras API and implemented a simple class to be compatible with previous MLP class.
+	For this case, we used the Keras API and implemented a simple class to be compatible with the previous MLP class.
 	\begin{python}
 CNN(architecture, epochs,
 batch_size, optimizer, loss,
@@ -357,7 +357,7 @@ metrics, task, verbose)
 	same as the CNN model, this class implements three methods fit, score and predict.
 	
 	\subsection{Hyperparameter tuning}
-	To find optimal architecture of network, grid search is a simple and efficient way. By passing a set of different possible choices for a problem, the following classes run and save all possible architectures and their corresponding loss history.
+	To find the optimal architecture of the network, grid search is a simple and efficient way. By passing a set of different possible choices for a problem, the following classes run and save all possible architectures and their corresponding loss history.
 	\begin{python}
 MLPGridSearch(task, hidden_layers, 
 activations batch_sizes,
@@ -377,7 +377,7 @@ batch_sizes, optimizers,
 file_name)
 	\end{python}
 	
-	These classes implement two methods run and best\_model which return history of models and the best model which has the best accuracy and lower loss, respectively. Also, a parallelization technique for multi-core processors has been implemented on MLPGridSearch class to speedup the searching process. Because of GPU limitations, we cannot implement parallelization on CNNGridSearch and RNNGridSearch.
+	These classes implement two methods run and best\_model which return history of models and the best model which has the best accuracy and lower loss, respectively. Also, a parallelization technique for multi-core processors has been implemented on MLPGridSearch class to speed up the searching process. Because of GPU limitations, we cannot implement parallelization on CNNGridSearch and RNNGridSearch.
 	
 	\section{Results and Discussion}
 	
@@ -408,9 +408,9 @@ alphas = [.001, .01, 0]
 	\begin{itemize}
 		\item  LeakyReLu acts like Relu function in some situations.
 		\item  Maybe test accuracy becomes better that train accuracy.
-		\item  Momentum technique plays an important role in optimization path. All of 6 best architectures are using momentum.
-		\item  Choosing learning is tricky and help us to reach global minimum in less epochs. By choosing big values for learning rate, the training phase becomes unstable and the MLP class raises floating point overflow.
-		\item  Smaller batch size help us to reach minimum faster.
+		\item  Momentum technique plays an important role in the optimization path. All of 6 best architectures are using momentum.
+		\item  Choosing learning is tricky and helps us to reach a global minimum in fewer epochs. By choosing big values for the learning rate, the training phase becomes unstable and the MLP class raises floating-point overflow.
+		\item  Smaller batch size helps us to reach a minimum faster.
 	\end{itemize}
 	\begin{table*}[hbt]
 		\centering
@@ -449,7 +449,7 @@ betas = [.2, .3]
 etas = [.01]
 alphas = [0.01, 0]
 \end{python}
-	See the results in table \ref{tsatlog}. By using this values, again we trained a network with this specification and reach train accuracy \textbf{83.74\%} and test accuracy \textbf{81.45\%} in 100 epochs.
+	See the results in table \ref{tsatlog}. By using these values, again we trained a network with this specification and reach train accuracy \textbf{83.74\%} and test accuracy \textbf{81.45\%} in 100 epochs.
 	
 	\begin{python}
 MLP([64], activation=ReLu(), 
@@ -527,7 +527,7 @@ verbose=1, task='classification')
 		\caption{Loss value of best architectures for MNIST}
 		\label{fmnist}
 	\end{figure*}
-	To reach this accuracy with just 15 epochs we reduced the batch size from 512 to 64. This shows the important role of batch size in training a network. Another interesting fact we found is the effect of the number of epochs on overfitting problem. In the above figure, you see that from iteration 7-8 the network validation accuracy is reducing.
+	To reach this accuracy with just 15 epochs we reduced the batch size from 512 to 64. This shows the important role of batch size in training a network. Another interesting fact we found is the effect of the number of epochs on the overfitting problem. In the above figure, you see that from iteration 7-8 the network validation accuracy is reducing.
 	
 	\begin{center}
 		\includegraphics[width=1\linewidth,height=6cm]{img/mnist-plots2}
@@ -537,7 +537,7 @@ verbose=1, task='classification')
 	
 	
 	\subsection{Fashion mnist}
-	Fashion-MNIST is a dataset of Zalando's article images consisting of a training set of 60,000 examples and a test set of 10,000 examples. Each example is a 28x28 grayscale image, associated with a label from 10 classes. We intend Fashion-MNIST to serve as a direct drop-in replacement for the original MNIST dataset for benchmarking machine learning algorithms. It shares the same image size and structure of training and testing splits. \href{https://github.com/zalandoresearch/fashion-mnist}{More information in zalandoresearch's github repository.}
+	Fashion-MNIST is a dataset of Zalando's article images consisting of a training set of 60,000 examples and a test set of 10,000 examples. Each example is a 28x28 grayscale image, associated with a label from 10 classes. We intend Fashion-MNIST to serve as a direct drop-in replacement for the original MNIST dataset for benchmarking machine learning algorithms. It shares the same image size and structure of training and testing splits. \href{https://github.com/zalandoresearch/fashion-mnist}{More information in zalandoresearch's Github repository.}
 	
 	The grid search parameters are set to:
 	\begin{python}
@@ -589,7 +589,7 @@ verbose=1, task='classification')
 	
 	To increase the accuracy, we changed the model from MLP to CNN and tested different architectures on this dataset.\\
 	
-	\textbf{Test 1)}  For the first test case we used a single convolution layer connected to a fully connected layer with 10 neurons and softmax activation function which classifies the input of the network. To show the effect of the convolution layer hyperparameters, we evaluated the network on five different feature maps $\{8,16,32,64,128\}$, five different kernel sizes $\{3\times3, 5\times5, 7\times7,9\times9,11\times11\}$ and two different padding strategies \{same, valid\} for grid search parameters with relu activation function, Keras default Adam optimizer, batch size 256 and 10 epochs. Table \ref{tfashion1} shows the best result of these models. Although different kernel size and number of filters are used to reach better accuracy, all of the results used only $same$ padding. 
+	\textbf{Test 1)}  For the first test case we used a single convolution layer connected to a fully connected layer with 10 neurons and softmax activation function which classifies the input of the network. To show the effect of the convolution layer hyperparameters, we evaluated the network on five different feature maps $\{8,16,32,64,128\}$, five different kernel sizes $\{3\times3, 5\times5, 7\times7,9\times9,11\times11\}$ and two different padding strategies \{same, valid\} for grid search parameters with Relu activation function, Keras default Adam optimizer, batch size 256 and 10 epochs. Table \ref{tfashion1} shows the best result of these models. Although different kernel sizes and the number of filters are used to reach better accuracy, all of the results used only $same$ padding. 
 	\\
 	\textbf{Test 2)} In the table \ref{tfashion2} we extended this architecture with 2 convolutional layers. The results show that by increasing the network depth, $3\times3$ kernel size performs better than bigger kernels.
 	\\
@@ -644,8 +644,8 @@ Dropout(.5),
 Dense(128, activation='relu'),
 Dense(10, activation='softmax')]
 	\end{python}
-	To show the effect of optimizer algorithm in the classification task when all of other hyperparameters are fixed, we changed the optimizer from adam to rmsprop and sgd and saw that the accuracy decreased from $72.5\%$ to $72.2$ and $60.5\%$, respectively. 
-	For the last try, we changed the learning rate parameter of Adam to show the effect of the learning rate to the accuracy.  See results in the table \ref{tadams}.
+	To show the effect of optimizer algorithm in the classification task when all of the other hyperparameters are fixed, we changed the optimizer from adam to RMSProp and SGD and saw that the accuracy decreased from $72.5\%$ to $72.2$ and $60.5\%$, respectively. 
+	For the last try, we changed the learning rate parameter of Adam to show the effect of the learning rate on the accuracy.  See results in the table \ref{tadams}.
 	\begin{center}
 		\begin{tabular*}{.85\linewidth}{@{\extracolsep{\fill} }ccc@{}}
 			\toprule
@@ -667,7 +667,7 @@ Dense(10, activation='softmax')]
 	
 	\subsection{Sentiment analysis}
 	
-	See dataset info in \href{https://www.kaggle.com/ashukr/rnnsentiment-data}{kaggle}. We splitt the data set into 67\% train and 33\% test set. The first test case in this example consists of 108 tries, with 12 different architectures and 9 different permutations of sentence configuration. To do this we first preprocess the documents and convert sentences to a sequence of integers. To apply this sequence into the network we should align all sequences to a fixed size length. We tested 3 different lengths $100,200,500$. Since some words in the documents appear frequently we removed 15 top common words from the sequences. Then fed this fixed size sequences to an embedding layer with $10,50,100,200$ output dimension along with one LSTM cell of $8,16,64$ units. Table \ref{tsentiment1} shows the accuracy of these models. All of the results obtained by just 5 epochs of Keras default Adam optimizer with batch size 256.  As the second try, we designed a more complex network consist of an embedding layer followed by two LSTM cells. Table \ref{tsentiment2} shows the results of this experiment ran in 15 epochs. Also in this example, we used Bidirectional LSTM architecture to see the effect of this layer but doesn't affect the accuracy.  For the last try, we designed a convolutional-LSTM network. This model performs better than previous models and reached $82\%$ accuracy. Note that the first layer of this model is an embedding layer with output\_dim=200, input\_dim=715 and input\_length=100. Here is the code of proposed architecture in the presented library.
+	See dataset info in \href{https://www.kaggle.com/ashukr/rnnsentiment-data}{kaggle}. We split the data set into 67\% train and 33\% test set. The first test case in this example consists of 108 tries, with 12 different architectures and 9 different permutations of sentence configuration. To do this we first preprocess the documents and convert sentences to a sequence of integers. To apply this sequence into the network we should align all sequences to a fixed size length. We tested 3 different lengths $100,200,500$. Since some words in the documents appear frequently we removed 15 top common words from the sequences. Then fed this fixed size sequences to an embedding layer with $10,50,100,200$ output dimension along with one LSTM cell of $8,16,64$ units. Table \ref{tsentiment1} shows the accuracy of these models. All of the results obtained by just 5 epochs of Keras default Adam optimizer with batch size 256.  As the second try, we designed a more complex network consist of an embedding layer followed by two LSTM cells. Table \ref{tsentiment2} shows the results of this experiment ran in 15 epochs. Also in this example, we used Bidirectional LSTM architecture to see the effect of this layer but doesn't affect the accuracy.  For the last try, we designed a convolutional-LSTM network. This model performs better than previous models and reached $82\%$ accuracy. Note that the first layer of this model is an embedding layer with output\_dim=200, input\_dim=715 and input\_length=100. Here is the code of proposed architecture in the presented library.
 	\begin{python}
 N=max_dict_words + skip_common
 [Embedding(N, 200, input_length=
@@ -681,7 +681,7 @@ Dense(2, activation='softmax')]
 \end{python}
 	\section{Concluding remarks}
 	In this exercise, we implemented a simple multi-layer perceptron neural network from scratch with matrix form formulations which are very important for fast prediction where the number of neurons and layers is large. Our implementation is appropriate for both regression and classification tasks by just setting an argument. All of the preprocessing requirements such as scaling and encoding are done by $MLP$ class automatically. For fine-tuning of hyperparameters of the network, we implemented a $MLPGridSearch$ class which uses $parallelization$ techniques and finds optimal architecture among all possible solutions.  
-	In the second part of the report, we implemented a $CNN$ class based on an awesome $keras$ module which is based on $tensorflow$ a scientific computation package. This class has the same signature of the $MLP$ class. Also to find optimal architecture, we implemented a $CNNGridSearch$ class with the same interface of $MLPGridSearch$ class. The third part implements $RNN$ based networks with an interface similar to $CNN$. Again to optimize the network architecture, we implemented $RNNGridSearch$. Also to prevent the overfitting problem we added some regularization techniques to the models. We tested these networks on 6 different benchmark datasets which are used by many researchers for classification tasks. The results show the important role of model type and architecture, batch size, number of epochs, activation function and learning rate for training a network. 
+	In the second part of the report, we implemented a $CNN$ class based on an awesome $keras$ module which is based on $tensorflow$ a scientific computation package. This class has the same signature as the $MLP$ class. Also to find optimal architecture, we implemented a $CNNGridSearch$ class with the same interface of $MLPGridSearch$ class. The third part implements $RNN$ based networks with an interface similar to $CNN$. Again to optimize the network architecture, we implemented $RNNGridSearch$. Also to prevent the overfitting problem we added some regularization techniques to the models. We tested these networks on 6 different benchmark datasets which are used by many researchers for classification tasks. The results show the important role of model type and architecture, batch size, number of epochs, activation function and learning rate for training a network. 
 	
 	\begin{table*}[]
 		\begin{tabular*}{1\linewidth}{@{\extracolsep{\fill} }lccc@{}}
